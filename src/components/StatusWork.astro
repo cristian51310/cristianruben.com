@@ -1,0 +1,20 @@
+---
+interface Props {
+  status: boolean;
+}
+
+const { status } = Astro.props;
+---
+
+
+<span class='inline-flex items-center justify-center px-5 py-1.5 font-semibold border rounded-md border-lime-600 shadow-md shadow-lime-300/20'>
+        
+  <span class='mr-2.5 flex h-3 w-3 items-center'>
+    <span class='absolute flex w-3 h-3 rounded-full opacity-75 animate-ping bg-lime-500 ' />
+    <span class='relative flex w-3 h-3 rounded-full bg-lime-500' />
+  </span>
+  
+  <span class="text-base text-lime-800 mt-1">
+    {status ? "Disponible para nuevos trabajos" : "Actualmente trabajando"}
+  </span>
+</span>

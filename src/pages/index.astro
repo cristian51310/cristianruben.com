@@ -1,27 +1,20 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import StatusWork from "../components/StatusWork.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1 class="text-3xl font-bold mb-3">Cristian Ruben Figueroa</h1>
+<MainLayout title="Cristian Ruben">
+	<main>
+		
+		<h1 class="text-[40px] font-bold mb-1">Cristian Ruben Figueroa</h1>
+		<h3 class="text-lg text-neutral-700 my-1 mb-4">Programador Full Stack, Diseñador fronted y movil</h3>
+		<StatusWork status={true} />
 
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to
-				build a personal website, blog, or portfolio with Astro.
-			</p>
-
-		</main>
-		<Footer />
-	</body>
-</html>
+		<p class="mt-10">
+			Welcome to the official blog
+			starter template. This template serves as a lightweight, minimally-styled
+			starting point for anyone looking to build a personal website, blog, or
+			portfolio with Astro.
+		</p>
+	</main>
+</MainLayout>
