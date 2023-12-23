@@ -1,7 +1,6 @@
 ---
 interface Props {
   title: string;
-  subtitle?: string;
 }
 
 import BaseHead from "../components/BaseHead.astro";
@@ -9,7 +8,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION } from "../consts";
 
-const { title, subtitle } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +20,7 @@ const { title, subtitle } = Astro.props;
     class="flex flex-col min-h-screen h-full bg-top bg-no-repeat bg-lights-sun bg-slate-950 text-neutral-300"
   >
     <Header />
-    <main class="md:mt-16 mt-24 w-[960px] px-0">
+    <main class="md:mt-16 mt-20 w-[960px] px-2 sm:px-16 md:px-2">
       <slot />
     </main>
     <Footer />

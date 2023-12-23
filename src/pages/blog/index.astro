@@ -17,10 +17,10 @@ const posts = (await getCollection("blog")).sort(
 		programación y hobbies.
 	</h4>
 
-	<ul class="grid grid-cols-1 md:grid-cols-2 list-none mt-10 gap-3 md:gap-8">
+	<ul class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-3 md:gap-8">
 		{
 			posts.map((post) => (
-				<li class="w-full text-center md:text-start list-none">
+				<li class="w-full">
 					<a href={`/blog/${post.slug}/`}>
 						<img
 							class="mb-3 rounded-xl hover:shadow-xl hover:shadow-blue-800/20"
@@ -30,7 +30,7 @@ const posts = (await getCollection("blog")).sort(
 							alt={post.data.title}
 							transition:name={post.data.heroImage}
 						/>
-						<h4 transition:name={post.data.title} class="m-0 text-white">
+						<h4 transition:name={post.data.title} class="m-0 text-xl md:text-2xl text-white">
 							{post.data.title}
 						</h4>
 						<p class="text-neutral-500 mb-0">
