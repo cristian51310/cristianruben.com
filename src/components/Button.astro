@@ -1,0 +1,26 @@
+---
+interface Props {
+  text?: string;
+  href: string | undefined;
+  icon?: string;
+}
+
+const { text, href, icon } = Astro.props;
+
+import { Icon } from "astro-icon";
+---
+
+<a
+  href={href}
+  class="bg-neutral-800 w-full text-center rounded-lg m-0 text-base py-2.5 px-3 text-neutral-200 border border-slate-700"
+>
+  {icon && <Icon name={icon} class="w-6 mr-3" />}
+  {
+    text && (
+      <span class="flex justify-center items-center">
+        <Icon name="tabler:link" class="w-5 mr-2" />
+        {text}
+      </span>
+    )
+  }
+</a>

@@ -1,12 +1,58 @@
 ---
+import { getCollection } from "astro:content";
+import Button from "../../components/Button.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
+
+const projects = (await getCollection("projects")).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+);
 ---
 
 <MainLayout title="Mis proyectos">
-	<h1 class="md:text-[40px] text-[32px] font-bold mt-0" transition:name="projects">
+	<h1
+		class="md:text-[40px] text-[24px] font-bold mt-0"
+		transition:name="projects"
+	>
 		Mis proyectos
 	</h1>
 	<h4 class="mb-6 -mt-2 text-lg text-neutral-400">
-		Estos son algunos de los proyectos en los que he trabajado y de los que mas orgulloso me siento.
+		Estos son algunos de los proyectos en los que he trabajado y de los que mas
+		orgulloso me siento.
 	</h4>
+
+	<ul
+		class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10 gap-3 md:gap-5"
+	>
+		{
+			projects.map((project) => (
+				<li class="w-full bg-neutral-500/20 rounded-2xl p-4 flex flex-col justify-between">
+					<a href={`/projects/${project.slug}/`}>
+						<img
+							class="rounded-xl min-h-48 sm:min-h-48 lg:min-h-40 hover:scale-105 transition-all duration-700 mb-4"
+							width={720}
+							height={360}
+							src={project.data.heroImage}
+							alt={project.data.title}
+							transition:name={project.data.heroImage}
+						/>
+
+						<h4
+							transition:name={project.data.title}
+							class="m-0 text-lg text-white"
+						>
+							{project.data.title}
+						</h4>
+
+						<p class="m-0 mt-3 text-base text-neutral-400">
+							{project.data.description}
+						</p>
+					</a>
+
+					<div class="w-full flex gap-2 mt-8">
+						<Button href={project.data.webpage} text={project.data.title} />
+					</div>
+				</li>
+			))
+		}
+	</ul>
 </MainLayout>

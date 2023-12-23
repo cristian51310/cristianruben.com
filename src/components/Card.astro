@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  transitionName: string;
+  href: string;
+}
+
+const { title, transitionName, href } = Astro.props;
+---
+
+<a
+  href={href}
+  class="border rounded-2xl p-4 md:p-5 border-neutral-600 h-full md:h-1/2 w-full bg-neutral-500/10 backdrop-blur-md hover:scale-105 transition-all duration-500"
+>
+  <h5
+    class="mt-0 text-base md:text-lg font-semibold text-center md:text-start"
+    transition:name={transitionName}
+  >
+    {title}
+  </h5>
+
+  <slot />
+</a>
