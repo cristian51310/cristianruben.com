@@ -8,18 +8,11 @@ const projects = (await getCollection("projects")).sort(
 );
 ---
 
-<MainLayout title="Mis proyectos">
-	<h1
-		class="md:text-[40px] text-[24px] font-bold mt-0"
-		transition:name="projects"
-	>
-		Mis proyectos
-	</h1>
-	<h4 class="mb-6 -mt-2 text-lg text-neutral-400">
-		Estos son algunos de los proyectos en los que he trabajado y de los que mas
-		orgulloso me siento.
-	</h4>
-
+<MainLayout
+	title="Mis proyectos"
+	description="Estos son algunos de los proyectos en los que he trabajado y de los que mas orgulloso me siento."
+	isMain={false}
+>
 	<ul
 		class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10 gap-3 md:gap-5"
 	>

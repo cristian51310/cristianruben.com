@@ -8,15 +8,11 @@ const posts = (await getCollection("blog")).sort(
 );
 ---
 
-<MainLayout title="Mi blog personal">
-	<h1 class="md:text-[40px] text-[24px] font-bold mt-0" transition:name="blog">
-		Mi blog personal
-	</h1>
-	<h4 class="mb-6 -mt-2 text-lg text-neutral-400">
-		Cuando no estoy programando, escribo sobre diseño de interfaces,
-		programación y hobbies.
-	</h4>
-
+<MainLayout
+	title="Mi blog personal"
+	description="Cuando no estoy programando, escribo sobre diseño de interfaces, programación y hobbies."
+	isMain={false}
+>
 	<ul class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-3 md:gap-8">
 		{
 			posts.map((post) => (

@@ -5,7 +5,11 @@ import StatusWork from "../components/StatusWork.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Cristian Ruben">
+<MainLayout
+	title="Cristian Ruben"
+	description="Programador Full Stack, Diseñador fronted y movil"
+	isMain
+>
 	<div class="flex md:flex-row flex-col items-start md:items-center gap-8">
 		<img
 			src="/images/portrait.jpg"
@@ -16,7 +20,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 			<h1 class="text-[24px] md:text-[40px] font-bold mb-1 mt-0 text-white">
 				Cristian Ruben Figueroa
 			</h1>
-			<h3 class="text-base md:text-lg text-neutral-300 my-1 mb-4">
+			<h3 class="text-base md:text-lg text-neutral-400 my-1 mb-4">
 				Programador Full Stack, Diseñador fronted y movil
 			</h3>
 			<StatusWork />
