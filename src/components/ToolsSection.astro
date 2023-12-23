@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section class="md:border-l md:pl-6 md:border-neutral-500">
+  <div class="grid items-baseline max-w-3xl grid-cols-1 gap-y-8 md:grid-cols-4">
+    <h2 class="text-lg font-semibold text-white">
+      {title}
+    </h2>
+    <div class="md:col-span-3">
+      <ul role="list" class="space-y-8">
+        <slot />
+      </ul>
+    </div>
+  </div>
+</section>

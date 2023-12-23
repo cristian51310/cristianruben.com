@@ -15,7 +15,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
 	</head>
 
 	<body
-		class="flex flex-col min-h-screen h-full bg-top bg-no-repeat bg-lights-sun bg-slate-950 text-neutral-300"
+		class="flex flex-col min-h-screen h-full bg-top bg-no-repeat bg-lights-sun bg-zinc-950 text-neutral-300"
 	>
 		<main class="w-full max-w-full m-0 text-neutral-300">
 			<article>
@@ -25,6 +25,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
 					src={heroImage}
 					alt={title}
 					class="rounded-xl shadow-xl shadow-blue-700/20 mx-auto"
+					transition:name={heroImage}
 				/>
 
 				<div class="w-[720px] max-w-full m-auto p-4">
