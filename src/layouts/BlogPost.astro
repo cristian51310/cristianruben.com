@@ -3,7 +3,6 @@ import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
-import Header from "../components/Header.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -15,9 +14,10 @@ const { title, description, pubDate, heroImage } = Astro.props;
 		<BaseHead title={title} description={description} />
 	</head>
 
-	<body>
-		<Header />
-		<main class="w-full max-w-full m-0 text-neutral-800">
+	<body
+		class="flex flex-col min-h-screen h-full bg-top bg-no-repeat bg-lights-sun bg-slate-950 text-neutral-300"
+	>
+		<main class="w-full max-w-full m-0 text-neutral-300">
 			<article>
 				<img
 					width={960}
@@ -33,7 +33,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
 						<div class="mb-2 text-neutral-500">
 							<FormattedDate date={pubDate} />
 						</div>
-						<h1 class="mt-3">{title}</h1>
+						<h1 transition:name={title} class="mt-3">{title}</h1>
 					</div>
 
 					<slot />

@@ -1,69 +1,21 @@
 ---
-import { Icon } from "astro-icon";
-import { SITE_TITLE } from "../consts";
 import HeaderLink from "./HeaderLink.astro";
 ---
 
-<header class="bg-white px-6 border-b">
-	<nav class="flex justify-between items-center">
-		<h2>
-			<a href="/">{SITE_TITLE}</a>
-		</h2>
-
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-		</div>
-
-		<div class="hidden md:flex justify-center gap-2">
-			<a
-				href="https://m.webtoo.ls/@astro"
-				target="_blank"
-				class="text-gray-500"
-			>
-				<span class="sr-only">Follow Astro on Mastodon</span>
-				<Icon pack="mdi" name="mastodon" class="w-8" />
-			</a>
-
-			<a
-				href="https://twitter.com/astrodotbuild"
-				target="_blank"
-				class="text-gray-500"
-			>
-				<span class="sr-only">Follow Astro on Twitter</span>
-				<Icon pack="mdi" name="twitter" class="w-8" />
-			</a>
-
-			<a
-				href="https://github.com/withastro/astro"
-				target="_blank"
-				class="text-gray-500"
-			>
-				<span class="sr-only">Go to Astro's GitHub repo</span>
-				<Icon pack="mdi" name="github" class="w-8" />
-			</a>
-		</div>
+<header class="bg-transparent border border-neutral-700 backdrop-blur-lg md:px-8 px-6 py-2 md:py-3 rounded-2xl text-base top-6 left-1/2 transform -translate-x-1/2 z-40 fixed">
+	<nav class="flex justify-between items-center gap-3 md:gap-5">
+		<HeaderLink href="/">Inicio</HeaderLink>
+		<HeaderLink href="/blog">Blog</HeaderLink>
+		<HeaderLink href="/projects">Proyectos</HeaderLink>
+		<HeaderLink href="/recommendations">Recomendaciones</HeaderLink>
 	</nav>
 </header>
 
 <style>
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
 	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
+		color: #bababa;
 	}
 	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
+		color: orange;
 	}
 </style>

@@ -1,20 +1,66 @@
 ---
+import SocialIcons from "../components/SocialIcons.astro";
 import StatusWork from "../components/StatusWork.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Cristian Ruben">
-	<main>
-		
-		<h1 class="text-[40px] font-bold mb-1">Cristian Ruben Figueroa</h1>
-		<h3 class="text-lg text-neutral-700 my-1 mb-4">Programador Full Stack, Diseñador fronted y movil</h3>
-		<StatusWork status={true} />
+	<div class="flex md:flex-row flex-col items-start md:items-center gap-8">
+		<img
+			src="/images/portrait.jpg"
+			alt="Cristian Ruben Figueroa Espinoza"
+			class="rounded-3xl md:w-48 md:h-48 w-40 h-40"
+		/>
+		<div>
+			<h1 class="text-[32px] md:text-[40px] font-bold mb-1 mt-0 text-white">
+				Cristian Ruben Figueroa
+			</h1>
+			<h3 class="text-lg text-neutral-300 my-1 mb-4">
+				Programador Full Stack, Diseñador fronted y movil
+			</h3>
+			<StatusWork />
+			<div class="mt-5">
+				<SocialIcons />
+			</div>
+		</div>
+	</div>
 
-		<p class="mt-10">
-			Welcome to the official blog
-			starter template. This template serves as a lightweight, minimally-styled
-			starting point for anyone looking to build a personal website, blog, or
-			portfolio with Astro.
-		</p>
-	</main>
+	<div class="grid grid-cols-2 md:grid-cols-5 gap-0 md:gap-5 mt-10">
+		<div
+			class="border rounded-3xl col-span-3 p-5 border-neutral-700 bg-neutral-500/10 backdrop-blur-md"
+		>
+			<h5 class="mt-0 font-semibold mb-4">Acerca de mi</h5>
+
+			<p class="text-lg text-neutral-400">
+				Soy programador fullstack y movil, me encanta lo que hago, soy un
+				apasionado de la tecnologia y el desarrollo de software, me especializo
+				en crear soluciones para negocios en la web y en plataformas moviles.
+			</p>
+
+			<p class="hidden md:block text-lg text-neutral-400">
+				Tengo un gran conocimiento de lo que se necesita para crear grandes
+				interfaces de usuario y diseños que funcionen bien en cualquier
+				dispositivo, desde ordenadores de sobremesa hasta teléfonos móviles.
+			</p>
+		</div>
+
+		<div class="flex flex-row md:flex-col gap-5 col-span-2 mt-5 md:mt-0">
+			<a
+				href="/projects"
+				class="border rounded-3xl p-5 border-neutral-600 h-full md:h-1/2 w-full bg-neutral-500/10 backdrop-blur-md hover:scale-105 transition-all duration-500"
+			>
+				<h5 class="mt-0 font-semibold text-center md:text-start" transition:name="projects">
+					Mis Proyectos
+				</h5>
+			</a>
+			<a
+				href="/blog"
+				class="border rounded-3xl p-5 border-neutral-600 h-full md:h-1/2 w-full bg-neutral-500/10 backdrop-blur-md hover:scale-105 transition-all duration-500"
+			>
+				<h5 class="mt-0 font-semibold text-center md:text-start" transition:name="blog">
+					Mi blog personal
+				</h5>
+			</a>
+		</div>
+	</div>
 </MainLayout>

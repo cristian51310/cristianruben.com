@@ -1,15 +1,8 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import { SITE_DESCRIPTION, SITE_TITLE_404 } from "../consts";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE_404} description={SITE_DESCRIPTION} />
-  </head>
-
-  <body class="flex justify-center items-center min-h-screen">
-    <h1>404</h1>
-  </body>
-</html>
+<MainLayout title="Pagina no encontrada">
+  <h1>404</h1>
+  <p>Page not found</p>
+</MainLayout>

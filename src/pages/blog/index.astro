@@ -9,32 +9,38 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <MainLayout title="Mi blog personal">
-	<main class="w-[960px]">
-		<section>
-			<ul class="grid grid-cols-1 md:grid-cols-2 list-none m-0 p-0 gap-3 md:gap-8">
-				{
-					posts.map((post) => (
-						<li class="w-full text-center md:text-start list-none">
-							<a href={`/blog/${post.slug}/`}>
-								<img
-									class="mb-3 rounded-xl hover:shadow-xl hover:shadow-blue-800/20"
-									width={720}
-									height={360}
-									src={post.data.heroImage}
-									alt={post.data.title}
-									transition:name={post.data.heroImage}
-								/>
-								<h4 class="m-0">{post.data.title}</h4>
-								<p class="text-neutral-500">
-									<FormattedDate date={post.data.pubDate} />
-								</p>
-							</a>
-						</li>
-					))
-				}
-			</ul>
-		</section>
-	</main>
+	<h1 class="md:text-[40px] text-[32px] font-bold mt-0" transition:name="blog">
+		Mi blog personal
+	</h1>
+	<h4 class="mb-6 -mt-2 text-lg text-neutral-400">
+		Cuando no estoy programando, escribo sobre diseño de interfaces,
+		programación y hobbies.
+	</h4>
+
+	<ul class="grid grid-cols-1 md:grid-cols-2 list-none mt-10 gap-3 md:gap-8">
+		{
+			posts.map((post) => (
+				<li class="w-full text-center md:text-start list-none">
+					<a href={`/blog/${post.slug}/`}>
+						<img
+							class="mb-3 rounded-xl hover:shadow-xl hover:shadow-blue-800/20"
+							width={720}
+							height={360}
+							src={post.data.heroImage}
+							alt={post.data.title}
+							transition:name={post.data.heroImage}
+						/>
+						<h4 transition:name={post.data.title} class="m-0 text-white">
+							{post.data.title}
+						</h4>
+						<p class="text-neutral-500 mb-0">
+							<FormattedDate date={post.data.pubDate} />
+						</p>
+					</a>
+				</li>
+			))
+		}
+	</ul>
 </MainLayout>
 
 <style>
