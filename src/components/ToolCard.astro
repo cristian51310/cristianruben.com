@@ -3,15 +3,17 @@ interface Props {
   title: string;
   description: string;
   href: string;
+  image: string;
 }
 
-const { title, description, href } = Astro.props;
+const { title, description, href, image } = Astro.props;
 ---
 
 <div class="group relative flex flex-col items-start z-10">
   <div
     class="w-full p-6 py-3 transition-transform duration-700 bg-gray-800/30 group-hover:scale-105 rounded-2xl"
   >
+    <img src={image} alt="" class="sm:w-20 w-14">
     <h2 class="text-lg font-semibold text-white">
       <a href={href}>
         <span

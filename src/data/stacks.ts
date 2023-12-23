@@ -18,7 +18,7 @@ export const stacks = [
     type: 'workstation',
     title: '13” MacBook Air, M1, 8GB RAM (2020)',
     link: 'https://amzn.to/3hp6Dxj',
-    info: 'Utilizo este ordenador todos los días para programar, diseñar y para uso personal. Su diseño es bonito y funcional. La duración de la batería es excelente y me encantan los teclados retroiluminados.',
+    info: 'Utilizo este ordenador todos los días para programar, diseñar y para uso personal. Su diseño es bonito y funcional y la duracion de la bateria es excelente.',
     img: "/images/icons/macbook-pro.png"
   },
   {
@@ -32,7 +32,7 @@ export const stacks = [
     type: 'development',
     title: 'Nextjs',
     link: 'https://nextjs.org/',
-    info: 'Utilizo Next.js como framework de React porque me permite crear aplicaciones y sitios web de alto rendimiento y con una experiencia de usuario fluida. Además, me ofrece una serie de características útiles como renderizado en el lado del servidor, soporte para SEO y enrutamiento automático.',
+    info: 'Utilizo Next.js como framework de React porque me permite crear aplicaciones y sitios web de alto rendimiento y con una experiencia de usuario fluida. Además, me ofrece una serie de características útiles como renderizado en el lado del servidor',
     img: "/images/icons/nextjs.png"
   },
   {
@@ -46,7 +46,7 @@ export const stacks = [
     type: 'development',
     title: 'Tailwind',
     link: 'https://tailwindcss.com/',
-    info: 'Utilizo Tailwind como framework de CSS para crear sitios web porque me permite crear diseños únicos y personalizados sin tener que escribir tanto código CSS. Además, es muy fácil de usar y integrar en proyectos realizados en React, lo que me permite ahorrar tiempo y esfuerzo en la creación de interfaces de usuario atractivas y funcionales.',
+    info: 'Utilizo Tailwind como framework de CSS para crear sitios web porque me permite crear diseños únicos y personalizados sin tener que escribir tanto código CSS. Además, es muy fácil de usar y integrar en proyectos realizados en React, aunque en verdad es por que odio pensar en clases de CSS',
     img: "/images/icons/tailwind.png"
   },
   {
