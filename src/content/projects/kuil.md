@@ -2,7 +2,7 @@
 title: 'Kuil'
 description: 'Pagina web y ecommerce para Kuil, una marca de lapices ecológicos'
 pubDate: 'Jul 08 2022'
-heroImage: '/images/projects/kuil/ss.png'
+heroImage: '/images/projects/kuil/ss.webp'
 webpage: 'https://kuil.com.mx'
 ---
 

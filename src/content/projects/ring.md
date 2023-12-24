@@ -2,7 +2,7 @@
 title: 'Ring!'
 description: 'Un marketplace digital enfocado a restaurantes'
 pubDate: 'Jul 08 2023'
-heroImage: '/images/projects/ring/ss.png'
+heroImage: '/images/projects/ring/ss.webp'
 webpage: 'https://ring-eccommerce.vercel.app/'
 ---
 
