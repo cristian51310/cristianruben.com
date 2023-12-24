@@ -10,6 +10,10 @@
 		0 16px 32px rgba(var(--gray), 33%);
 }
 
+.time-line-container>div:last-child .education__time>.education__line {
+	display: none;
+}
+
 @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-regular.woff') format('woff');

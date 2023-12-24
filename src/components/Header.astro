@@ -3,11 +3,12 @@ import HeaderLink from "./HeaderLink.astro";
 ---
 
 <header
-	class="bg-transparent border border-neutral-700 backdrop-blur-lg md:px-8 px-4 py-2 md:py-3 rounded-2xl text-base top-6 left-1/2 transform -translate-x-1/2 z-40 fixed"
+	class="bg-gray-700/20 border border-neutral-700 backdrop-blur-lg px-8 py-3 rounded-2xl text-base fixed inset-x-6 top-6 mx-auto w-max z-40"
 >
-	<nav class="flex justify-between items-center gap-3 md:gap-5">
+	<nav class="flex justify-between items-center gap-5">
 		<HeaderLink href="/">Inicio</HeaderLink>
 		<HeaderLink href="/projects">Proyectos</HeaderLink>
+		<HeaderLink href="/resume">Curriculum</HeaderLink>
 		<HeaderLink href="/blog">Blog</HeaderLink>
 		<HeaderLink href="/recommendations">Recomendaciones</HeaderLink>
 	</nav>

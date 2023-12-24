@@ -13,14 +13,16 @@ const { title, description, isMain } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <BaseHead title={title} description={description} />
   </head>
   <body
     class="flex flex-col min-h-screen h-full bg-top bg-no-repeat bg-lights-sun bg-zinc-950 text-neutral-300"
   >
-    <Header />
+    <div class="">
+      <Header />
+    </div>
     <main class="md:mt-16 mt-20 w-[1000px] px-2 sm:px-16 md:px-2">
       {
         !isMain && (
