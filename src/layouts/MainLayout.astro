@@ -7,7 +7,7 @@ interface Props {
 
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import { Navbar } from "../components/Navbar";
 
 const { title, description, isMain } = Astro.props;
 ---
@@ -20,10 +20,9 @@ const { title, description, isMain } = Astro.props;
   <body
     class="flex flex-col min-h-screen h-full bg-top bg-no-repeat bg-lights-sun bg-zinc-950 text-neutral-300"
   >
-    <div class="">
-      <Header />
-    </div>
-    <main class="md:mt-16 mt-20 w-[1000px] px-2 sm:px-16 md:px-2">
+    <Navbar client:only />
+
+    <main class=" w-[1000px] px-2 sm:px-16 md:px-2 mt-0">
       {
         !isMain && (
           <>
