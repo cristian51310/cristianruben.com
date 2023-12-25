@@ -3,17 +3,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { generalLinks } from '../data/links'
 
-function MobileNavItem({ href, children }) {
-  return (
-    <a
-      href={href}
-      className='block py-3 text-lg border-b border-neutral-800 text-neutral-300'
-    >
-      {children}
-    </a>
-  )
-}
-
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
@@ -23,7 +12,6 @@ function MobileNavigation(props) {
       </Popover.Button>
 
       <Transition.Root>
-
         <Popover.Overlay className='fixed inset-0 z-50 backdrop-blur-md bg-zinc-900/20' />
 
         <Transition.Child
@@ -40,18 +28,19 @@ function MobileNavigation(props) {
           >
             <div className='flex flex-row-reverse items-center justify-between'>
               <Popover.Button className='p-1'>
-                <span className='w-6 h-6 text-zinc-400' >x</span>
+                <span className='w-6 h-6 text-zinc-400'>x</span>
               </Popover.Button>
             </div>
             <nav className='mt-6'>
               <ul className='-my-6 text-base text-zinc-400 last:pb-4'>
                 {generalLinks.map((link, index) => (
-                  <MobileNavItem
+                  <a
                     key={index}
                     href={link.href}
+                    className='block py-3 text-lg border-b border-neutral-800 text-neutral-300'
                   >
                     {link.label}
-                  </MobileNavItem>
+                  </a>
                 ))}
               </ul>
             </nav>
@@ -63,14 +52,15 @@ function MobileNavigation(props) {
 }
 
 function NavItem({ href, children, onMouseEnter, onMouseLeave }) {
-  const isActive = true
+  const path = window.location.pathname
+  const isActive = path === href
 
   return (
     <a
       href={href}
       className={`${isActive && 'text-amber-400'} text-neutral-300 hover:text-neutral-300 relative block text-base px-3 transition`}
       onMouseEnter={onMouseEnter}
-      onMouseLeaves={onMouseLeave}
+      onMouseLeave={onMouseLeave}
     >
       {children}
       {isActive && (
@@ -106,7 +96,7 @@ function DesktopNavigation(props) {
                   }}
                   exit={{
                     opacity: 0,
-                    transition: { duration: 0.15, delay: 0.3 }
+                    transition: { duration: 0.65, delay: 0.3 }
                   }}
                 />
               )}
@@ -175,6 +165,8 @@ export function Navbar() {
       window.removeEventListener('scroll', updateStyles, { passive: true })
     }
   }, [])
+
+  console.log(window.location.pathname)
 
   return (
     <motion.header
