@@ -7,7 +7,7 @@ function MobileNavItem({ href, children }) {
   return (
     <a
       href={href}
-      className='block py-3 text-lg border-b border-neutral-800'
+      className='block py-3 text-lg border-b border-neutral-800 text-neutral-300'
     >
       {children}
     </a>
@@ -17,14 +17,14 @@ function MobileNavItem({ href, children }) {
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <Popover.Button className='flex gap-3 items-center px-10 py-3 text-base font-medium border rounded-2xl border-white/10 bg-zinc-900/20 text-zinc-400 backdrop-blur'>
+      <Popover.Button className='flex gap-3 items-center px-6 py-3 text-base font-medium border rounded-2xl border-white/10 bg-zinc-900/20 text-zinc-400 backdrop-blur'>
         Menu
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12"><path fill="currentColor" d="M6 8.825c-.2 0-.4-.1-.5-.2l-3.3-3.3c-.3-.3-.3-.8 0-1.1c.3-.3.8-.3 1.1 0l2.7 2.7l2.7-2.7c.3-.3.8-.3 1.1 0c.3.3.3.8 0 1.1l-3.2 3.2c-.2.2-.4.3-.6.3" /></svg>
       </Popover.Button>
 
       <Transition.Root>
 
-        <Popover.Overlay className='fixed inset-0 z-50 backdrop-blur-xl bg-zinc-900/20' />
+        <Popover.Overlay className='fixed inset-0 z-50 backdrop-blur-md bg-zinc-900/20' />
 
         <Transition.Child
           as={Fragment}
@@ -177,7 +177,6 @@ export function Navbar() {
   }, [])
 
   return (
-
     <motion.header
       className='relative z-50 flex flex-col pointer-events-none'
       style={{
