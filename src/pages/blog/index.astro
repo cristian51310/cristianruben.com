@@ -13,13 +13,15 @@ const posts = (await getCollection("blog")).sort(
 	description="Cuando no estoy programando, escribo sobre diseño de interfaces, programación y hobbies."
 	isMain={false}
 >
-	<ul class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-3 md:gap-8">
+	<div
+		class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-3 md:gap-8 m-0 list-none p-0"
+	>
 		{
 			posts.map((post) => (
-				<li class="w-full">
+				<article class="w-full list-none group">
 					<a href={`/blog/${post.slug}/`}>
 						<img
-							class="mb-3 rounded-xl hover:shadow-xl hover:shadow-blue-800/20"
+							class="mb-3 rounded-xl hover:shadow-xl hover:shadow-blue-800/20 transition-all duration-700"
 							width={720}
 							height={360}
 							src={post.data.heroImage}
@@ -28,7 +30,7 @@ const posts = (await getCollection("blog")).sort(
 						/>
 						<h4
 							transition:name={post.data.title}
-							class="m-0 text-xl md:text-2xl text-white"
+							class="m-0 text-xl md:text-2xl text-white group-hover:text-blue-400 transition-all duration-500"
 						>
 							{post.data.title}
 						</h4>
@@ -36,18 +38,8 @@ const posts = (await getCollection("blog")).sort(
 							<FormattedDate date={post.data.pubDate} />
 						</p>
 					</a>
-				</li>
+				</article>
 			))
 		}
-	</ul>
+	</div>
 </MainLayout>
-
-<style>
-	ul li * {
-		transition: 0.2s ease;
-	}
-	ul li a:hover h4,
-	ul li a:hover .date {
-		color: rgb(var(--accent));
-	}
-</style>

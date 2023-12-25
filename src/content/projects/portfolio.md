@@ -3,7 +3,7 @@ title: 'Portafolio'
 description: 'Mi portafolio personal de codigo abierto'
 pubDate: 'Jul 08 2022'
 heroImage: '/images/projects/portfolio/ss.webp'
-webpage: 'https://cristianruben-com.vercel.app/'
+webpage: 'https://cristianfigueroa.vercel.app/'
 github: 'https://github.com/cristian51310/cristianruben.com'
 ---
 

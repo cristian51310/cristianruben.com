@@ -13,15 +13,15 @@ const projects = (await getCollection("projects")).sort(
 	description="Estos son algunos de los proyectos en los que he trabajado y de los que mas orgulloso me siento."
 	isMain={false}
 >
-	<ul
+	<div
 		class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10 gap-3 md:gap-5"
 	>
 		{
 			projects.map((project) => (
-				<li class="w-full bg-gray-700/40 rounded-2xl p-4 flex flex-col justify-between">
+				<article class="w-full bg-gray-700/40 rounded-2xl p-4 flex flex-col justify-between group hover:shadow-2xl transition-all duration-500">
 					<a href={`/projects/${project.slug}/`}>
 						<img
-							class="rounded-xl min-h-40 sm:min-h-48 lg:min-h-40 hover:scale-105 transition-all duration-700 mb-4"
+							class="rounded-xl min-h-40 sm:min-h-48 lg:min-h-40 group-hover:scale-105 transition-all duration-500 mb-4"
 							width={720}
 							height={360}
 							src={project.data.heroImage}
@@ -44,8 +44,8 @@ const projects = (await getCollection("projects")).sort(
 					<div class="w-full flex gap-2 mt-8">
 						<Button href={project.data.webpage} text={project.data.title} />
 					</div>
-				</li>
+				</article>
 			))
 		}
-	</ul>
+	</div>
 </MainLayout>

@@ -1,5 +1,5 @@
 :root {
-	--accent: #3d95d0;
+	--accent: #6ebdf2;
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
@@ -125,10 +125,11 @@ code {
 	background-color: rgb(var(--gray-light));
 	border-radius: 6px;
 	font-size: 0.8em;
+	color: #000d8a;
 }
 
 pre {
-	padding: 2em;
+	padding: 1.2em;
 	border-radius: 8px;
 	font-size: 0.75em;
 }
@@ -149,13 +150,54 @@ hr {
 	border-top: 1px solid rgb(var(--gray-light));
 }
 
+
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+ul,
+ol {
+	padding-left: 1.45rem;
+}
+
+li {
+	margin-top: 0.1rem;
+	margin-bottom: 0.1rem;
+	padding-left: 0.5rem;
+}
+
+li::marker {
+	font-size: 1em;
+	font-weight: 600;
+}
+
+ol>li::marker {
+	color: rgb(11, 194, 11);
+}
+
+ul>li::marker {
+	color: rgb(11, 194, 11);
+}
+
+li :is(ol, ul) {
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
+}
+
+li :is(li, p) {
+	margin-top: 0.125rem;
+	margin-bottom: 0.125rem;
+}
+
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
 	}
-
 	main {
 		padding: 1em;
 	}
 }
-

@@ -1,7 +1,12 @@
 {
   "name": "cristianruben.com",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Cristian Rubén's personal website",
+  "author": {
+    "name": "Cristian Rubén Figueroa Espinoza",
+    "email": "cristian.figueroa.crfe@outlook.com"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

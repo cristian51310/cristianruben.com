@@ -1,51 +1,49 @@
 ---
-title: 'Markdown Style Guide'
-description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
+title: 'Guia de estilo Markdown'
+description: 'Aqui esta una muestra de alguna sintaxis básica del Markdown que puede ser usada al escribir contenido Markdown en Astro.'
 pubDate: 'Jul 01 2022'
 heroImage: '/blog-placeholder-1.webp'
 ---
 
-Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
+Esta es una simple muestra de la sintaxis básica de Markdown que puede ser usada al escribir contenido Markdown 
 
-## Headings
+## Encazados
 
-The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
+La siguiente sintaxis de HTML `<h1>`—`<h6>` representa seis niveles de encabezados de sección. `<h1>` es el nivel de sección más alto mientras que `<h6>` es el más bajo.
 
-## Paragraph
+## Parráfos
 
-Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur
+Este es un párrafo. Es bastante largo. Pero eso está bien porque los saltos de línea se ignoran en los párrafos largos. También puedes usar *cursiva* o **negrita** en el estilo de texto, pero no mucho más.
 
-## Images
+## Imagenes
 
-#### Syntax
+La sintaxis de Markdown para imágenes es similar a la sintaxis para enlaces. Se necesita especificar un texto alternativo para la imagen si no se muestra, y opcionalmente, se puede agregar un título para mostrar cuando el usuario pasa el mouse sobre la imagen.
 
 ```markdown
 ![Alt text](./full/or/relative/path/of/image)
 ```
 
-#### Output
+#### Salida
 
 ![blog placeholder](/blog-placeholder-about.webp)
 
-## Blockquotes
+## Cita de bloque
 
-The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
+El elemento `blockquote` representa contenido que se cita de otra fuente, opcionalmente con una cita que debe estar dentro de un elemento `footer` o `cite`, y opcionalmente con cambios en línea como anotaciones y abreviaturas.
 
-### Blockquote without attribution
+### Cita de bloque simple
 
 #### Syntax
 
 ```markdown
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
 > **Note** that you can use _Markdown syntax_ within a blockquote.
 ```
 
 #### Output
 
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
 > **Note** that you can use _Markdown syntax_ within a blockquote.
 
-### Blockquote with attribution
+### Cita de bloque con autor
 
 #### Syntax
 
@@ -58,8 +56,6 @@ The blockquote element represents content that is quoted from another source, op
 
 > Don't communicate by sharing memory, share memory by communicating.<br>
 > — <cite>Rob Pike[^1]</cite>
-
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
 ## Tables
 
@@ -83,14 +79,12 @@ The blockquote element represents content that is quoted from another source, op
 
 we can use 3 backticks ``` in new line and write snippet and close with 3 backticks on new line and to highlight language specific syntac, write one word of language name after first 3 backticks, for eg. html, javascript, css, markdown, typescript, txt, bash
 
+podemos usar 3 acentos invertidos ``` en una nueva línea y escribir fragmentos y cerrar con 3 acentos invertidos en una nueva línea y para resaltar la sintaxis específica del lenguaje, escriba una palabra del nombre del lenguaje después de los primeros 3 acentos invertidos, por ejemplo. html, javascript, css, markdown, typescript, txt, bash
+
 ````markdown
 ```html
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-  </head>
   <body>
     <p>Test</p>
   </body>
@@ -103,10 +97,6 @@ Output
 ```html
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-  </head>
   <body>
     <p>Test</p>
   </body>
@@ -122,14 +112,12 @@ Output
 ```markdown
 1. First item
 2. Second item
-3. Third item
 ```
 
 #### Output
 
 1. First item
 2. Second item
-3. Third item
 
 ### Unordered List
 
@@ -138,14 +126,12 @@ Output
 ```markdown
 - List item
 - Another item
-- And another item
 ```
 
 #### Output
 
 - List item
 - Another item
-- And another item
 
 ### Nested list
 
@@ -154,8 +140,6 @@ Output
 ```markdown
 - Fruit
   - Apple
-  - Orange
-  - Banana
 - Dairy
   - Milk
   - Cheese
@@ -165,36 +149,6 @@ Output
 
 - Fruit
   - Apple
-  - Orange
-  - Banana
 - Dairy
   - Milk
   - Cheese
-
-## Other Elements — abbr, sub, sup, kbd, mark
-
-#### Syntax
-
-```markdown
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
-```
-
-#### Output
-
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
