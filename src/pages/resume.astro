@@ -7,27 +7,23 @@ const { profile, education, experience, certifications, skills } = resume;
 ---
 
 <MainLayout title="Mi currículum" description="" isMain>
-	<h3 class="text-3xl w-full font-bold mt-0 mb-5">Profile</h3>
+	<h3 class="text-3xl w-full font-bold mt-0 mb-5">Acerca de mi</h3>
+	<p class="mb-10 text-lg text-neutral-300">{profile}</p>
 
-	<p class="mb-10 text-lg text-neutral-400">
-		{profile}
-	</p>
-
-	<h3 class="text-3xl w-full font-bold mb-5">Education</h3>
-
+	<h3 class="text-3xl w-full font-bold mb-5">Educacion</h3>
 	<div class="time-line-container grid gap-4 mb-10">
 		{
-			education.map(({ title }) => (
+			education.map(({ title, start, end, place, city, country }) => (
 				<TimeLine
 					title={title}
-					subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+					subtitle={"${}"}
+					subtitle={`${start} - ${end}, ${place}, ${city}, ${country}`}
 				/>
 			))
 		}
 	</div>
 
-	<h3 class="text-3xl w-full font-bold mb-5">Experience</h3>
-
+	<h3 class="text-3xl w-full font-bold mb-5">Experiencia</h3>
 	<div class="time-line-container mb-10">
 		{
 			experience.map(({ title, description }) => (
@@ -41,8 +37,7 @@ const { profile, education, experience, certifications, skills } = resume;
 		}
 	</div>
 
-	<h3 class="text-3xl w-full font-bold mb-5">Certifications</h3>
-
+	<h3 class="text-3xl w-full font-bold mb-5">Certificaciones</h3>
 	<ul class="list-disc mx-6 mb-10 grid gap-2 text-lg text-neutral-400">
 		{
 			certifications.map(({ title, link }) => (
@@ -55,11 +50,10 @@ const { profile, education, experience, certifications, skills } = resume;
 		}
 	</ul>
 
-	<h3 class="text-3xl w-full font-bold mb-5">Skills</h3>
-
+	<h3 class="text-3xl w-full font-bold mb-5">Habilidades</h3>
 	<ul
 		class="list-disc mx-6 grid md:grid-cols-4 grid-cols-2 text-lg text-neutral-400"
 	>
-		{skills.map((skill) => <li>{skill}</li>)}
+		{skills.map(({ title }) => <li>{title}</li>)}
 	</ul>
 </MainLayout>

@@ -3,7 +3,11 @@ export interface Resume {
   education: Education[];
   experience: Experience[];
   certifications: Certification[];
-  skills: string[];
+  skills: Skill[];
+}
+
+export interface Skill {
+  title: string
 }
 
 export interface Education {
@@ -31,43 +35,43 @@ export interface Certification {
 }
 
 export const resume: Resume = {
-  profile: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+  profile: "Soy un programador Full Stack apasionado por la tecnologia y por el desarrollo de software. Tengo experiencia en la creacion de interfaces de usuario con tecnologias web y moviles usando tecnologias hibridas, creaciones de APIs con NodeJs y manejo de bases de datos relacionales y no relacionales. ",
   education: [
     {
-      title: "title name",
-      start: "start date",
-      end: "end date",
-      place: "study center name",
-      city: "city name",
-      country: "country name",
+      title: "Ingenieria en software",
+      start: "2021",
+      end: "Actualidad",
+      place: "Universidad Politecnica Penjamo",
+      city: "Guanajuato",
+      country: "Mexico",
     },
     {
-      title: "title name",
-      start: "start date",
-      end: "end date",
-      place: "study center name",
-      city: "city name",
-      country: "country name",
+      title: "Tecnico en programacion",
+      start: "2019",
+      end: "2021",
+      place: "CBTIS 171",
+      city: "Guanajuato",
+      country: "Mexico",
     },
   ],
   experience: [
     {
-      title: "Job Title at Project or Company Name",
+      title: "Kuil - Lapices ecologicos",
       start: "start date",
       end: "end date",
-      company: "company name",
-      city: "city name",
-      country: "country name",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+      company: "Freelancer en Kuil",
+      city: "Leon, Guanajuato",
+      country: "Mexico",
+      description: "Desarrolle un sistema de inventario para la empresa kuil, ademas de desarrollar una aplicacion web para la venta de sus productos. "
     },
     {
-      title: "Job Title at Project or Company Namee",
+      title: "Dorichangos",
       start: "start date",
       end: "end date",
-      company: "company name",
-      city: "city name",
-      country: "country name",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+      company: "Freelancer en Dorichangos",
+      city: "Penjamo, Guanajuato",
+      country: "Mexico",
+      description: "Desarrolle una pagina web y un eccomerce para la empresa Dorichangos. la cual permite a los usuarios comprar productos de la empresa. ademas de integrar un dasboard para la administracion de los productos y para la administracion de los pedidos. "
     },
   ],
   certifications: [
@@ -81,13 +85,23 @@ export const resume: Resume = {
     },
   ],
   skills: [
-    "Skill Name",
-    "Skill Name",
-    "Skill Name",
-    "Skill Name",
-    "Skill Name",
-    "Skill Name",
-    "Skill Name",
-    "Skill Name",
+    {
+      title: "JavaScript"
+    },
+    {
+      title: "ReactJS"
+    },
+    {
+      title: "React Native"
+    },
+    {
+      title: "NodeJS"
+    },
+    {
+      title: "TailwindCSS"
+    },
+    {
+      title: "SQL and NoSQL" 
+    }
   ],
 }
