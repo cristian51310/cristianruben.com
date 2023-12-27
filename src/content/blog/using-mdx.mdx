@@ -16,18 +16,15 @@ MDX es una variante especial de Markdown que admite sintaxis JavaScript y JSX in
 Aquí tienes cómo importar y utilizar un componente de interfaz de usuario dentro de MDX. Cuando abras esta página en el navegador, deberías ver el botón clickeable a continuación.
 
 ```jsx
-import Button from '../../components/Button.astro';
+<button onclick="alert('clicked!')">
+  Embedded component in MDX
+</button>
 
-<div class="flex">
-  <Button href="#" onclick="alert('clicked!')" text="Componente incrustado en MDX"/>
-</div>
 ```
 
 <br/>
 
-import Button from '../../components/Button.astro';
-
-<div class="flex">
-	<Button href="#" onclick="alert('clicked!')" text="Embedded component in MDX"/>
-</div>
+<button onclick="alert('clicked!')">
+  Embedded component in MDX
+</button>
 

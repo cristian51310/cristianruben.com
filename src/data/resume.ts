@@ -1,40 +1,4 @@
-export interface Resume {
-  profile: string;
-  education: Education[];
-  experience: Experience[];
-  certifications: Certification[];
-  skills: Skill[];
-}
-
-export interface Skill {
-  title: string
-}
-
-export interface Education {
-  title: string;
-  start: string;
-  end: string;
-  place: string;
-  city: string;
-  country: string;
-}
-
-export interface Experience {
-  title: string;
-  start: string;
-  end: string;
-  company: string;
-  city: string;
-  country: string;
-  description: string;
-}
-
-export interface Certification {
-  title: string;
-  link: string;
-}
-
-export const resume: Resume = {
+export const resume = {
   profile: "Soy un programador Full Stack apasionado por la tecnologia y por el desarrollo de software. Tengo experiencia en la creacion de interfaces de usuario con tecnologias web y moviles usando tecnologias hibridas, creaciones de APIs con NodeJs y manejo de bases de datos relacionales y no relacionales. ",
   education: [
     {
@@ -101,7 +65,7 @@ export const resume: Resume = {
       title: "TailwindCSS"
     },
     {
-      title: "SQL and NoSQL" 
+      title: "SQL and NoSQL"
     }
   ],
 }

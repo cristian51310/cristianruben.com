@@ -21,6 +21,7 @@
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.4",
+    "@fontsource-variable/onest": "^5.0.2",
     "@headlessui/react": "^1.7.17",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",

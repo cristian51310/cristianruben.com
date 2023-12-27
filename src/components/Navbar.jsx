@@ -28,7 +28,7 @@ function MobileNavigation(props) {
           >
             <div className='flex flex-row-reverse items-center justify-between'>
               <Popover.Button className='p-1'>
-                <span className='w-6 h-6 text-zinc-400'>x</span>
+                <span className='size-6 text-zinc-400'>x</span>
               </Popover.Button>
             </div>
             <nav className='mt-6'>
