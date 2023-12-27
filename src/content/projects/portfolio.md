@@ -1,6 +1,6 @@
 ---
 title: 'Portafolio'
-description: 'Mi portafolio personal de codigo abierto'
+description: 'Mi portafolio personal de codigo abierto en el cual muestro mis proyectos y articulos de blog'
 pubDate: 'Jul 08 2022'
 heroImage: '/images/projects/portfolio/ss.webp'
 webpage: 'https://cristianfigueroa.vercel.app/'

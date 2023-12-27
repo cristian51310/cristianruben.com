@@ -1,6 +1,6 @@
 ---
 title: 'Ring!'
-description: 'Un marketplace digital enfocado a restaurantes'
+description: 'Un marketplace digital enfocado a restaurantes, el cual permite comprar comida a domicilio (aun en desarrollo)'
 pubDate: 'Jul 08 2023'
 heroImage: '/images/projects/ring/ss.webp'
 webpage: 'https://ring-eccommerce.vercel.app/'

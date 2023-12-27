@@ -11,19 +11,22 @@ const { title, description, href, image } = Astro.props;
 
 <div class="group relative flex flex-col items-start z-10">
   <div
-    class="w-full p-6 py-3 transition-transform duration-700 bg-gray-700/40 group-hover:scale-105 rounded-2xl"
+    class="flex flex-col md:gap-4 md:flex-row w-full p-6 py-3 transition-transform duration-700 bg-gray-700/40 group-hover:scale-105 rounded-2xl"
   >
-    <img src={image} alt="" class="sm:w-20 w-14">
-    <h2 class="text-lg font-semibold text-white">
-      <a href={href}>
-        <span
-          class="absolute z-20 -inset-y-6 -inset-x-4 sm:-inset-x-6 sm:rounded-2xl"
-        ></span>
-        <span class="relative z-10">{title}</span>
-      </a>
-    </h2>
-    <p class="mt-2 text-sm text-white">
-      {description}
-    </p>
+    <img src={image} alt="" class="sm:size-20 size-14" />
+
+    <div>
+      <h2 class="text-lg font-semibold text-white">
+        <a href={href}>
+          <span
+            class="absolute z-20 -inset-y-6 -inset-x-4 sm:-inset-x-6 sm:rounded-2xl"
+          ></span>
+          <span class="relative z-10">{title}</span>
+        </a>
+      </h2>
+      <p class="mt-2 text-base text-white">
+        {description}
+      </p>
+    </div>
   </div>
 </div>
