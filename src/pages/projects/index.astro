@@ -21,7 +21,7 @@ const projects = (await getCollection("projects")).sort(
 				<article class="w-full bg-gray-700/40 rounded-2xl p-4 flex flex-col justify-between group hover:shadow-2xl transition-all duration-500">
 					<a href={`/projects/${project.slug}/`}>
 						<img
-							class="rounded-xl min-h-40 sm:min-h-48 lg:min-h-40 group-hover:scale-105 transition-all duration-500 mb-4"
+							class="rounded-xl min-h-40 sm:min-h-48 lg:min-h-40 group-hover:scale-105 transition-duration duration-500 mb-4"
 							width={720}
 							height={360}
 							src={project.data.heroImage}

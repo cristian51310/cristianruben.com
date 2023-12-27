@@ -1,5 +1,5 @@
 import { Popover, Transition } from '@headlessui/react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { generalLinks } from '../data/links'
 
@@ -58,13 +58,13 @@ function NavItem({ href, children, onMouseEnter, onMouseLeave }) {
   return (
     <a
       href={href}
-      className={`${isActive && 'text-amber-400'} text-neutral-300 hover:text-neutral-300 relative block text-base px-3 transition`}
+      className={`${isActive ? 'text-amber-400 hover:text-amber-400' : 'text-neutral-300'} relative block text-base px-3 transition`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       {children}
       {isActive && (
-        <span className='absolute h-px inset-x-1 -bottom-px bg-gradient-to-r from-amber-400/0 via-amber-400/40 to-amber-400/0' />
+        <span className='absolute h-px inset-x-1 -bottom-px bg-gradient-to-r from-amber-400/0 via-amber-400/80 to-amber-400/0' />
       )}
     </a>
   )
@@ -84,23 +84,21 @@ function DesktopNavigation(props) {
             onMouseLeave={() => setHoveredIndex(null)}
           >
             {link.label}
-            <AnimatePresence>
-              {hoveredIndex === index && (
-                <motion.span
-                  className='absolute inset-0 transition-colors rounded-md -z-10 bg-zinc-700/50'
-                  layoutId='hoverBackground'
-                  initial={{ opacity: 0 }}
-                  animate={{
-                    opacity: 1,
-                    transition: { duration: 0.65 }
-                  }}
-                  exit={{
-                    opacity: 0,
-                    transition: { duration: 0.65, delay: 0.3 }
-                  }}
-                />
-              )}
-            </AnimatePresence>
+            {hoveredIndex === index && (
+              <motion.span
+                className='absolute inset-0 transition-colors rounded-md -z-10 bg-zinc-500/50'
+                layoutId='hoverBackground'
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { duration: 0.65 }
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: { duration: 0.65, delay: 0.3 }
+                }}
+              />
+            )}
           </NavItem>
         ))}
       </ul>
@@ -165,8 +163,6 @@ export function Navbar() {
       window.removeEventListener('scroll', updateStyles, { passive: true })
     }
   }, [])
-
-  console.log(window.location.pathname)
 
   return (
     <motion.header

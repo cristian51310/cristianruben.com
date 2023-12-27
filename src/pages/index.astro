@@ -31,22 +31,28 @@ import MainLayout from "../layouts/MainLayout.astro";
 	</div>
 
 	<div class="grid grid-cols-2 md:grid-cols-5 gap-0 md:gap-5 mt-10">
-		<div
-			class="rounded-2xl col-span-3 p-4 md:p-5 bg-gray-700/40 backdrop-blur-md"
-		>
-			<h5 class="mt-0 font-semibold mb-3 text-base md:text-lg">Acerca de mi</h5>
+		<div class="flex flex-col col-span-3 gap-5">
+			<Card title="Mi Trayectoria" href="/projects">
+				<p class="text-base md:text-lg text-neutral-400 m-0">
+					He trabajado en diferentes proyectos, desde aplicaciones web hasta
+					aplicaciones moviles.
+				</p>
+			</Card>
 
-			<p class="text-base md:text-lg text-neutral-400">
-				Soy programador fullstack y movil, me encanta lo que hago, soy un
-				apasionado de la tecnologia y el desarrollo de software, me especializo
-				en crear soluciones para negocios en la web y en plataformas moviles.
-			</p>
+			<Card title="Acerca de mi" href="/projects">
+				<p class="text-base md:text-lg text-neutral-400">
+					Soy programador fullstack y movil, me encanta lo que hago, soy un
+					apasionado de la tecnologia y el desarrollo de software, me
+					especializo en crear soluciones para negocios en la web y en
+					plataformas moviles.
+				</p>
 
-			<p class="hidden md:block text-base md:text-lg text-neutral-400">
-				Tengo un gran conocimiento de lo que se necesita para crear grandes
-				interfaces de usuario y diseños que funcionen bien en cualquier
-				dispositivo, desde ordenadores de sobremesa hasta teléfonos móviles.
-			</p>
+				<p class="hidden md:block text-base md:text-lg text-neutral-400">
+					Tengo un gran conocimiento de lo que se necesita para crear grandes
+					interfaces de usuario y diseños que funcionen bien en cualquier
+					dispositivo, desde ordenadores de sobremesa hasta teléfonos móviles.
+				</p>
+			</Card>
 		</div>
 
 		<div class="flex flex-col gap-5 col-span-2 mt-5 md:mt-0">
@@ -57,20 +63,17 @@ import MainLayout from "../layouts/MainLayout.astro";
 				</p>
 			</Card>
 
-			<Card
-				title="Recomendaciones"
-				href="/recommendations"
-			>
+			<Card title="Recomendaciones" href="/recommendations">
 				<p class="text-base md:text-lg text-neutral-400 m-0">
-					Proyectos en los que he trabajado y de los que mas orgulloso me
-					siento.
+					El software, dispositivos y cosas que uso para desarrollar y que
+					recomiendo.
 				</p>
 			</Card>
 
 			<Card title="Mi blog personal" href="/blog">
 				<p class="text-base md:text-lg text-neutral-400 m-0">
-					Proyectos en los que he trabajado y de los que mas orgulloso me
-					siento.
+					Cuando no estoy programando, escribo sobre diseño de interfaces,
+					programación y hobbies.
 				</p>
 			</Card>
 		</div>
