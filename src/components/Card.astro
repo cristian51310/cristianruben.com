@@ -5,26 +5,38 @@ interface Props {
   href?: string;
 }
 
-import { Icon } from "astro-icon";
 const { title, icon, href } = Astro.props;
+
+import { Icon } from "astro-icon";
 ---
 
-<a
-  href={href}
-  class="rounded-2xl group p-5 md:p-7 md:py-5 w-full bg-gray-700/40 backdrop-blur-md"
+<div
+  class="group relative flex flex-col z-10 gap-2 md:gap-4 w-full p-5 md:p-7 md:py-5 bg-gray-700/40 rounded-2xl"
 >
-  <div class="flex justify-between items-center mb-3">
-    <div class="flex justify-center items-center gap-3">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center gap-3">
       <Icon
         name={icon}
         class="size-6 text-amber-100/90 group-hover:text-amber-400 transition-transform"
       />
 
-      <h5
-        class="mt-1 text-base md:text-lg font-semibold text-amber-100/90 group-hover:text-amber-400"
-      >
-        {title}
-      </h5>
+      {
+        href ? (
+          <a href={href}>
+            <span class="absolute z-20 -inset-y-1 -inset-x-1" />
+            <span class="relative z-10 mt-1 text-amber-100/90 group-hover:text-amber-400 font-semibold text-lg">
+              {title}
+            </span>
+          </a>
+        ) : (
+          <span>
+            <span class="absolute z-20 -inset-y-1 -inset-x-1" />
+            <span class="relative z-10 mt-1 text-amber-100/90 group-hover:text-amber-400 font-semibold text-lg">
+              {title}
+            </span>
+          </span>
+        )
+      }
     </div>
 
     {
@@ -38,4 +50,4 @@ const { title, icon, href } = Astro.props;
   </div>
 
   <slot />
-</a>
+</div>
