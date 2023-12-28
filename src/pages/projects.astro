@@ -1,11 +1,7 @@
 ---
-import { getCollection } from "astro:content";
 import Button from "../components/Button.astro";
+import { projects } from "../data/projects";
 import MainLayout from "../layouts/MainLayout.astro";
-
-const projects = (await getCollection("projects")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
-);
 ---
 
 <MainLayout
@@ -23,24 +19,21 @@ const projects = (await getCollection("projects")).sort(
 						class="rounded-xl min-h-40 sm:min-h-48 lg:min-h-40 group-hover:scale-105 transition-duration duration-500 mb-4"
 						width={720}
 						height={360}
-						src={project.data.heroImage}
-						alt={project.data.title}
-						transition:name={project.data.heroImage}
+						src={project.heroImage}
+						alt={project.title}
+						transition:name={project.heroImage}
 					/>
 
-					<h4
-						transition:name={project.data.title}
-						class="m-0 text-lg text-white"
-					>
-						{project.data.title}
+					<h4 transition:name={project.title} class="m-0 text-lg text-white">
+						{project.title}
 					</h4>
 
 					<p class="m-0 mt-3 text-base text-neutral-400 text-pretty">
-						{project.data.description}
+						{project.description}
 					</p>
 
 					<div class="w-full flex gap-2 mt-8">
-						<Button href={project.data.webpage} text={project.data.title} />
+						<Button href={project.webpage} text={project.title} />
 					</div>
 				</article>
 			))
