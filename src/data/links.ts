@@ -1,4 +1,4 @@
-export const generalLinks = [
+export const links = [
   {
     href: '/',
     label: 'Inicio'

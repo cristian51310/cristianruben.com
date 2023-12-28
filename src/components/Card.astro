@@ -1,7 +1,7 @@
 ---
 interface Props {
   title: string;
-  icon?: string;
+  icon: string;
   href?: string;
 }
 
@@ -11,21 +11,17 @@ const { title, icon, href } = Astro.props;
 
 <a
   href={href}
-  class="rounded-2xl group p-4 md:p-7 md:py-5 w-full bg-gray-700/40 backdrop-blur-md"
+  class="rounded-2xl group p-5 md:p-7 md:py-5 w-full bg-gray-700/40 backdrop-blur-md"
 >
   <div class="flex justify-between items-center mb-3">
     <div class="flex justify-center items-center gap-3">
-      {
-        icon && (
-          <Icon
-            name={icon}
-            class="size-6 text-amber-100/90 group-hover:text-amber-400 transition-transform"
-          />
-        )
-      }
-      
+      <Icon
+        name={icon}
+        class="size-6 text-amber-100/90 group-hover:text-amber-400 transition-transform"
+      />
+
       <h5
-        class="mt-1 text-base md:text-lg font-semibold text-start text-amber-100/90 group-hover:text-amber-400"
+        class="mt-1 text-base md:text-lg font-semibold text-amber-100/90 group-hover:text-amber-400"
       >
         {title}
       </h5>
@@ -35,7 +31,7 @@ const { title, icon, href } = Astro.props;
       href && (
         <Icon
           name="mdi:arrow-right"
-          class="size-6 text-amber-100/90 -ml-3 group-hover:translate-x-2 group-hover:text-amber-400 transition-transform"
+          class="size-6 text-amber-100/90 -ml-4 md:-ml-3 group-hover:translate-x-2 group-hover:text-amber-400 transition-transform"
         />
       )
     }

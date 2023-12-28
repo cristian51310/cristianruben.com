@@ -14,17 +14,15 @@ const { title, description, pubDate, heroImage } = Astro.props;
 		<BaseHead title={title} description={description} />
 	</head>
 
-	<body
-		class="min-h-screen h-full bg-top bg-no-repeat bg-lights-sun bg-zinc-950 text-neutral-300"
-	>
-		<main class="w-full max-w-full m-0 text-neutral-300">
+	<body class="bg-top bg-lights-sun bg-zinc-950 text-neutral-300">
+		<main class="w-full max-w-full m-0">
 			<article>
 				<img
 					width={760}
 					height={510}
 					src={heroImage}
 					alt={title}
-					class="rounded-xl shadow-md shadow-blue-700/20 mx-auto"
+					class="rounded-xl mx-auto"
 					transition:name={heroImage}
 				/>
 
@@ -33,7 +31,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
 						<div class="mb-2 text-neutral-500">
 							<FormattedDate date={pubDate} />
 						</div>
-						<h1 transition:name={title} class="mt-3">{title}</h1>
+						<h1 transition:name={title}>{title}</h1>
 					</div>
 
 					<slot />
@@ -43,4 +41,3 @@ const { title, description, pubDate, heroImage } = Astro.props;
 		<Footer />
 	</body>
 </html>
-

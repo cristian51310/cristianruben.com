@@ -2,9 +2,6 @@
 	--accent: #6ebdf2;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
 }
 
 .time-line-container>div:last-child .education__time>.education__line {
@@ -12,13 +9,11 @@
 }
 
 body {
-	margin: 0;
-	padding: 0;
 	text-align: left;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	font-size: 20px;
-	line-height: 1.7;
+	font-size: 18px;
+	line-height: 1.9;
 }
 
 main {
@@ -60,11 +55,6 @@ h5 {
 	font-size: 1em;
 }
 
-strong,
-b {
-	font-weight: 700;
-}
-
 a {
 	color: var(--accent);
 }
@@ -79,15 +69,6 @@ p {
 
 .prose p {
 	margin-bottom: 2em;
-}
-
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-
-input {
-	font-size: 16px;
 }
 
 table {
@@ -124,12 +105,6 @@ blockquote {
 	margin: 0px;
 	font-size: 1em;
 }
-
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
-
 
 ul {
 	list-style-type: disc;
@@ -177,6 +152,7 @@ li :is(li, p) {
 	body {
 		font-size: 18px;
 	}
+
 	main {
 		padding: 1em;
 	}

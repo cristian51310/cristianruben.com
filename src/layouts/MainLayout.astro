@@ -1,32 +1,32 @@
 ---
-interface Props {
-  title: string;
-  description: string;
-  isMain: boolean;
-}
-
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
-import { Navbar } from "../components/Navbar";
+import Navbar from "../components/navbar/Navbar";
 
-import '@fontsource-variable/onest';
+import '@fontsource/onest/400.css';
+import '@fontsource/onest/600.css';
+import '@fontsource/onest/700.css';
 
 const { title, description, isMain } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
   <head>
     <BaseHead title={title} description={description} />
   </head>
   <body
-    class="min-h-screen h-full bg-top bg-no-repeat bg-lights-sun bg-zinc-950 text-neutral-300"
+    class="min-h-screen h-full bg-top bg-lights-sun bg-zinc-950 text-neutral-300"
   >
-    <main class=" w-[1000px] px-2 sm:px-16 md:px-2 sm:mt-0 mt-6">
+    <Navbar client:only="react" />
+
+    <main class="w-[1000px] px-2 sm:px-16 md:px-2 sm:mt-0 mt-6">
       {
         !isMain && (
           <>
-            <h1 class="md:text-[40px] text-[24px] font-bold mt-0 text-amber-200/90 mb-5">{title}</h1>
+            <h1 class="md:text-4xl text-2xl font-bold mt-0 text-amber-200/90 mb-5">
+              {title}
+            </h1>
             <h4 class="mb-6 -mt-2 text-lg text-neutral-400">{description}</h4>
           </>
         )
@@ -39,6 +39,6 @@ const { title, description, isMain } = Astro.props;
 
 <style is:global>
   body {
-    font-family: 'Onest Variable', sans-serif;
+    font-family: "Onest", sans-serif;
   }
 </style>

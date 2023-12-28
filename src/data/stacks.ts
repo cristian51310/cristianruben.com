@@ -1,18 +1,3 @@
-export const stacksType = [
-  {
-    id: '1',
-    name: 'workstation',
-  },
-  {
-    id: '2',
-    name: 'development',
-  },
-  {
-    id: '3',
-    name: 'productivity',
-  }
-]
-
 export const stacks = [
   {
     type: 'workstation',
