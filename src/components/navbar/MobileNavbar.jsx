@@ -3,9 +3,9 @@ import { Fragment } from 'react'
 import { links } from '../../data/links'
 import { NavItem } from './Navbar'
 
-export default function MobileNavigation(props) {
+export default function MobileNavigation({ pathname }) {
   return (
-    <Popover {...props}>
+    <Popover className="md:hidden">
       <Popover.Button className='flex gap-3 items-center px-6 py-3 text-base border rounded-2xl border-white/10 text-zinc-400'>
         Menu
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12"><path fill="currentColor" d="M6 8.825c-.2 0-.4-.1-.5-.2l-3.3-3.3c-.3-.3-.3-.8 0-1.1c.3-.3.8-.3 1.1 0l2.7 2.7l2.7-2.7c.3-.3.8-.3 1.1 0c.3.3.3.8 0 1.1l-3.2 3.2c-.2.2-.4.3-.6.3" /></svg>
@@ -26,7 +26,7 @@ export default function MobileNavigation(props) {
           <Popover.Panel
             className='fixed z-50 p-8 pt-4 inset-x-4 top-6 rounded-2xl bg-zinc-900'
           >
-            <div className='flex flex-row-reverse items-center justify-between'>
+            <div className='flex flex-row-reverse items-center'>
               <Popover.Button className="size-6 text-zinc-300">
                 x
               </Popover.Button>
@@ -37,7 +37,7 @@ export default function MobileNavigation(props) {
                   key={index}
                   href={link.href}
                   label={link.label}
-                  pathname={props.pathname}
+                  pathname={pathname}
                 />
               ))}
             </nav>

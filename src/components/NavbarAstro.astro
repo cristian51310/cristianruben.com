@@ -1,5 +1,15 @@
 ---
-import Navbar from "./navbar/Navbar";
+import DesktopNavigation from "./navbar/DesktopNavbar";
+import MobileNavigation from "./navbar/MobileNavbar";
+
+const { pathname } = Astro.url;
 ---
 
-<Navbar pathname={Astro.url.pathname} client:load />
+<header class="relative z-50 flex flex-col">
+  <div class="top-0 z-10 h-16 pt-6">
+    <div class="flex justify-center">
+      <MobileNavigation client:only="react" pathname={pathname} />
+      <DesktopNavigation client:only="react" pathname={pathname} />
+    </div>
+  </div>
+</header>
