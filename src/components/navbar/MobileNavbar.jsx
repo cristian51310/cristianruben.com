@@ -1,6 +1,7 @@
 import { Popover, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { links } from '../../data/links'
+import { NavItem } from './Navbar'
 
 export default function MobileNavigation(props) {
   return (
@@ -26,38 +27,23 @@ export default function MobileNavigation(props) {
             className='fixed z-50 p-8 pt-4 inset-x-4 top-6 rounded-2xl bg-zinc-900'
           >
             <div className='flex flex-row-reverse items-center justify-between'>
-              <Popover.Button>
-                <span className='size-6 text-zinc-400'>x</span>
+              <Popover.Button className="size-6 text-zinc-300">
+                x
               </Popover.Button>
             </div>
-            <nav className='mt-6'>
-              <ul className='-my-6 text-base text-zinc-400 last:pb-4'>
-                {links.map((link, index) => (
-                  <NavItem
-                    key={index}
-                    href={link.href}
-                    label={link.label}
-                  />
-                ))}
-              </ul>
+            <nav className='-my-6 text-base text-zinc-400 last:pb-4 mt-2'>
+              {links.map((link, index) => (
+                <NavItem
+                  key={index}
+                  href={link.href}
+                  label={link.label}
+                  pathname={props.pathname}
+                />
+              ))}
             </nav>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
     </Popover>
-  )
-}
-
-function NavItem({ href, label }) {
-  const path = window.location.pathname
-  const isActive = path === href
-
-  return (
-    <a
-      href={href}
-      className={`${isActive ? 'text-amber-400' : 'text-neutral-400'} block py-3 text-lg border-b border-neutral-800`}
-    >
-      {label}
-    </a>
   )
 }
