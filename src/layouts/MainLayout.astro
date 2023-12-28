@@ -22,8 +22,6 @@ const { title, description, isMain } = Astro.props;
   <body
     class="min-h-screen h-full bg-top bg-no-repeat bg-lights-sun bg-zinc-950 text-neutral-300"
   >
-    <Navbar client:only="react" />
-
     <main class=" w-[1000px] px-2 sm:px-16 md:px-2 sm:mt-0 mt-6">
       {
         !isMain && (
