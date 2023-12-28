@@ -1,6 +1,5 @@
 import { Popover, Transition } from '@headlessui/react'
-import { motion } from 'framer-motion'
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment, useEffect, useRef } from 'react'
 import { generalLinks } from '../data/links'
 
 function MobileNavigation(props) {
@@ -51,16 +50,14 @@ function MobileNavigation(props) {
   )
 }
 
-function NavItem({ href, children, onMouseEnter, onMouseLeave }) {
+function NavItem({ href, children }) {
   const path = window.location.pathname
   const isActive = path === href
 
   return (
     <a
       href={href}
-      className={`${isActive ? 'text-amber-400 hover:text-amber-400' : 'text-neutral-300'} relative block text-base px-3 transition`}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      className={`${isActive ? 'text-amber-400 hover:text-amber-400' : 'text-neutral-300'} relative block text-base px-3 bg-transparent hover:bg-white/20 rounded-md transition-colors duration-500 `}
     >
       {children}
       {isActive && (
@@ -71,8 +68,6 @@ function NavItem({ href, children, onMouseEnter, onMouseLeave }) {
 }
 
 function DesktopNavigation(props) {
-  const [hoveredIndex, setHoveredIndex] = useState(null)
-
   return (
     <nav {...props}>
       <ul className='flex px-5 py-3 text-xl transition border rounded-2xl border-white/10 bg-zinc-900/20 text-zinc-400 backdrop-blur hover:text-white'>
@@ -80,25 +75,8 @@ function DesktopNavigation(props) {
           <NavItem
             key={index}
             href={link.href}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
           >
             {link.label}
-            {hoveredIndex === index && (
-              <motion.span
-                className='absolute inset-0 transition-colors rounded-md -z-10 bg-zinc-500/50'
-                layoutId='hoverBackground'
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.65 }
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.65, delay: 0.3 }
-                }}
-              />
-            )}
           </NavItem>
         ))}
       </ul>
@@ -165,7 +143,7 @@ export function Navbar() {
   }, [])
 
   return (
-    <motion.header
+    <header
       className='relative z-50 flex flex-col pointer-events-none'
       style={{
         height: 'var(--header-height)',
@@ -182,6 +160,6 @@ export function Navbar() {
           <DesktopNavigation className='hidden pointer-events-auto md:block' />
         </div>
       </div>
-    </motion.header>
+    </header>
   )
 }
