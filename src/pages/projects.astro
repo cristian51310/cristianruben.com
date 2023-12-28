@@ -9,31 +9,53 @@ import MainLayout from "../layouts/MainLayout.astro";
 	description="Estos son algunos de los proyectos en los que he trabajado y de los que mas orgulloso me siento."
 	isMain={false}
 >
-	<div
-		class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10 gap-3 md:gap-5"
-	>
+	<div class="flex flex-col justify-center items-center mt-10 gap-3 md:gap-5">
 		{
 			projects.map((project) => (
-				<article class="w-full bg-gray-700/40 rounded-2xl p-4 flex flex-col justify-between group hover:shadow-2xl transition-transform duration-500">
+				<article class="flex md:flex-row flex-col w-full h-full bg-gray-700/40 rounded-2xl p-4 justify-between group hover:shadow-2xl transition-shadow duration-500">
 					<img
-						class="rounded-xl min-h-40 sm:min-h-48 lg:min-h-40 group-hover:scale-105 duration-300 mb-4"
-						width={720}
-						height={360}
+						class="rounded-xl min-h-40 mb-4 md:m-0"
+						width={420}
 						src={project.heroImage}
 						alt={project.title}
-						transition:name={project.heroImage}
 					/>
 
-					<h4 transition:name={project.title} class="m-0 text-lg text-white">
-						{project.title}
-					</h4>
+					<div class="flex flex-col md:px-4 md:justify-between h-full">
+						<div>
+							<h4 class="m-0 text-lg md:text-xl font-bold text-white">
+								{project.title}
+							</h4>
 
-					<p class="m-0 mt-3 text-base text-neutral-400 text-pretty">
-						{project.description}
-					</p>
+							<p class="m-0 mt-3 text-base text-neutral-400 text-pretty">
+								{project.description}
+							</p>
 
-					<div class="w-full flex gap-2 mt-8">
-						<Button href={project.webpage} text={project.title} />
+							{project.tags && (
+								<div class="flex flex-wrap gap-2 mt-4">
+									{project.tags.map((tag) => (
+										<div class="flex justify-center items-center gap-1.5 bg-gray-700/50 rounded-2xl px-2.5 py-1.5">
+											<tag.icon class="size-5" />
+											<span class="text-sm text-neutral-400">{tag.name}</span>
+										</div>
+									))}
+								</div>
+							)}
+						</div>
+
+						<div class="w-full flex flex-col md:flex-row gap-2 mt-8 md:mt-12">
+							<Button
+								icon="tabler:link"
+								href={project.webpage}
+								text={project.title}
+							/>
+							{project.github && (
+								<Button
+									icon="mdi:github"
+									href={project.github}
+									text="Repositorio"
+								/>
+							)}
+						</div>
 					</div>
 				</article>
 			))

@@ -1,5 +1,4 @@
 export const resume = {
-  profile: "Soy un programador Full Stack apasionado por la tecnologia y por el desarrollo de software. Tengo experiencia en la creacion de interfaces de usuario con tecnologias web y moviles usando tecnologias hibridas, creaciones de APIs con NodeJs y manejo de bases de datos relacionales y no relacionales. ",
   education: [
     {
       title: "Ingenieria en software",

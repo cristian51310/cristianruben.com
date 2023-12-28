@@ -19,12 +19,13 @@ const { title, icon, href } = Astro.props;
         icon && (
           <Icon
             name={icon}
-            class="size-6 text-neutral-200 group-hover:text-amber-400 transition-transform"
+            class="size-6 text-amber-100/90 group-hover:text-amber-400 transition-transform"
           />
         )
       }
+      
       <h5
-        class="mt-1 text-base md:text-lg font-semibold text-start group-hover:text-amber-400"
+        class="mt-1 text-base md:text-lg font-semibold text-start text-amber-100/90 group-hover:text-amber-400"
       >
         {title}
       </h5>
@@ -34,7 +35,7 @@ const { title, icon, href } = Astro.props;
       href && (
         <Icon
           name="mdi:arrow-right"
-          class="size-6 text-neutral-200 -ml-3 group-hover:translate-x-2 group-hover:text-amber-400 transition-transform"
+          class="size-6 text-amber-100/90 -ml-3 group-hover:translate-x-2 group-hover:text-amber-400 transition-transform"
         />
       )
     }

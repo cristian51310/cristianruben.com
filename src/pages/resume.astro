@@ -3,17 +3,14 @@ import TimeLine from "../components/TimeLine.astro";
 import { resume } from "../data/resume";
 import MainLayout from "../layouts/MainLayout.astro";
 
-const { profile, education, experience, certifications, skills } = resume;
+const { education, experience, certifications, skills } = resume;
 ---
 
 <MainLayout
 	title="Mi currículum"
-	description="Aqui puedes ver toda mi experiencia profesional o los prouectos con los que he trabajado"
-	isMain
+	description="Soy un programador Full Stack apasionado por la tecnologia y por el desarrollo de software. Tengo experiencia en la creacion de interfaces de usuario con tecnologias web y moviles usando tecnologias hibridas, creaciones de APIs con NodeJs y manejo de bases de datos relacionales y no relacionales."
+	isMain={false}
 >
-	<h3 class="text-3xl w-full font-bold mt-0 mb-5">Acerca de mi</h3>
-	<p class="mb-10 text-lg text-neutral-300">{profile}</p>
-
 	<h3 class="text-3xl w-full font-bold mb-5">Educacion</h3>
 	<div class="time-line-container grid gap-4 mb-10">
 		{
