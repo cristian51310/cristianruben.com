@@ -31,48 +31,77 @@ const t = useTranslate(Astro.currentLocale);
 
   <div class="grid grid-cols-2 md:grid-cols-5 gap-0 md:gap-5 mt-10">
     <div class="flex flex-col col-span-3 gap-5">
-      <Card
-        title={t("RESUME_TITLE")}
-        href="/projects"
-        icon="mdi:calendar-outline"
-      >
-        <p class="text-base md:text-lg text-neutral-300 m-0">
-          {t("RESUME_CARD_DESCRIPTION")}
-        </p>
-      </Card>
+      <section>
+        <Card
+          title={t("RESUME_TITLE")}
+          href="/projects"
+          icon="mdi:calendar-outline"
+        >
+          <p class="text-base md:text-lg text-neutral-300 m-0">
+            {t("RESUME_CARD_DESCRIPTION")}
+          </p>
+        </Card>
+      </section>
 
-      <Card title={t("ABOUT_ME")} icon="ion:person-outline">
-        <p class="text-base md:text-lg text-neutral-300">
-          {t("ABOUT_ME_DESCRIPTION")}
-        </p>
-        <p class="hidden md:block text-base md:text-lg text-neutral-300">
-          {t("ABOUT_ME_DESCRIPTION_2")}
-        </p>
-      </Card>
+      <section>
+        <Card title={t("ABOUT_ME")} icon="ion:person-outline">
+          <p class="text-base md:text-lg text-neutral-300">
+            {t("ABOUT_ME_DESCRIPTION")}
+          </p>
+          <p class="hidden md:block text-base md:text-lg text-neutral-300">
+            {t("ABOUT_ME_DESCRIPTION_2")}
+          </p>
+        </Card>
+      </section>
     </div>
 
     <div class="flex flex-col gap-5 col-span-2 mt-5 md:mt-0">
-      <Card title={t("MY_PROJECTS")} href="/#projects" icon="ep:suitcase">
-        <p class="text-base md:text-lg text-neutral-300 m-0 text-pretty">
-          {t("MY_PROJECTS_CARD_DESCRIPTION")}
-        </p>
-      </Card>
+      <section>
+        <Card title={t("MY_PROJECTS")} href="/#projects" icon="ep:suitcase">
+          <p class="text-base md:text-lg text-neutral-300 m-0 text-pretty">
+            {t("MY_PROJECTS_CARD_DESCRIPTION")}
+          </p>
+        </Card>
+      </section>
 
-      <Card
-        title={t("RECOMMENDATIONS_TITLE")}
-        href="/recommendations"
-        icon="mdi:stars"
-      >
-        <p class="text-base md:text-lg text-neutral-300 m-0 text-pretty">
-          {t("RECOMMENDATIONS_CARD_DESCRIPTION")}
-        </p>
-      </Card>
+      <section>
+        <Card
+          title={t("RECOMMENDATIONS_TITLE")}
+          href="/recommendations"
+          icon="mdi:stars"
+        >
+          <p class="text-base md:text-lg text-neutral-300 m-0 text-pretty">
+            {t("RECOMMENDATIONS_CARD_DESCRIPTION")}
+          </p>
+        </Card>
+      </section>
 
-      <Card title={t("BLOG_TITLE")} href="/blog" icon="carbon:blog">
-        <p class="text-base md:text-lg text-neutral-300 m-0 text-pretty">
-          {t("BLOG_DESCRIPTION")}
-        </p>
-      </Card>
+      <section>
+        <Card title={t("BLOG_TITLE")} href="/blog" icon="carbon:blog">
+          <p class="text-base md:text-lg text-neutral-300 m-0 text-pretty">
+            {t("BLOG_DESCRIPTION")}
+          </p>
+        </Card>
+      </section>
     </div>
   </div>
 </MainLayout>
+
+<style>
+  section {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 13%;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      translate: 0 70px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+</style>
