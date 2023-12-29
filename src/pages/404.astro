@@ -1,25 +1,31 @@
 ---
 import Button from "../components/Button.astro";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
 import MainLayout from "../layouts/MainLayout.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatedPath = useTranslatedPath(lang);
 ---
 
-<MainLayout
-  title="Pagina no encontrada"
-  description="Pagina no encontrada"
-  isMain
->
+<MainLayout title={t("TITLE_404")} description={t("DESCRIPTION_404")} isMain>
   <div class="flex flex-col justify-center items-center -mt-20">
     <h1 class="font-bold text-9xl">404</h1>
 
-    <h3 class="mb-16 -mt-8">Pagina no encontrada</h3>
+    <h3 class="mb-16 -mt-8">
+      {t("TITLE_404")}
+    </h3>
 
     <p class="max-w-lg text-center text-neutral-400">
-      La pagina que estas buscando pudo haber sido removida, cambiado su nombre
-      o esta temporalmente no disponible
+      {t("DESCRIPTION_404")}
     </p>
 
     <div class="flex max-w-lg mt-8">
-      <Button href="/" text="Back To Home" icon="mdi:home" />
+      <Button href={translatedPath("/")} text="Back To Home" icon="mdi:home" />
     </div>
   </div>
 </MainLayout>

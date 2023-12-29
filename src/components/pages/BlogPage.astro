@@ -1,0 +1,54 @@
+---
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../../i18n/utils";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const posts = (await getCollection("blog"))
+  .filter((post) => post.data.lang === lang)
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+---
+
+<MainLayout
+  title={t("BLOG_TITLE")}
+  description={t("BLOG_DESCRIPTION")}
+  isMain={false}
+>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-3 md:gap-8 m-0 list-none p-0"
+  >
+    {
+      posts.map((post) => (
+        <article class="w-full list-none group">
+          <a href={translatePath(`/blog/${post.slug}/`)}>
+            <img
+              class="mb-3 rounded-xl hover:shadow-xl hover:shadow-blue-800/20 transition-transform duration-700"
+              width={720}
+              height={360}
+              src={post.data.heroImage}
+              alt={post.data.title}
+              transition:name={post.data.heroImage}
+            />
+            <h4
+              transition:name={post.data.title}
+              class="m-0 text-xl md:text-2xl text-white group-hover:text-blue-400 transition-colors duration-500"
+            >
+              {post.data.title}
+            </h4>
+            <p class="text-neutral-500 mb-0">
+              <FormattedDate date={post.data.pubDate} />
+            </p>
+          </a>
+        </article>
+      ))
+    }
+  </div>
+</MainLayout>

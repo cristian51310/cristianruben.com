@@ -25,7 +25,10 @@ export const resume = {
       company: "Freelancer en Kuil",
       city: "Leon, Guanajuato",
       country: "Mexico",
-      description: "Desarrolle un sistema de inventario para la empresa kuil, ademas de desarrollar una aplicacion web para la venta de sus productos. "
+      description: {
+        es: "Desarrolle un sistema de inventario para la empresa kuil, ademas de desarrollar una aplicacion web para la venta de sus productos.",
+        en: "I developed an inventory system for the kuil company, in addition to developing a web application for the sale of its products."
+      }
     },
     {
       title: "Dorichangos",
@@ -34,7 +37,10 @@ export const resume = {
       company: "Freelancer en Dorichangos",
       city: "Penjamo, Guanajuato",
       country: "Mexico",
-      description: "Desarrolle una pagina web y un eccomerce para la empresa Dorichangos. la cual permite a los usuarios comprar productos de la empresa. ademas de integrar un dasboard para la administracion de los productos y para la administracion de los pedidos. "
+      description: {
+        es: "Desarrolle una pagina web y un eccomerce para la empresa Dorichangos. la cual permite a los usuarios comprar productos de la empresa. ademas de integrar un dasboard para la administracion de los productos y para la administracion de los pedidos. ",
+        en: "I developed a website and an eccomerce for the Dorichangos company. which allows users to buy company products. in addition to integrating a dasboard for the administration of products and for the administration of orders."
+      }
     },
   ],
   certifications: [

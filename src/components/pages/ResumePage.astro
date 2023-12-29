@@ -1,0 +1,64 @@
+---
+import TimeLine from "../../components/TimeLine.astro";
+import { resume } from "../../data/resume";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const { education, experience, certifications, skills } = resume;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<MainLayout
+  title={t("RESUME_TITLE")}
+  description={t("RESUME_DESCRIPTION")}
+  isMain={false}
+>
+  <h3 class="text-3xl w-full font-bold mb-5">{t("EDUCATION_TEXT")}</h3>
+  <div class="time-line-container grid gap-4 mb-10">
+    {
+      education.map(({ title, start, end, place, city, country }) => (
+        <TimeLine
+          title={title}
+          subtitle={"${}"}
+          subtitle={`${start} - ${end}, ${place}, ${city}, ${country}`}
+        />
+      ))
+    }
+  </div>
+
+  <h3 class="text-3xl w-full font-bold mb-5">{t("EXPERIENCE_TEXT")}</h3>
+  <div class="time-line-container mb-10">
+    {
+      experience.map(({ title, description }) => (
+        <TimeLine
+          title={title}
+          subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+        >
+          {description[lang]}
+        </TimeLine>
+      ))
+    }
+  </div>
+
+  <h3 class="text-3xl w-full font-bold mb-5">{t("CERTIFICATIONS_TEXT")}</h3>
+  <ul class="list-disc mx-6 mb-10 grid gap-2 text-lg text-neutral-400">
+    {
+      certifications.map(({ title, link }) => (
+        <li>
+          <a href={link} target="_blank">
+            {title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <h3 class="text-3xl w-full font-bold mb-5">{t("SKILLS_TEXT")}</h3>
+  <ul
+    class="list-disc mx-6 grid md:grid-cols-4 grid-cols-1 text-lg text-neutral-400"
+  >
+    {skills.map(({ title }) => <li>{title}</li>)}
+  </ul>
+</MainLayout>

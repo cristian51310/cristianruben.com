@@ -1,37 +1,38 @@
 ---
-title: 'Guia de estilo Markdown'
-description: 'Aqui esta una muestra de alguna sintaxis básica del Markdown que puede ser usada al escribir contenido Markdown en Astro.'
+title: 'Markdown Style Guide'
+description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: 'Jul 01 2022'
 heroImage: '/blog-placeholder-1.webp'
+lang: 'en'
 ---
 
-Esta es una simple muestra de la sintaxis básica de Markdown que puede ser usada al escribir contenido Markdown 
+This is a simple sample of basic markdown syntax that can be used when writing markdown content
 
-## Encazados
+## Headings
 
-La siguiente sintaxis de HTML `<h1>`—`<h6>` representa seis niveles de encabezados de sección. `<h1>` es el nivel de sección más alto mientras que `<h6>` es el más bajo.
+The following HTML syntax `<h1>`—`<h6>` represents six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
-## Parráfos
+## Paragraphs
 
-Este es un párrafo. Es bastante largo. Pero eso está bien porque los saltos de línea se ignoran en los párrafos largos. También puedes usar *cursiva* o **negrita** en el estilo de texto, pero no mucho más.
+This is a paragraph. It's quite long. But that's fine because line breaks are ignored in long paragraphs. You can also use *italics* or **bold** text style, but not much more.
 
 ## Imagenes
 
-La sintaxis de Markdown para imágenes es similar a la sintaxis para enlaces. Se necesita especificar un texto alternativo para la imagen si no se muestra, y opcionalmente, se puede agregar un título para mostrar cuando el usuario pasa el mouse sobre la imagen.
+Markdown syntax for images is similar to the syntax for links. You need to specify an alternative text for the image if it doesn't display, and optionally, you can add a title to show when the user hovers the mouse over the image.
 
 ```markdown
 ![Alt text](./full/or/relative/path/of/image)
 ```
 
-#### Salida
+#### Output
 
 ![blog placeholder](/blog-placeholder-about.webp)
 
-## Cita de bloque
+## Blockquote
 
-El elemento `blockquote` representa contenido que se cita de otra fuente, opcionalmente con una cita que debe estar dentro de un elemento `footer` o `cite`, y opcionalmente con cambios en línea como anotaciones y abreviaturas.
+The `blockquote` element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
 
-### Cita de bloque simple
+### Simple blockquote
 
 #### Syntax
 
@@ -43,7 +44,7 @@ El elemento `blockquote` representa contenido que se cita de otra fuente, opcion
 
 > **Note** that you can use _Markdown syntax_ within a blockquote.
 
-### Cita de bloque con autor
+### Blockquote with author
 
 #### Syntax
 
@@ -79,7 +80,6 @@ El elemento `blockquote` representa contenido que se cita de otra fuente, opcion
 
 we can use 3 backticks ``` in new line and write snippet and close with 3 backticks on new line and to highlight language specific syntac, write one word of language name after first 3 backticks, for eg. html, javascript, css, markdown, typescript, txt, bash
 
-podemos usar 3 acentos invertidos ``` en una nueva línea y escribir fragmentos y cerrar con 3 acentos invertidos en una nueva línea y para resaltar la sintaxis específica del lenguaje, escriba una palabra del nombre del lenguaje después de los primeros 3 acentos invertidos, por ejemplo. html, javascript, css, markdown, typescript, txt, bash
 
 ````markdown
 ```html

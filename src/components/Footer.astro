@@ -1,16 +1,23 @@
 ---
 import SocialIcons from "./SocialIcons.astro";
+import LanguagePicker from "./LanguagePicker.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
 const year = new Date().getFullYear();
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer
 	class="flex flex-col-reverse md:flex-row gap-4 justify-between items-center py-10 text-center bg-transparent border-t border-neutral-700 md:mx-16 mx-6 mt-4 md:mt-0"
 >
 	<span class="text-sm md:text-base">
-		&copy; {year} Cristian Ruben Figueroa. Todos los derechos reservados.
+		&copy; {year} Cristian Ruben Figueroa. {t("ALL_RIGHTS_RESERVED")}.
 	</span>
 
-	<div class="flex justify-center">
+	<div class="flex items-center justify-center gap-5">
 		<SocialIcons />
+		<LanguagePicker />
 	</div>
 </footer>

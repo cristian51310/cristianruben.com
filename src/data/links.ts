@@ -1,22 +1,22 @@
 export const links = [
   {
     href: '/',
-    label: 'Inicio'
+    label: 'nav.home'
   },
   {
-    href: '/projects',
-    label: 'Proyectos'
+    href: '/#projects',
+    label: 'nav.projects'
   },
   {
     href: '/resume',
-    label: 'Curriculum'
+    label: 'nav.resume'
   },
   {
     href: '/blog',
-    label: 'Blog'
+    label: 'nav.blog'
   },
   {
     href: '/recommendations',
-    label: 'Recomendaciones'
+    label: 'nav.recommendations'
   }
 ]

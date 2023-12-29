@@ -1,9 +1,25 @@
-import { Popover, Transition } from '@headlessui/react'
-import { Fragment } from 'react'
-import { links } from '../../data/links'
-import { NavItem } from './Navbar'
+import { Popover, Transition } from '@headlessui/react';
+import { Fragment } from 'react';
+import { links } from '../../data/links';
+import { getLangFromUrl, useTranslatedPath, useTranslations } from '../../i18n/utils';
 
-export default function MobileNavigation({ pathname }) {
+function NavItem({ href, label }) {
+  const lang = getLangFromUrl(window.location);
+  const t = useTranslations(lang);
+  const translatePath = useTranslatedPath(lang);
+
+  return (
+    <a
+      href={translatePath(href)}
+      className={`text-neutral-400 relative block px-3 py-6 text-lg`}
+    >
+      {t(label)}
+      <span className='absolute h-px inset-x-1 -bottom-px bg-gradient-to-r from-amber-400/0 via-amber-400/80 to-amber-400/0' />
+    </a>
+  )
+}
+
+export default function MobileNavigation() {
   return (
     <Popover className="md:hidden">
       <Popover.Button className='flex gap-3 items-center px-6 py-3 text-base border rounded-2xl border-white/10 text-zinc-400'>
@@ -27,7 +43,7 @@ export default function MobileNavigation({ pathname }) {
             className='fixed z-50 p-8 pt-4 inset-x-4 top-6 rounded-2xl bg-zinc-900'
           >
             <div className='flex flex-row-reverse items-center'>
-              <Popover.Button className="size-6 text-zinc-300">
+              <Popover.Button className="size-6 text-zinc-400">
                 x
               </Popover.Button>
             </div>
@@ -37,7 +53,6 @@ export default function MobileNavigation({ pathname }) {
                   key={index}
                   href={link.href}
                   label={link.label}
-                  pathname={pathname}
                 />
               ))}
             </nav>
