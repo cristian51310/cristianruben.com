@@ -1,15 +1,17 @@
 ---
-import { languages } from "../i18n/ui";
+import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
 
-const currentPath = Astro.url.pathname.slice(3);
+const currentPath = Astro.url.pathname.slice(0);
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <div class="flex gap-4">
-  {
-    Object.entries(languages).map(([lang, label]) => (
-      <span class="bg-gray-800 px-3 py-1 rounded-md">
-        <a href={`/${lang}${currentPath}`}>{label}</a>
-      </span>
-    ))
-  }
+  <span class="bg-gray-800 px-3 py-1 rounded-md">
+    <a href={`/en/`}>English</a>
+  </span>
+  <span class="bg-gray-800 px-3 py-1 rounded-md">
+    <a href={`/`}>Español</a>
+  </span>
 </div>
