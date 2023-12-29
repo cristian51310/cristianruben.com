@@ -1,15 +1,10 @@
 ---
 import Button from "../components/Button.astro";
-import {
-  getLangFromUrl,
-  useTranslatedPath,
-  useTranslations,
-} from "../i18n/utils";
+import { useTranslate, useTranslateLink } from "../i18n/utils";
 import MainLayout from "../layouts/MainLayout.astro";
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const translatedPath = useTranslatedPath(lang);
+const t = useTranslate(Astro.currentLocale);
+const translatedLink = useTranslateLink(Astro.currentLocale);
 ---
 
 <MainLayout title={t("TITLE_404")} description={t("DESCRIPTION_404")} isMain>
@@ -25,7 +20,7 @@ const translatedPath = useTranslatedPath(lang);
     </p>
 
     <div class="flex max-w-lg mt-8">
-      <Button href={translatedPath("/")} text="Back To Home" icon="mdi:home" />
+      <Button href={translatedLink("/")} text="Back To Home" icon="mdi:home" />
     </div>
   </div>
 </MainLayout>

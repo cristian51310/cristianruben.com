@@ -4,7 +4,7 @@ export const links = [
     label: 'nav.home'
   },
   {
-    href: '/#projects',
+    href: '/projects',
     label: 'nav.projects'
   },
   {

@@ -1,13 +1,13 @@
 ---
 import TimeLine from "../../components/TimeLine.astro";
 import { resume } from "../../data/resume";
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { useTranslate } from "../../i18n/utils";
 import MainLayout from "../../layouts/MainLayout.astro";
 
 const { education, experience, certifications, skills } = resume;
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = Astro.currentLocale as "en" | "es";
+const t = useTranslate(lang);
 ---
 
 <MainLayout

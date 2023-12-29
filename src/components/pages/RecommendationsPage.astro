@@ -1,6 +1,6 @@
 ---
 import { stacks } from "../../data/stacks";
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { useTranslate } from "../../i18n/utils";
 import MainLayout from "../../layouts/MainLayout.astro";
 import ToolCard from "../ToolCard.astro";
 import ToolsSection from "../ToolsSection.astro";
@@ -13,8 +13,8 @@ const development = filterStacks(stacks, "development");
 const workstation = filterStacks(stacks, "workstation");
 const productivity = filterStacks(stacks, "productivity");
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = Astro.currentLocale as string;
+const t = useTranslate(lang);
 ---
 
 <MainLayout

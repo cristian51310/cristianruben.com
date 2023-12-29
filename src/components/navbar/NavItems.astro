@@ -1,22 +1,19 @@
 ---
-import {
-  getLangFromUrl,
-  useTranslatedPath,
-  useTranslations,
-} from "../../i18n/utils";
+import { useTranslate, useTranslateLink } from "../../i18n/utils";
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
+const t = useTranslate(Astro.currentLocale);
+const translateLink = useTranslateLink(Astro.currentLocale);
 
 const { href, label } = Astro.props;
 const { pathname } = Astro.url;
 
-const isActive = pathname === translatePath(href) || pathname.replace(/\/$/, '') === translatePath(href);
+const isActive =
+  pathname === translateLink(href) ||
+  pathname.replace(/\/$/, "") === translateLink(href);
 ---
 
 <a
-  href={translatePath(href)}
+  href={translateLink(href)}
   class:list={[
     "relative text-neutral-400 block px-3 py-0 text-base hover:bg-white/10 rounded-md transition-colors duration-500",
     { active: isActive },

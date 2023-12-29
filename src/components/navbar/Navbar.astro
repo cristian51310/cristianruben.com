@@ -1,12 +1,14 @@
 ---
 import MobileNavigation from "../navbar/MobileNavbar";
 import DesktopNavbar from "./DesktopNavbar.astro";
+
+const lang = Astro.currentLocale
 ---
 
 <header class="relative z-50 flex flex-col">
   <div class="top-0 z-10 h-16 pt-6">
     <div class="flex justify-center">
-      <MobileNavigation client:only="react" />
+      <MobileNavigation lang={lang} client:only="react" />
       <DesktopNavbar />
     </div>
   </div>

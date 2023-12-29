@@ -1,22 +1,19 @@
 ---
 import { projects } from "../../data/projects";
 import { useTranslate } from "../../i18n/utils";
+import MainLayout from "../../layouts/MainLayout.astro";
 import Button from "../Button.astro";
 
 const lang = Astro.currentLocale === "es" ? "es" : "en";
 const t = useTranslate(lang);
 ---
 
-<div class="pt-10 md:pt-16" id="projects">
-  <h1 class="md:text-4xl text-2xl font-bold mt-0 text-amber-200/90 mb-5">
-    {t("MY_PROJECTS")}
-  </h1>
-
-  <h2 class="mb-6 -mt-2 text-lg text-neutral-400">
-    {t("MY_PROJECTS_DESCRIPTION")}
-  </h2>
-
-  <div class="flex flex-col justify-center items-center mt-10 gap-3 md:gap-5">
+<MainLayout
+  title={t("MY_PROJECTS")}
+  description={t("MY_PROJECTS_DESCRIPTION")}
+  isMain={false}
+>
+  <div class="flex flex-col justify-center items-center gap-3 md:gap-5">
     {
       projects.map(
         ({ heroImage, title, description, webpage, github, tags }) => (
@@ -65,4 +62,4 @@ const t = useTranslate(lang);
       )
     }
   </div>
-</div>
+</MainLayout>

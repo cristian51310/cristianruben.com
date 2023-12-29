@@ -1,16 +1,15 @@
 import { Popover, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { links } from '../../data/links';
-import { getLangFromUrl, useTranslatedPath, useTranslations } from '../../i18n/utils';
+import { useTranslate, useTranslateLink } from '../../i18n/utils';
 
-function NavItem({ href, label }) {
-  const lang = getLangFromUrl(window.location);
-  const t = useTranslations(lang);
-  const translatePath = useTranslatedPath(lang);
+function NavItem({ href, label, lang }) {
+  const t = useTranslate(lang);
+  const translateLink = useTranslateLink(lang);
 
   return (
     <a
-      href={translatePath(href)}
+      href={translateLink(href)}
       className={`text-neutral-400 relative block px-3 py-6 text-lg`}
     >
       {t(label)}
@@ -19,7 +18,7 @@ function NavItem({ href, label }) {
   )
 }
 
-export default function MobileNavigation() {
+export default function MobileNavigation({ lang }) {
   return (
     <Popover className="md:hidden">
       <Popover.Button className='flex gap-3 items-center px-6 py-3 text-base border rounded-2xl border-white/10 text-zinc-400'>
@@ -53,6 +52,7 @@ export default function MobileNavigation() {
                   key={index}
                   href={link.href}
                   label={link.label}
+                  lang={lang}
                 />
               ))}
             </nav>
