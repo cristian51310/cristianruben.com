@@ -26,24 +26,25 @@ const { title, description, isMain } = Astro.props;
   >
     <Navbar />
 
-    <main class="w-[1000px] px-2 sm:px-16 md:px-2 sm:mt-0 mt-6">
+    <main class="w-[1000px] px-2 mt-0">
       {
         !isMain && (
           <>
-            <h1 class="md:text-4xl text-2xl font-bold mt-0 text-amber-200/90 mb-5">
+            <h1 class="md:text-4xl text-2xl font-bold mt-0 text-amber-200/90">
               {title}
             </h1>
-            <h2 class="mb-6 -mt-2 text-lg text-neutral-400">{description}</h2>
+            <h2 class="mb-6 text-lg text-neutral-400">{description}</h2>
           </>
         )
       }
       <slot />
     </main>
     <Footer />
-    <style is:global>
-      body {
-        font-family: "Onest", sans-serif;
-      }
-    </style>
   </body>
 </html>
+
+<style is:global>
+  body {
+    font-family: "Onest", sans-serif;
+  }
+</style>
