@@ -12,7 +12,7 @@ const translatePath = useTranslatedPath(lang);
 const { href, label } = Astro.props;
 const { pathname } = Astro.url;
 
-const isActive = pathname === translatePath(href);
+const isActive = pathname === translatePath(href) || pathname.replace(/\/$/, '') === translatePath(href);
 ---
 
 <a
