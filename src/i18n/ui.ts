@@ -41,6 +41,7 @@ export const ui = {
     EXPERIENCE_TEXT: "Experience",
     CERTIFICATIONS_TEXT: "Certifications",
     SKILLS_TEXT: "Skills",
+    BACK_TO_HOME_TEXT: "Back to home",
   },
   es: {
     'nav.home': 'Inicio',
@@ -55,7 +56,7 @@ export const ui = {
     "RECOMMENDATIONS_TITLE": "Mis Recomendaciones",
     "RECOMMENDATIONS_DESCRIPTION": "El software que uso, las cosas que uso para desarrollar, mantenerme productivo y pensar que estoy siendo productivo cuando en realidad solo estoy procrastinando",
     "RECOMMENDATIONS_CARD_DESCRIPTION": "El software, dispositivos y cosas que uso para desarrollar y que recomiendo.",
-    "RESUME_TITLE": "Mi Currículum",
+    "RESUME_TITLE": "Mi Trayectoria",
     "RESUME_DESCRIPTION": "Programador Full Stack apasionado por la tecnologia y por el desarrollo de software. Tengo experiencia en la creacion de interfaces de usuario con tecnologias web y moviles usando tecnologias hibridas, creaciones de APIs con NodeJs y manejo de bases de datos relacionales y no relacionales.",
     "RESUME_CARD_DESCRIPTION": "He trabajado en diferentes proyectos, desde aplicaciones web hasta aplicaciones moviles.",
     "TITLE_404": "Pagina no encontrada",
@@ -77,5 +78,6 @@ export const ui = {
     EXPERIENCE_TEXT: "Experiencia",
     CERTIFICATIONS_TEXT: "Certificaciones",
     SKILLS_TEXT: "Habilidades",
+    BACK_TO_HOME_TEXT: "Volver al inicio",
   },
 } as const;

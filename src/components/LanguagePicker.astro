@@ -1,18 +1,26 @@
 ---
 import { Icon } from "astro-icon";
+
+const lang = Astro.currentLocale;
 ---
 
 <div class="flex gap-4">
   <a
     href="/en/"
-    class="bg-gray-800 md:hover:bg-gray-700 px-3 py-1 rounded-md flex items-center gap-2"
+    class:list={[
+      "md:hover:bg-gray-700 px-3 text-neutral-300 py-1 rounded-md flex items-center gap-2",
+      lang === "en" ? "bg-green-900" : "bg-gray-800",
+    ]}
   >
     English
     <Icon name="emojione:flag-for-united-states" class="w-4 h-4" />
   </a>
   <a
     href="/"
-    class="bg-gray-800 md:hover:bg-gray-700 px-3 py-1 rounded-md flex items-center gap-2"
+    class:list={[
+      "md:hover:bg-gray-700 px-3 text-neutral-300 py-1 rounded-md flex items-center gap-2",
+      lang === "es" ? "bg-green-900" : "bg-gray-800",
+    ]}
   >
     Español
     <Icon name="emojione:flag-for-mexico" class="w-4 h-4" />

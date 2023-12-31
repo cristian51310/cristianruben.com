@@ -3,15 +3,13 @@ import { Icon } from "astro-icon";
 import { socialLinks } from "../data/socialLinks";
 ---
 
-<div class={Astro.props.class}>
-  <div class="flex gap-4">
-    {
-      socialLinks.map((link) => (
-        <a href={link.url} target="_blank" class="text-gray-400">
-          <Icon name={link.icon} class="w-7" />
-          <span class="sr-only">{link.label}</span>
-        </a>
-      ))
-    }
-  </div>
+<div class:list={["flex gap-4", Astro.props.class]}>
+  {
+    socialLinks.map((link) => (
+      <a href={link.url} target="_blank" class="text-gray-400">
+        <Icon name={link.icon} class="w-7" />
+        <span class="sr-only">{link.label}</span>
+      </a>
+    ))
+  }
 </div>

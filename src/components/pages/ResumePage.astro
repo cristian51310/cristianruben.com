@@ -4,7 +4,7 @@ import { resume } from "../../data/resume";
 import { useTranslate } from "../../i18n/utils";
 import MainLayout from "../../layouts/MainLayout.astro";
 
-const { education, experience, certifications, skills } = resume;
+const { education, experience, skills } = resume;
 
 const lang = Astro.currentLocale as "en" | "es";
 const t = useTranslate(lang);
@@ -15,50 +15,50 @@ const t = useTranslate(lang);
   description={t("RESUME_DESCRIPTION")}
   isMain={false}
 >
-  <h3 class="text-3xl w-full font-bold mb-5">{t("EDUCATION_TEXT")}</h3>
-  <div class="time-line-container grid gap-4 mb-10">
-    {
-      education.map(({ title, start, end, place, city, country }) => (
-        <TimeLine
-          title={title}
-          subtitle={"${}"}
-          subtitle={`${start} - ${end}, ${place}, ${city}, ${country}`}
-        />
-      ))
-    }
-  </div>
+  <section class="grid grid-cols-1 gap-y-4 md:grid-cols-5 mt-16">
+    <h2 class="text-3xl font-semibold mt-0">{t("EXPERIENCE_TEXT")}</h2>
+    <div class="md:col-span-4 space-y-6">
+      <div class="time-line-container grid gap-4 mb-10">
+        {
+          experience.map(({ title, start, description, company }) => (
+            <TimeLine title={`${start}, ${title}`} subtitle={company[lang]}>
+              {description[lang]}
+            </TimeLine>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 
-  <h3 class="text-3xl w-full font-bold mb-5">{t("EXPERIENCE_TEXT")}</h3>
-  <div class="time-line-container mb-10">
-    {
-      experience.map(({ title, description }) => (
-        <TimeLine
-          title={title}
-          subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-        >
-          {description[lang]}
-        </TimeLine>
-      ))
-    }
-  </div>
+  <section class="grid grid-cols-1 gap-y-4 md:grid-cols-5">
+    <h2 class="text-3xl font-semibold mt-0">{t("EDUCATION_TEXT")}</h2>
+    <div class="md:col-span-4">
+      <div class="time-line-container grid gap-4 mb-10">
+        {
+          education.map(({ title, start, end, place, country }) => (
+            <TimeLine
+              title={title}
+              subtitle={"${}"}
+              subtitle={`${start} - ${end}, ${place}, ${country}`}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
 
-  <h3 class="text-3xl w-full font-bold mb-5">{t("CERTIFICATIONS_TEXT")}</h3>
-  <ul class="list-disc mx-6 mb-10 grid gap-2 text-lg text-neutral-400">
-    {
-      certifications.map(({ title, link }) => (
-        <li>
-          <a href={link} target="_blank">
-            {title}
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-
-  <h3 class="text-3xl w-full font-bold mb-5">{t("SKILLS_TEXT")}</h3>
-  <ul
-    class="list-disc mx-6 grid md:grid-cols-4 grid-cols-1 text-lg text-neutral-400"
-  >
-    {skills.map(({ title }) => <li>{title}</li>)}
-  </ul>
+  <section class="grid grid-cols-1 gap-y-4 md:grid-cols-5">
+    <h2 class="text-3xl font-semibold mt-0">{t("SKILLS_TEXT")}</h2>
+    <div class="md:col-span-4">
+      <div class="grid md:grid-cols-4 grid-cols-2 text-lg gap-4 ml-10">
+        {
+          skills.map(({ title }) => (
+            <div class="p-4 bg-zinc-600/10 border border-neutral-400/10 rounded-xl">
+              {title}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 </MainLayout>

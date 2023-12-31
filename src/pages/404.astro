@@ -8,19 +8,19 @@ const translatedLink = useTranslateLink(Astro.currentLocale);
 ---
 
 <MainLayout title={t("TITLE_404")} description={t("DESCRIPTION_404")} isMain>
-  <div class="flex flex-col justify-center items-center -mt-20">
-    <h1 class="font-bold text-9xl">404</h1>
+  <div class="flex flex-col justify-center items-center -mt-24 min-h-screen">
+    <h1 class="font-bold text-9xl text-amber-200 mt-0">404</h1>
 
     <h3 class="mb-16 -mt-8">
       {t("TITLE_404")}
     </h3>
 
-    <p class="max-w-lg text-center text-neutral-400">
+    <p class="max-w-lg text-center">
       {t("DESCRIPTION_404")}
     </p>
 
     <div class="flex max-w-lg mt-8">
-      <Button href={translatedLink("/")} text="Back To Home" icon="mdi:home" />
+      <Button href={translatedLink("/")} text={t("BACK_TO_HOME_TEXT")} icon="mdi:home" />
     </div>
   </div>
 </MainLayout>
