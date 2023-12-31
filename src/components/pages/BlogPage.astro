@@ -3,12 +3,15 @@ import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import { useTranslate } from "../../i18n/utils";
 import MainLayout from "../../layouts/MainLayout.astro";
+import { ViewTransitions } from "astro:transitions"
 
 const t = useTranslate(Astro.currentLocale);
 
 const posts = (await getCollection("blog"))
   .filter((post) => post.data.lang === Astro.currentLocale)
   .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+
+
 ---
 
 <MainLayout
@@ -45,4 +48,5 @@ const posts = (await getCollection("blog"))
       ))
     }
   </div>
+  <ViewTransitions />
 </MainLayout>
