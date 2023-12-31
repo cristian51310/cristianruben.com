@@ -15,8 +15,8 @@ const isActive =
 <a
   href={translateLink(href)}
   class:list={[
-    "relative text-neutral-400 block px-3 py-0 text-base hover:bg-white/10 rounded-md transition-colors duration-500",
-    { active: isActive },
+    "relative block px-3 py-3 md:py-0 text-lg md:text-base md:hover:bg-white/10 rounded-md transition-colors duration-500",
+    isActive ? "text-amber-400" : "text-neutral-400",
   ]}
 >
   {t(label)}
@@ -26,9 +26,3 @@ const isActive =
     )
   }
 </a>
-
-<style>
-  a.active {
-    color: rgb(251 191 36);
-  }
-</style>
