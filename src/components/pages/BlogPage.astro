@@ -10,8 +10,6 @@ const t = useTranslate(Astro.currentLocale);
 const posts = (await getCollection("blog"))
   .filter((post) => post.data.lang === Astro.currentLocale)
   .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
-
-
 ---
 
 <MainLayout
@@ -34,12 +32,12 @@ const posts = (await getCollection("blog"))
               alt={post.data.title}
               transition:name={post.data.heroImage}
             />
-            <h4
+            <h2
               transition:name={post.data.title}
               class="m-0 text-xl md:text-2xl text-white md:group-hover:text-blue-400 transition-colors duration-500"
             >
               {post.data.title}
-            </h4>
+            </h2>
             <p class="text-neutral-500 mb-0">
               <FormattedDate date={post.data.pubDate} />
             </p>
