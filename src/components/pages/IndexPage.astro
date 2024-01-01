@@ -29,60 +29,96 @@ const t = useTranslate(Astro.currentLocale);
     </div>
   </div>
 
-  <div class="grid grid-cols-2 md:grid-cols-5 gap-0 md:gap-5 mt-10">
-    <div class="flex flex-col col-span-3 gap-5">
-      <section>
-        <Card
-          title={t("RESUME_TITLE")}
-          href="/resume"
-          icon="mdi:calendar-outline"
-        >
-          <p class="text-base md:text-lg m-0">
-            {t("RESUME_CARD_DESCRIPTION")}
-          </p>
-        </Card>
-      </section>
+  <div id="bento-grid" class="grid gap-5">
+    <section id="resume">
+      <Card
+        title={t("RESUME_TITLE")}
+        href="/resume"
+        icon="mdi:calendar-outline"
+      >
+        <p class="text-base md:text-lg m-0">
+          {t("RESUME_CARD_DESCRIPTION")}
+        </p>
+      </Card>
+    </section>
 
-      <section>
-        <Card title={t("ABOUT_ME")} icon="ion:person-outline">
-          <p class="text-base md:text-lg">
-            {t("ABOUT_ME_DESCRIPTION")}
-          </p>
-          <p class="hidden md:block text-base md:text-lg">
-            {t("ABOUT_ME_DESCRIPTION_2")}
-          </p>
-        </Card>
-      </section>
-    </div>
+    <section id="about">
+      <Card title={t("ABOUT_ME")} icon="ion:person-outline">
+        <p class="text-base md:text-lg">
+          {t("ABOUT_ME_DESCRIPTION")}
+        </p>
+        <p class="hidden md:block text-base md:text-lg">
+          {t("ABOUT_ME_DESCRIPTION_2")}
+        </p>
+      </Card>
+    </section>
 
-    <div class="flex flex-col gap-5 col-span-2 mt-5 md:mt-0">
-      <section>
-        <Card title={t("MY_PROJECTS")} href="/#projects" icon="ep:suitcase">
-          <p class="text-base md:text-lg m-0">
-            {t("MY_PROJECTS_CARD_DESCRIPTION")}
-          </p>
-        </Card>
-      </section>
+    <section id="projects">
+      <Card title={t("MY_PROJECTS")} href="/#projects" icon="ep:suitcase">
+        <p class="text-base md:text-lg m-0">
+          {t("MY_PROJECTS_CARD_DESCRIPTION")}
+        </p>
+      </Card>
+    </section>
 
-      <section>
-        <Card
-          title={t("RECOMMENDATIONS_TITLE")}
-          href="/recommendations"
-          icon="mdi:stars"
-        >
-          <p class="text-base md:text-lg m-0">
-            {t("RECOMMENDATIONS_CARD_DESCRIPTION")}
-          </p>
-        </Card>
-      </section>
+    <section id="recom">
+      <Card
+        title={t("RECOMMENDATIONS_TITLE")}
+        href="/recommendations"
+        icon="mdi:stars"
+      >
+        <p class="text-base md:text-lg m-0">
+          {t("RECOMMENDATIONS_CARD_DESCRIPTION")}
+        </p>
+      </Card>
+    </section>
 
-      <section>
-        <Card title={t("BLOG_TITLE")} href="/blog" icon="carbon:blog">
-          <p class="text-base md:text-lg m-0">
-            {t("BLOG_DESCRIPTION")}
-          </p>
-        </Card>
-      </section>
-    </div>
+    <section id="blog" class="">
+      <Card title={t("BLOG_TITLE")} href="/blog" icon="carbon:blog">
+        <p class="text-base md:text-lg m-0">
+          {t("BLOG_DESCRIPTION")}
+        </p>
+      </Card>
+    </section>
   </div>
 </MainLayout>
+
+<style>
+  #projects {
+    grid-area: projects;
+  }
+
+  #resume {
+    grid-area: resume;
+  }
+
+  #about {
+    grid-area: about;
+  }
+
+  #recom {
+    grid-area: recom;
+  }
+
+  #blog {
+    grid-area: blog;
+  }
+
+  #bento-grid {
+    grid-template-areas:
+      "resume"
+      "about"
+      "projects"
+      "recom"
+      "blog";
+  }
+
+  @media (min-width: 768px) {
+    #bento-grid {
+      grid-template-areas:
+        "resume resume resume projects projects"
+        "about about about recom recom"
+        "about about about blog blog";
+    }
+  }
+</style>

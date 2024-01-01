@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon";
+
 interface Props {
   title: string;
   icon: string;
@@ -6,12 +8,10 @@ interface Props {
 }
 
 const { title, icon, href } = Astro.props;
-
-import { Icon } from "astro-icon";
 ---
 
 <div
-  class="group relative text-neutral-300 flex flex-col z-10 gap-2 md:gap-4 w-full p-5 md:p-7 md:py-5 bg-gray-700/40 rounded-2xl"
+  class="group relative h-full flex flex-col z-10 gap-2 md:gap-4 w-full p-5 md:p-6 bg-gray-700/40 rounded-2xl"
 >
   <div class="flex items-center justify-between">
     <div class="flex items-center gap-3">
@@ -31,7 +31,7 @@ import { Icon } from "astro-icon";
         ) : (
           <span>
             <span class="absolute z-20 -inset-y-1 -inset-x-1" />
-            <span class="relative z-10 mt-1 text-amber-100/90 md:group-hover:text-amber-400 font-semibold text-lg">
+            <span class="relative z-10 text-amber-100/90 md:group-hover:text-amber-400 font-semibold text-lg">
               {title}
             </span>
           </span>
@@ -43,7 +43,7 @@ import { Icon } from "astro-icon";
       href && (
         <Icon
           name="mdi:arrow-right"
-          class="size-6 text-amber-100/90 -ml-4 md:-ml-3 md:group-hover:translate-x-2 md:group-hover:text-amber-400 transition-transform"
+          class="size-6 text-amber-100/90 -ml-4 md:group-hover:translate-x-2 md:group-hover:text-amber-400 transition-transform"
         />
       )
     }
