@@ -17,27 +17,47 @@ export const resume = {
   ],
   experience: [
     {
-      title: "Kuil - Lapices ecologicos",
+      title: "Kuil - Lápices Ecológicos",
       start: "2022",
       company: {
-        es: "Freelancer en Kuil",
+        es: "Trabajador Independiente en Kuil",
         en: "Freelancer in Kuil"
       },
       description: {
-        es: "Desarrolle un sistema de inventario para la empresa kuil, ademas de desarrollar una aplicacion web para la venta de sus productos.",
-        en: "I developed an inventory system for the kuil company, in addition to developing a web application for the sale of its products."
+        es: "Dirigí el desarrollo y la implementación de un eficiente sistema de inventario para Kuil, optimizando significativamente la gestión de productos. Asimismo, diseñé y construí una aplicación web integral que impulsó las ventas y mejoró la experiencia del usuario en la compra de productos.",
+        en: "I led the development and implementation of an efficient inventory system for Kuil, significantly optimizing product management. Additionally, I designed and built a comprehensive web application that boosted sales and enhanced the user experience in purchasing products."
+      },
+      achievements: {
+        es: [
+          "Optimización significativa en la gestión de inventario.",
+          "Incremento notable en las ventas a través de la aplicación web desarrollada."
+        ],
+        en: [
+          "Significant optimization in inventory management.",
+          "Notable increase in sales through the developed web application."
+        ]
       }
     },
     {
       title: "Dorichangos",
       start: "2023",
       company: {
-        es: "Freelancer en Dorichangos",
+        es: "Trabajador Independiente en Dorichangos",
         en: "Freelancer in Dorichangos"
       },
       description: {
-        es: "Desarrolle una pagina web y un eccomerce para la empresa Dorichangos. la cual permite a los usuarios comprar productos de la empresa. ademas de integrar un dasboard para la administracion de los productos y para la administracion de los pedidos. ",
-        en: "I developed a website and an eccomerce for the Dorichangos company. which allows users to buy company products. in addition to integrating a dasboard for the administration of products and for the administration of orders."
+        es: "Desarrollé un sitio web y una plataforma de comercio electrónico para Dorichangos, permitiendo a los usuarios comprar productos de manera sencilla. Implementé un dashboard integral para la administración eficiente de productos y pedidos, mejorando la eficacia operativa de la empresa.",
+        en: "I developed a website and an e-commerce platform for Dorichangos, enabling users to easily purchase products. Implemented a comprehensive dashboard for efficient product and order management, enhancing the operational effectiveness of the company."
+      },
+      achievements: {
+        es: [
+          "Simplificación del proceso de compra para usuarios.",
+          "Mejora significativa en la eficiencia operativa mediante el dashboard implementado."
+        ],
+        en: [
+          "Streamlining the purchasing process for users.",
+          "Significant improvement in operational efficiency through the implemented dashboard."
+        ]
       }
     },
   ],
