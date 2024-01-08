@@ -1,4 +1,4 @@
-document.addEventListener("astro:after-swap", () => {
+document.addEventListener("astro:page-load", () => {
   const toggleMenu = document.querySelector("[data-toggle-nav]")
   const navbar = document.querySelector("[data-navbar]");
   const overlayNav = document.querySelector("[data-nav-overlay]");
