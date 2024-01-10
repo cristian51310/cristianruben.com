@@ -2,7 +2,7 @@
 title: 'Markdown Style Guide'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: 'Jul 01 2022'
-heroImage: '/blog-placeholder-1.webp'
+heroImage: '/blog-placeholder-1.jpg'
 lang: 'en'
 ---
 
@@ -26,7 +26,7 @@ Markdown syntax for images is similar to the syntax for links. You need to speci
 
 #### Output
 
-![blog placeholder](/blog-placeholder-about.webp)
+![blog placeholder](/blog-placeholder-about.jpg)
 
 ## Blockquote
 

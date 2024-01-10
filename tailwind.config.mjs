@@ -1,12 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {
-			backgroundImage: {
-				'lights-sun': "url('/images/gradient.svg')"
-			}
-		},
-	},
+	content: ['./src/**/*.{astro,js,jsx,md,mdx,ts,tsx}'],
+	theme: {},
 	plugins: [],
 }

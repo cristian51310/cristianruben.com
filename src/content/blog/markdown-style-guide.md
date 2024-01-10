@@ -2,7 +2,7 @@
 title: 'Guia de estilo Markdown'
 description: 'Aqui esta una muestra de alguna sintaxis básica del Markdown que puede ser usada al escribir contenido Markdown en Astro.'
 pubDate: 'Jul 01 2022'
-heroImage: '/blog-placeholder-1.webp'
+heroImage: '/blog-placeholder-1.jpg'
 lang: 'es'
 ---
 
@@ -26,7 +26,7 @@ La sintaxis de Markdown para imágenes es similar a la sintaxis para enlaces. Se
 
 #### Salida
 
-![blog placeholder](/blog-placeholder-about.webp)
+![blog placeholder](/blog-placeholder-about.jpg)
 
 ## Cita de bloque
 

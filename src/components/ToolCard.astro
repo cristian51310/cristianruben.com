@@ -9,9 +9,9 @@ interface Props {
 const { title, description, href, image } = Astro.props;
 ---
 
-<div id="tool-card" class="group flex flex-col">
+<div id="tool-card" class="group flex flex-col backdrop-blur-[2px]">
   <div
-    class="flex flex-col md:gap-4 md:flex-row border border-transparent p-6 py-3 bg-gray-700/40 md:group-hover:border-blue-400/30 rounded-2xl"
+    class="flex flex-col md:gap-4 md:flex-row border border-transparent p-6 py-3 bg-gray-500/10 md:group-hover:border-blue-400/30 rounded-2xl"
   >
     <img src={image} alt={title} class="sm:size-20 size-14" />
 

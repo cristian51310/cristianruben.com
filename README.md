@@ -1,6 +1,6 @@
 # PORTFOLIO Created with Astro
 
-![Portfolio](./public/images/projects/portfolio.png)
+![Portfolio](./public/images/projects/portfolio.webp)
 
 ```sh
 npm create astro@latest

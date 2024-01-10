@@ -14,6 +14,30 @@ export const projects = [
     tags: [TAGS.REACT, TAGS.NEXTJS, TAGS.JS]
   },
   {
+    title: 'Dorichangos',
+    description: {
+      es: 'Sistema de reservaciones y comercio electrónico. Permite a los clientes reservar mesas y hacer pedidos en línea, brindando una buena experiencia.',
+      en: 'Reservation and e-commerce system. Allows customers to book tables and place orders online, providing a good experience.'
+    },
+    pubDate: 'Dec 08 2023',
+    heroImage: '/images/projects/dorichangos.webp',
+    webpage: 'https://dorichangos.vercel.app',
+    github: null,
+    tags: [TAGS.REACT, TAGS.NEXTJS, TAGS.TS, TAGS.VERCEL]
+  },
+  {
+    title: 'TeamPilot',
+    description: {
+      es: 'Aplicación de gestión de proyectos basada en la metodología Kanban, soporte cooperativo para trabajar en equipo y asignar responsabilidades.',
+      en: 'Project management application based on the Kanban methodology, cooperative support for teamwork and assigning responsibilities.'
+    },
+    pubDate: 'Jan 08 2024',
+    heroImage: '/images/projects/team-pilot.webp',
+    webpage: 'https://team-pilot.vercel.app',
+    github: null,
+    tags: [TAGS.REACT, TAGS.NEXTJS, TAGS.TS, TAGS.VERCEL]
+  },
+  {
     title: 'Ring!',
     description: {
       es: "Un marketplace digital enfocado a restaurantes, que permite comprar comida a domicilio (aún en desarrollo)",
