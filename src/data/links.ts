@@ -12,10 +12,6 @@ export const links = [
     label: 'nav.resume'
   },
   {
-    href: '/blog',
-    label: 'nav.blog'
-  },
-  {
     href: '/recommendations',
     label: 'nav.recommendations'
   }

@@ -53,14 +53,6 @@ const t = useTranslate(Astro.currentLocale);
       </Card>
     </section>
 
-    <section id="projects">
-      <Card title={t("MY_PROJECTS")} href="/projects" icon="ep:suitcase">
-        <p class="text-base md:text-lg m-0">
-          {t("MY_PROJECTS_CARD_DESCRIPTION")}
-        </p>
-      </Card>
-    </section>
-
     <section id="recom">
       <Card
         title={t("RECOMMENDATIONS_TITLE")}
@@ -72,22 +64,24 @@ const t = useTranslate(Astro.currentLocale);
         </p>
       </Card>
     </section>
-
-    <section id="blog" class="">
-      <Card title={t("BLOG_TITLE")} href="/blog" icon="carbon:blog">
-        <p class="text-base md:text-lg m-0">
-          {t("BLOG_DESCRIPTION")}
-        </p>
-      </Card>
-    </section>
   </div>
+
+  <h1 class="md:text-3xl text-2xl font-bold mt-14 text-amber-200/90">
+    {t("MY_PROJECTS")}
+  </h1>
+  <h2 class="mb-6 text-lg text-neutral-300">
+    {t("MY_PROJECTS_CARD_DESCRIPTION")}
+  </h2>
+
+  <h1 class="md:text-3xl text-2xl font-bold mt-14 text-amber-200/90">
+    Tecnologias
+  </h1>
+  <h2 class="mb-6 text-lg text-neutral-300">
+    Mis tecnologias favoritas, que uso en mis proyectos y que son parte de mi
+  </h2>
 </MainLayout>
 
 <style>
-  #projects {
-    grid-area: projects;
-  }
-
   #resume {
     grid-area: resume;
   }
@@ -100,25 +94,15 @@ const t = useTranslate(Astro.currentLocale);
     grid-area: recom;
   }
 
-  #blog {
-    grid-area: blog;
-  }
-
   #bento-grid {
-    grid-template-areas:
-      "resume"
-      "about"
-      "projects"
-      "recom"
-      "blog";
+    grid-template-areas: "resume" "about" "recom";
   }
 
   @media (min-width: 768px) {
     #bento-grid {
       grid-template-areas:
-        "resume resume resume projects projects"
         "about about about recom recom"
-        "about about about blog blog";
+        "about about about resume resume";
     }
   }
 </style>

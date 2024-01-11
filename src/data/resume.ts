@@ -63,25 +63,16 @@ export const resume = {
   ],
   skills: [
     {
-      title: "JavaScript"
+      title: "Desarollo Web"
     },
     {
-      title: "ReactJS"
+      title: "Desarrollo Movil"
     },
     {
-      title: "React Native"
+      title: "Gestion de BD"
     },
     {
-      title: "NodeJS"
+      title: "Ingles A2"
     },
-    {
-      title: "TailwindCSS"
-    },
-    {
-      title: "SQL"
-    },
-    {
-      title: "NoSQL"
-    }
   ],
 }

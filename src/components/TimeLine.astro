@@ -19,7 +19,7 @@ const { title, subtitle } = Astro.props;
   >
     <p class="font-semibold text-green-100 mt-1 mb-1">{title}</p>
     <span class="md:text-base text-sm text-blue-200">{subtitle}</span>
-    <p class="my-2">
+    <p class="my-2 md:text-base text-sm leading-relaxed text-pretty">
       <slot />
     </p>
   </div>
