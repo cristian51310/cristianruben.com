@@ -1,108 +1,87 @@
 ---
+import { projects } from "../../data/projects";
+import { TAGS } from "../../data/tags";
 import { useTranslate } from "../../i18n/utils";
 import MainLayout from "../../layouts/MainLayout.astro";
 import Card from "../Card.astro";
+import ProjectCard from "../ProjectCard.astro";
 import SocialIcons from "../SocialIcons.astro";
+import StackCard from "../StackCard.astro";
 import StatusWork from "../StatusWork.astro";
+
+const stack = [
+  TAGS.REACT,
+  TAGS.ASTRO,
+  TAGS.NEXTJS,
+  TAGS.JS,
+  TAGS.TS,
+  TAGS.PRISMA,
+  TAGS.NODEJS,
+  TAGS.GIT,
+  TAGS.GITHUB,
+  TAGS.TAILWIND,
+];
 
 const t = useTranslate(Astro.currentLocale);
 ---
 
 <MainLayout title={t("MAIN_TITLE")} description={t("MAIN_DESCRIPTION")} isMain>
   <div
-    class="flex md:flex-row flex-col items-start md:items-center gap-8 my-6 mb-10 md:mb-20"
+    class="flex md:flex-row flex-col items-start md:items-center gap-8 mb-10 md:mb-12"
   >
     <img
       src="/images/portrait.webp"
       alt="Cristian Ruben Figueroa Espinoza"
-      class="md:size-48 size-40"
+      class="md:size-52 size-40"
     />
     <div>
       <h1 class="text-[24px] md:text-4xl font-bold mb-4 mt-0 text-amber-200/90">
         Cristian Ruben Figueroa
       </h1>
-      <h2 class="text-base md:text-lg my-1 mb-4">
+      <h2 class="text-base md:text-lg my-1">
         {t("MAIN_DESCRIPTION")}
+      </h2>
+      <h2 class="text-base md:text-lg mb-4">
+        {t("MAIN_DESCRIPTION_2")}
       </h2>
       <StatusWork />
       <SocialIcons class="mt-5" />
     </div>
   </div>
 
-  <div id="bento-grid" class="grid gap-5">
-    <section id="resume">
-      <Card
-        title={t("RESUME_TITLE")}
-        href="/resume"
-        icon="mdi:calendar-outline"
-      >
-        <p class="text-base md:text-lg m-0">
-          {t("RESUME_CARD_DESCRIPTION")}
-        </p>
-      </Card>
-    </section>
-
-    <section id="about">
-      <Card title={t("ABOUT_ME")} icon="ion:person-outline">
-        <p class="text-base md:text-lg">
-          {t("ABOUT_ME_DESCRIPTION")}
-        </p>
-        <p class="hidden md:block text-base md:text-lg">
-          {t("ABOUT_ME_DESCRIPTION_2")}
-        </p>
-      </Card>
-    </section>
-
-    <section id="recom">
-      <Card
-        title={t("RECOMMENDATIONS_TITLE")}
-        href="/recommendations"
-        icon="mdi:stars"
-      >
-        <p class="text-base md:text-lg m-0">
-          {t("RECOMMENDATIONS_CARD_DESCRIPTION")}
-        </p>
-      </Card>
-    </section>
-  </div>
-
-  <h1 class="md:text-3xl text-2xl font-bold mt-14 text-amber-200/90">
+  <h1 class="text-2xl font-bold mt-10 text-amber-200/90">
     {t("MY_PROJECTS")}
   </h1>
-  <h2 class="mb-6 text-lg text-neutral-300">
+  <h2 class="mb-6 mt-3 text-lg text-neutral-300">
     {t("MY_PROJECTS_CARD_DESCRIPTION")}
   </h2>
 
-  <h1 class="md:text-3xl text-2xl font-bold mt-14 text-amber-200/90">
-    Tecnologias
-  </h1>
-  <h2 class="mb-6 text-lg text-neutral-300">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    {
+      projects
+        .slice(0, 3)
+        .map((project) => <ProjectCard project={project} compact />)
+    }
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+    <Card title={t("RESUME_TITLE")} href="/resume" icon="mdi:calendar-outline">
+      <p class="text-base md:text-lg">Conoce un poco mas sobre mi aqui</p>
+    </Card>
+
+    <Card title={"Todos Mis Proyectos"} href="/projects" icon="mdi:stars">
+      <p class="text-base md:text-lg">
+        Echa un vistazo a los proyectos que he realizado
+      </p>
+    </Card>
+  </div>
+
+  <h1 class="text-2xl font-bold mt-14 text-amber-200/90">Tecnologias</h1>
+  <h2 class="mb-6 text-lg mt-3 text-neutral-300">
     Mis tecnologias favoritas, que uso en mis proyectos y que son parte de mi
   </h2>
+
+  <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+    {stack.map((tag) => <StackCard name={tag.name} icon={tag.icon} />)}
+  </div>
 </MainLayout>
-
-<style>
-  #resume {
-    grid-area: resume;
-  }
-
-  #about {
-    grid-area: about;
-  }
-
-  #recom {
-    grid-area: recom;
-  }
-
-  #bento-grid {
-    grid-template-areas: "resume" "about" "recom";
-  }
-
-  @media (min-width: 768px) {
-    #bento-grid {
-      grid-template-areas:
-        "about about about recom recom"
-        "about about about resume resume";
-    }
-  }
-</style>

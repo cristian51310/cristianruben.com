@@ -7,13 +7,13 @@ export const socialLinks = [
   },
   {
     name: "Linkedin",
-    url: "https://www.linkedin.com/in/cristian-ruben-figueroa-espinoza-613245262/",
+    url: "https://www.linkedin.com/in/cristianruben",
     icon: "mdi:linkedin",
     label: "Go to my linkedin"
   },
   {
     name: "Whatsapp",
-    url: "https://wa.me/+524621493816",
+    url: "https://wa.me/+525646256576",
     icon: "mdi:whatsapp",
     label: "Go to my whatsapp"
   },

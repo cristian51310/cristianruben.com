@@ -1,0 +1,55 @@
+---
+import { useTranslate } from "../i18n/utils";
+import Button from "./Button.astro";
+
+interface Props {
+  project: any;
+  compact?: boolean;
+}
+
+const lang = Astro.currentLocale === "es" ? "es" : "en";
+const t = useTranslate(lang);
+
+const { project, compact = false } = Astro.props;
+---
+
+<article
+  class="flex group flex-col h-full bg-gray-500/10 backdrop-blur-[2px] rounded-2xl p-4 justify-between gap-6"
+>
+  <div class="grid gap-4">
+    <div class="overflow-hidden rounded-xl">
+      <img
+        src={project.heroImage}
+        alt={project.title}
+        class="group-hover:scale-[1.1] transition-transform duration-300 ease-in-out"
+      />
+    </div>
+    {
+      !compact && (
+        <>
+          <h2 class="text-lg md:text-xl font-bold text-white">
+            {project.title}
+          </h2>
+          <p class="text-base">{project.description[lang]}</p>
+          <div class="flex flex-wrap gap-2">
+            {project.tags.map((tag: any) => (
+              <div class="flex items-center gap-1 bg-neutral-700/50 rounded-full px-2 py-1">
+                <tag.icon class="size-4" />
+                <span class="text-sm">{tag.name}</span>
+              </div>
+            ))}
+          </div>
+        </>
+      )
+    }
+  </div>
+
+  <div class="w-full flex flex-col gap-2">
+    <Button icon="tabler:link" href={project.webpage} text={project.title} />
+    {
+      project.github && (
+        <Button icon="mdi:github" href={project.github} text={t("REPO_TEXT")} />
+      )
+    }
+  </div>
+</article>
