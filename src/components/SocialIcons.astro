@@ -3,10 +3,10 @@ import { Icon } from "astro-icon";
 import { socialLinks } from "../data/socialLinks";
 ---
 
-<div class:list={["flex gap-4", Astro.props.class]}>
+<div class="flex gap-4 mt-5">
   {
     socialLinks.map((link) => (
-      <a href={link.url} target="_blank" class="text-gray-400">
+      <a href={link.url} target="_blank" class="text-gray-400 border p-2 rounded-lg border-neutral-700 bg-neutral-500/10">
         <Icon name={link.icon} class="w-7" />
         <span class="sr-only">{link.label}</span>
       </a>
