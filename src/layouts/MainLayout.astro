@@ -22,15 +22,15 @@ const { title, description, isMain } = Astro.props;
   <head>
     <BaseHead title={title} description={description} />
   </head>
-  <body class="text-neutral-300">
+  <body class="text-neutral-300 bg-neutral-950">
     <Background />
     <Navbar />
 
-    <main class="w-[1000px] mx-auto max-w-full pt-14 pb-6 md:pb-14 px-4">
+    <main class="w-[1000px] mx-auto max-w-full md:pt-14 pb-6 md:pb-14 px-4">
       {
         !isMain && (
           <>
-            <h1 class="md:text-4xl text-2xl font-bold mb-4 text-amber-200/90">
+            <h1 class="md:text-4xl text-2xl font-bold mb-8 md:mb-4 text-amber-200/90">
               {title}
             </h1>
             <h2 class="mb-6 text-lg text-neutral-300">{description}</h2>
@@ -71,8 +71,6 @@ const { title, description, isMain } = Astro.props;
       }
 
       img {
-        max-width: 100%;
-        height: auto;
         border-radius: 12px;
       }
     </style>
