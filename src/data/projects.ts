@@ -16,8 +16,8 @@ export const projects = [
   {
     title: 'Dorichangos',
     description: {
-      es: 'Sistema de reservaciones y comercio electrónico. Permite a los clientes reservar mesas y hacer pedidos en línea, brindando una buena experiencia.',
-      en: 'Reservation and e-commerce system. Allows customers to book tables and place orders online, providing a good experience.'
+      es: 'Sistema de reservaciones y comercio electrónico. Permite reservar mesas y hacer pedidos en línea.',
+      en: 'Reservation and e-commerce system. Allows customers to book tables and place orders online.'
     },
     pubDate: 'Dec 08 2023',
     heroImage: '/images/projects/dorichangos.webp',
