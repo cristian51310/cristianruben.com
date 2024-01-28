@@ -2,6 +2,7 @@
 import Background from "../components/Background.astro";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
+import BlogBanner from "../components/blog-banner.astro";
 import Navbar from "../components/navbar/Navbar.astro";
 
 import "@fontsource/onest/400.css";
@@ -24,6 +25,7 @@ const { title, description, isMain } = Astro.props;
   </head>
   <body class="text-neutral-300 bg-neutral-900">
     <Background />
+    <BlogBanner />
     <Navbar />
 
     <main class="w-[1000px] mx-auto max-w-full md:pt-14 pb-6 md:pb-14 px-4">

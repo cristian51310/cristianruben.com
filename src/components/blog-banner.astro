@@ -1,0 +1,22 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div
+  class="h-12 flex justify-center items-center md:bg-neutral-600/60 bg-neutral-600 border-white/10 backdrop-blur-[2px] gap-2 group md:relative fixed bottom-0 inset-x-0 z-20"
+>
+  <a href="https://cristianblog.vercel.app">
+    <span class="absolute z-20 -inset-y-1 -inset-x-1"></span>
+  </a>
+  <span class="font-semibold text-sm text-amber-100/90 hidden md:block">
+    Ven a visitar mi blog, hablo sobre tecnologia, diseño y mas temas que te
+    pueden interesar.
+  </span>
+  <span class="font-semibold text-sm text-amber-100/90 md:hidden">
+    Ven a echarle un vistazo a mi blog
+  </span>
+  <Icon
+    name="mdi:arrow-right"
+    class="size-4 text-amber-100/90 md:group-hover:translate-x-2 md:group-hover:text-amber-400 transition-transform"
+  />
+</div>
