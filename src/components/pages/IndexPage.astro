@@ -25,16 +25,14 @@ const t = useTranslate(Astro.currentLocale);
 ---
 
 <MainLayout title={t("MAIN_TITLE")} description={t("MAIN_DESCRIPTION")}>
-  <div
-    class="flex md:flex-row flex-col items-start md:items-center gap-8 mb-10 md:mb-12"
-  >
+  <div class="flex md:flex-row flex-col items-start gap-8 mb-10 md:mb-12">
     <img
       src="/images/portrait.webp"
       alt="Cristian Ruben Figueroa Espinoza"
-      class="md:size-56 size-40"
+      class="md:size-52 size-40"
     />
     <div class="text-base">
-      <h1 class="text-[24px] md:text-4xl font-bold mb-4 text-amber-200/90">
+      <h1 class="text-[24px] md:text-3xl font-bold mb-4 text-amber-200/90">
         Cristian Rubén Figueroa
       </h1>
       <h2 class="my-1">{t("MAIN_DESCRIPTION")}</h2>
