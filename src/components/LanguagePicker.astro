@@ -8,21 +8,25 @@ const lang = Astro.currentLocale;
   <a
     href="/en/"
     class:list={[
-      "md:hover:bg-gray-700 px-3 text-neutral-300 py-1 rounded-md flex items-center gap-2",
-      lang === "en" ? "bg-green-900" : "bg-gray-800",
+      "px-3 py-1 rounded-md flex items-center gap-2",
+      lang === "en"
+        ? "dark:bg-green-900 bg-green-400/60"
+        : "dark:bg-gray-800 bg-gray-400/80",
     ]}
   >
     English
-    <Icon name="emojione:flag-for-united-states" class="w-4 h-4" />
+    <Icon name="emojione:flag-for-united-states" class="size-4" />
   </a>
   <a
     href="/"
     class:list={[
-      "md:hover:bg-gray-700 px-3 text-neutral-300 py-1 rounded-md flex items-center gap-2",
-      lang === "es" ? "bg-green-900" : "bg-gray-800",
+      "px-3 py-1 rounded-md flex items-center gap-2",
+      lang === "es"
+        ? "dark:bg-green-900 bg-green-400/60"
+        : "dark:bg-gray-800 bg-gray-400/80",
     ]}
   >
     Español
-    <Icon name="emojione:flag-for-mexico" class="w-4 h-4" />
+    <Icon name="emojione:flag-for-mexico" class="size-4" />
   </a>
 </div>

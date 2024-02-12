@@ -21,22 +21,23 @@ const { title, description } = Astro.props;
   <head>
     <BaseHead title={title} description={description} />
   </head>
-  <body class="text-neutral-300 bg-neutral-900">
+  <body
+    class="dark:text-neutral-300 text-neutral-600 dark:bg-neutral-900 bg-neutral-200"
+  >
     <Background />
     <BlogBanner />
 
-    <main class="w-[1000px] mx-auto max-w-full md:pt-14 pb-6 md:pb-14 px-4">
+    <main class="w-[960px] mx-auto max-w-full md:pt-10 pb-6 md:pb-14 px-6">
       <slot />
     </main>
     <Footer />
+    <style is:global>
+      body {
+        font-family: "Onest", sans-serif;
+      }
+      img {
+        border-radius: 12px;
+      }
+    </style>
   </body>
 </html>
-
-<style is:global>
-  body {
-    font-family: "Onest", sans-serif;
-  }
-  img {
-    border-radius: 12px;
-  }
-</style>
