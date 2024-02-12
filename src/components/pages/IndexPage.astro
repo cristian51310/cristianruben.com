@@ -33,16 +33,12 @@ const t = useTranslate(Astro.currentLocale);
       alt="Cristian Ruben Figueroa Espinoza"
       class="md:size-56 size-40"
     />
-    <div>
-      <h1 class="text-[24px] md:text-4xl font-bold mb-4 mt-0 text-amber-200/90">
+    <div class="text-base">
+      <h1 class="text-[24px] md:text-4xl font-bold mb-4 text-amber-200/90">
         Cristian Rubén Figueroa
       </h1>
-      <h2 class="text-base md:text-lg my-1">
-        {t("MAIN_DESCRIPTION")}
-      </h2>
-      <h2 class="text-base md:text-lg mb-4">
-        {t("MAIN_DESCRIPTION_2")}
-      </h2>
+      <h2 class="my-1">{t("MAIN_DESCRIPTION")}</h2>
+      <h2 class="mb-4">{t("MAIN_DESCRIPTION_2")}</h2>
       <StatusWork />
       <SocialIcons />
     </div>
@@ -51,17 +47,19 @@ const t = useTranslate(Astro.currentLocale);
   <h1 class="text-2xl font-bold mt-10 text-amber-200/90">
     {t("MY_PROJECTS")}
   </h1>
-  <h2 class="mb-6 mt-3 text-lg text-neutral-300">
-    {t("MY_PROJECTS_CARD_DESCRIPTION")}
+  <h2 class="mb-6 mt-2 text-neutral-300">
+    {t("MY_PROJECTS_DESCRIPTION")}
   </h2>
 
   <div class="grid grid-cols-1 gap-5">
     {projects.map((project) => <ProjectCard project={project} />)}
   </div>
 
-  <h1 class="text-2xl font-bold mt-14 text-amber-200/90">Habilidades</h1>
-  <h2 class="mb-6 text-lg mt-3 text-neutral-300">
-    Mis tecnologias favoritas, que uso en mis proyectos y que son parte de mi
+  <h1 class="text-2xl font-bold mt-14 text-amber-200/90">
+    {t("SKILLS_TEXT")}
+  </h1>
+  <h2 class="mb-6 mt-2 text-neutral-300">
+    {t("SKILLS_DESCRIPTION")}
   </h2>
 
   <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">

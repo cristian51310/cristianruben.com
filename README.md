@@ -11,8 +11,6 @@ Features:
 - ✅ 95/100 Lighthouse performance
 - ✅ SEO-friendly with canonical URLs and OpenGraph data
 - ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
 
 Any static assets, like images, can be placed in the `public/` directory.
 

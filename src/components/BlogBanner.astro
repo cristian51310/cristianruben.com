@@ -1,5 +1,9 @@
 ---
 import { Icon } from "astro-icon";
+import { useTranslate } from "../i18n/utils";
+
+const lang = Astro.currentLocale === "es" ? "es" : "en";
+const t = useTranslate(lang);
 ---
 
 <div
@@ -9,11 +13,10 @@ import { Icon } from "astro-icon";
     <span class="absolute z-20 -inset-y-1 -inset-x-1"></span>
   </a>
   <span class="font-semibold text-sm text-amber-100/90 hidden md:block">
-    Ven a visitar mi blog, hablo sobre tecnologia, diseño y mas temas que te
-    pueden interesar.
+    {t("BLOG_BANNER")}
   </span>
   <span class="font-semibold text-sm text-amber-100/90 md:hidden">
-    Ven a echarle un vistazo a mi blog
+    {t("BLOG_BANNER_SMALL")}
   </span>
   <Icon
     name="mdi:arrow-right"
