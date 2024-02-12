@@ -22,12 +22,12 @@ const { title, description } = Astro.props;
     <BaseHead title={title} description={description} />
   </head>
   <body
-    class="dark:text-neutral-300 text-neutral-600 dark:bg-neutral-900 bg-neutral-200"
+    class="dark:text-neutral-300/90 text-neutral-600 dark:bg-neutral-900 bg-white"
   >
     <Background />
     <BlogBanner />
 
-    <main class="w-[960px] mx-auto max-w-full md:pt-10 pb-6 md:pb-14 px-6">
+    <main class="w-[960px] mx-auto max-w-full md:pt-16 pt-6 pb-6 md:pb-14 px-6">
       <slot />
     </main>
     <Footer />

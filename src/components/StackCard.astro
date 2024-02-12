@@ -3,8 +3,9 @@ const { icon: Icon, name } = Astro.props;
 ---
 
 <div
-  class="flex flex-col p-6 py-3 gap-2 dark:bg-neutral-500/10 bg-neutral-500/20 backdrop-blur-[2px] rounded-2xl justify-center items-center"
+  class="flex flex-col p-6 py-3 gap-2 backdrop-blur-[2px] rounded-2xl justify-center items-center
+  dark:bg-neutral-700/10 bg-neutral-400/10"
 >
   <Icon class="size-12 md:size-14 ld:size-16" />
-  <h2 class="md:text-base text-sm font-semibold">{name}</h2>
+  <h2 class="text-sm">{name}</h2>
 </div>
