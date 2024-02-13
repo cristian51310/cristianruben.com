@@ -1,8 +1,8 @@
 ---
-import { projects } from "../../data/projects";
-import { TAGS } from "../../data/tags";
-import { useTranslate } from "../../i18n/utils";
-import MainLayout from "../../layouts/MainLayout.astro";
+import { projects } from "@/data/projects";
+import { TAGS } from "@/data/tags";
+import { useTranslate } from "@/i18n/utils";
+import MainLayout from "@/layouts/MainLayout.astro";
 import ProjectCard from "../ProjectCard.astro";
 import SocialIcons from "../SocialIcons.astro";
 import StackCard from "../StackCard.astro";
@@ -33,9 +33,9 @@ const t = useTranslate(Astro.currentLocale);
     />
     <div class="text-base">
       <h1
-        class="text-[24px] md:text-3xl font-bold mb-4 dark:text-amber-200/90 text-yellow-500"
+        class="text-[22px] md:text-3xl font-bold mb-4 dark:text-amber-200/90 text-yellow-500"
       >
-        Cristian Rubén Figueroa
+        Cristian Rubén Figueroa Espinoza
       </h1>
       <h2>{t("MAIN_DESCRIPTION")}</h2>
       <h2 class="mb-4">{t("MAIN_DESCRIPTION_2")}</h2>
