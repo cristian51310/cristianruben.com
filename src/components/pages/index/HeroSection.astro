@@ -1,0 +1,26 @@
+---
+import SocialIcons from "@/components/SocialIcons.astro";
+import StatusWork from "@/components/StatusWork.astro";
+import { useTranslate } from "@/i18n/utils";
+
+const t = useTranslate(Astro.currentLocale);
+---
+
+<div class="flex md:flex-row flex-col items-start gap-8 mb-10 md:mb-12">
+  <img
+    src="/me.webp"
+    alt="Cristian Ruben Figueroa Espinoza"
+    class="md:size-52 size-40"
+  />
+  <div class="text-base">
+    <h1
+      class="text-[22px] md:text-3xl font-bold mb-4 dark:text-amber-200/90 text-yellow-500"
+    >
+      Cristian Rubén Figueroa Espinoza
+    </h1>
+    <h2>{t("MAIN_DESCRIPTION")}</h2>
+    <h3 class="mb-4">{t("MAIN_DESCRIPTION_2")}</h3>
+    <StatusWork />
+    <SocialIcons />
+  </div>
+</div>

@@ -1,0 +1,31 @@
+---
+import { TAGS } from "@/data/tags";
+import { useTranslate } from "@/i18n/utils";
+import StackCard from "@/components/StackCard.astro";
+
+const stack = [
+  TAGS.REACT,
+  TAGS.ASTRO,
+  TAGS.NEXTJS,
+  TAGS.JS,
+  TAGS.TS,
+  TAGS.PRISMA,
+  TAGS.NODEJS,
+  TAGS.GIT,
+  TAGS.GITHUB,
+  TAGS.TAILWIND,
+];
+
+const t = useTranslate(Astro.currentLocale);
+---
+
+<h3 class="text-2xl font-bold mt-14 dark:text-amber-200/90 text-yellow-500">
+  {t("SKILLS_TEXT")}
+</h3>
+<h4 class="mb-6 mt-2">
+  {t("SKILLS_DESCRIPTION")}
+</h4>
+
+<div class="flex flex-wrap gap-3 md:gap-5">
+  {stack.map((tag) => <StackCard name={tag.name} icon={tag.icon} />)}
+</div>
