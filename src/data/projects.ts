@@ -28,8 +28,8 @@ export const projects = [
   {
     title: 'TeamPilot',
     description: {
-      es: 'Aplicación de gestión de proyectos basada en la metodología Kanban, soporte cooperativo para trabajar en equipo y asignar responsabilidades.',
-      en: 'Project management application based on the Kanban methodology, cooperative support for teamwork and assigning responsibilities.'
+      es: 'Aplicación de gestión de proyectos basada en la metodología Kanban..',
+      en: 'Project management application based on the Kanban methodology.'
     },
     pubDate: 'Jan 08 2024',
     heroImage: '/images/projects/team-pilot.webp',
