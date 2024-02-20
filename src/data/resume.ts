@@ -4,14 +4,14 @@ export const resume = {
       title: "Ingenieria en software",
       start: "2021",
       end: "Actualidad",
-      place: "Universidad Politecnica Penjamo",
+      place: "Universidad Politecnica de Pénjamo",
       country: "Mexico",
     },
     {
       title: "Tecnico en programacion",
       start: "2019",
       end: "2021",
-      place: "CBTIS 171",
+      place: "Centro de bachillerato tecnologico industrial y de servicios 171",
       country: "Mexico",
     },
   ],
@@ -20,8 +20,8 @@ export const resume = {
       title: "Kuil - Lápices Ecológicos",
       start: "2022",
       company: {
-        es: "Trabajador Independiente en Kuil",
-        en: "Freelancer in Kuil"
+        es: "Freelancer",
+        en: "Freelancer"
       },
       description: {
         es: "Dirigí el desarrollo y la implementación de un eficiente sistema de inventario para Kuil, optimizando significativamente la gestión de productos. Asimismo, diseñé y construí una aplicación web integral que impulsó las ventas y mejoró la experiencia del usuario en la compra de productos.",
@@ -42,8 +42,8 @@ export const resume = {
       title: "Dorichangos",
       start: "2023",
       company: {
-        es: "Trabajador Independiente en Dorichangos",
-        en: "Freelancer in Dorichangos"
+        es: "Freelancer",
+        en: "Freelancer"
       },
       description: {
         es: "Desarrollé un sitio web y una plataforma de comercio electrónico para Dorichangos, permitiendo a los usuarios comprar productos de manera sencilla. Implementé un dashboard integral para la administración eficiente de productos y pedidos, mejorando la eficacia operativa de la empresa.",

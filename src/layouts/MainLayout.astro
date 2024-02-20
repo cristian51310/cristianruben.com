@@ -3,7 +3,7 @@ import Background from "../components/Background.astro";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import BlogBanner from "../components/blog-banner.astro";
-import Navbar from "../components/navbar/Navbar.astro";
+import DesktopNavbar from "../components/navbar/DesktopNavbar.astro";
 
 import "@fontsource/onest/400.css";
 import "@fontsource/onest/600.css";
@@ -12,10 +12,9 @@ import "@fontsource/onest/700.css";
 interface Props {
   title: string;
   description: string;
-  isMain: boolean;
 }
 
-const { title, description, isMain } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,43 +25,17 @@ const { title, description, isMain } = Astro.props;
   <body class="text-neutral-300 bg-neutral-900">
     <Background />
     <BlogBanner />
-    <Navbar />
+    <DesktopNavbar />
 
-    <main class="w-[1000px] mx-auto max-w-full md:pt-14 pb-6 md:pb-14 px-4">
-      {
-        !isMain && (
-          <>
-            <h1 class="md:text-4xl text-2xl font-bold mb-8 md:mb-4 text-amber-200/90">
-              {title}
-            </h1>
-            <h2 class="mb-6 text-lg text-neutral-300">{description}</h2>
-          </>
-        )
-      }
+    <main
+      class="w-[1000px] mx-auto max-w-full md:pt-14 pt-8 pb-6 md:pb-14 px-4"
+    >
       <slot />
     </main>
     <Footer />
     <style is:global>
       body {
         font-family: "Onest", sans-serif;
-      }
-
-      [data-toggle-nav][data-open-nav="true"] #line1 {
-        transform: translateY(0.375rem) rotate(40deg);
-      }
-
-      [data-toggle-nav][data-open-nav="true"] #line2 {
-        transform: scaleX(0);
-        opacity: 0;
-      }
-
-      [data-toggle-nav][data-open-nav="true"] #line3 {
-        transform: translateY(-0.375rem) rotate(-40deg);
-      }
-
-      [data-nav-overlay][data-is-visible="true"] {
-        visibility: visible;
-        display: flex;
       }
 
       .time-line-container
@@ -74,6 +47,10 @@ const { title, description, isMain } = Astro.props;
 
       img {
         border-radius: 12px;
+      }
+
+      p {
+        text-wrap: pretty;
       }
     </style>
   </body>

@@ -20,9 +20,13 @@ const t = useTranslate(lang);
 <MainLayout
   title={t("RECOMMENDATIONS_TITLE")}
   description={t("RECOMMENDATIONS_DESCRIPTION")}
-  isMain={false}
 >
-  <div class="my-10 space-y-8">
+  <h1 class="md:text-3xl text-2xl font-bold mb-8 md:mb-4 text-amber-200/90">
+    {t("RECOMMENDATIONS_TITLE")}
+  </h1>
+  <h2 class="mb-6">{t("RECOMMENDATIONS_DESCRIPTION")}</h2>
+
+  <div class="my-10 space-y-6">
     <ToolsSection title={t("WORKSTATION_TEXT")}>
       {
         workstation.map((stack: any) => (

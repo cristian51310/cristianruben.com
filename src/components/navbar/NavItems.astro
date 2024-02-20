@@ -15,14 +15,14 @@ const isActive =
 <a
   href={translateLink(href)}
   class:list={[
-    "relative block px-3 py-3 md:py-0 text-lg md:text-base md:hover:bg-white/10 rounded-md transition-colors duration-500",
+    "relative block px-3 py-0 text-base md:hover:bg-neutral-200/10 rounded-md transition-colors duration-500",
     isActive ? "text-amber-400" : "text-neutral-400",
   ]}
 >
   {t(label)}
   {
     isActive && (
-      <span class="absolute h-px inset-x-1 -bottom-px bg-gradient-to-r from-amber-400/0 via-amber-400/80 to-amber-400/0" />
+      <span class="absolute h-px inset-x-1 -bottom-px bg-gradient-to-r from-transparent via-amber-400/80 to-transparent" />
     )
   }
 </a>

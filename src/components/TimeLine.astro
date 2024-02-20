@@ -9,17 +9,22 @@ const { title, subtitle } = Astro.props;
 
 <div class="flex">
   <div class="education__time mr-6">
-    <span class="size-4 bg-lime-400 block rounded-full mt-3"></span>
+    <span class="size-4 bg-lime-400/80 block rounded-full"></span>
     <span
-      class="education__line bg-lime-400 block h-full w-[2px] translate-x-[7px]"
+      class="education__line bg-lime-400/80 block h-full w-[2px] translate-x-[7px]"
     ></span>
   </div>
   <div
-    class="experience__data px-6 py-3 bg-gray-500/10 backdrop-blur-[2px] w-full rounded-xl border border-neutral-400/10"
+    class="px-6 py-5 bg-neutral-800/50 w-full rounded-xl border border-neutral-500/10"
   >
-    <p class="font-semibold text-green-100 mt-1 mb-1">{title}</p>
-    <span class="md:text-base text-sm text-blue-200">{subtitle}</span>
-    <p class="my-2 md:text-base text-sm leading-relaxed text-pretty">
+    <header
+      class="flex md:flex-row flex-col md:items-center md:justify-between md:mb-6 mb-3"
+    >
+      <p class="font-semibold text-green-100 text-lg">{title}</p>
+      <span class="text-blue-200 leading-10">{subtitle}</span>
+    </header>
+
+    <p class="my-2 md:text-base text-sm leading-relaxed">
       <slot />
     </p>
   </div>

@@ -1,11 +1,21 @@
 ---
-import { links } from "../../data/links";
 import NavItem from "./NavItems.astro";
+
+export const links = [
+  {
+    href: "/",
+    label: "nav.home",
+  },
+  {
+    href: "/recommendations",
+    label: "nav.recommendations",
+  },
+];
 ---
 
-<nav class="hidden md:flex justify-center">
+<nav class="flex justify-center mt-8">
   <div
-    class="flex px-5 py-3 text-lg border rounded-2xl bg-neutral-600/20 border-white/10 text-zinc-400"
+    class="flex px-5 py-2 text-lg border rounded-2xl bg-neutral-600/20 border-neutral-400/10 text-zinc-400"
   >
     {links.map(({ href, label }) => <NavItem href={href} label={label} />)}
   </div>
