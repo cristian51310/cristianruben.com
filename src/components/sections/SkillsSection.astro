@@ -1,16 +1,19 @@
 ---
 import { resume } from "../../data/resume";
+import { useTranslate } from "../../i18n/utils";
 import StackCard from "../StackCard.astro";
+
+const t = useTranslate(Astro.currentLocale);
 
 const stack = resume.stack;
 ---
 
-<h1 class="text-2xl font-bold mt-14 text-amber-200/90 mx-6 sm:mx-0">
-  Habilidades
-</h1>
-<h2 class="mb-6 mt-4 mx-6 sm:mx-0">
-  Tecnologias que he utilizado en mis proyectos y que manejo con soltura
-</h2>
+<div class="mx-6 sm:mx-0 mt-10 gap-2 flex flex-col mb-6">
+  <h1 class="text-2xl font-bold text-amber-200/90">Habilidades</h1>
+  <h2>
+    Tecnologias que he utilizado en mis proyectos y que manejo con soltura
+  </h2>
+</div>
 
 <div class="flex flex-wrap gap-3 mx-6 sm:mx-0">
   {stack.map((tag) => <StackCard name={tag.name} icon={tag.icon} />)}

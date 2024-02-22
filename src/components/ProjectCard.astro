@@ -7,7 +7,7 @@ const { project } = Astro.props;
 ---
 
 <Card
-  class="flex group flex-col md:bg-neutral-700/10 p-4 justify-between gap-4 min-w-96 md:first:ml-4 md:last:mr-4"
+  class="flex group flex-col md:bg-neutral-700/10 p-4 justify-between gap-4 min-w-[80%] md:min-w-[40%] md:first:ml-4 md:last:mr-4"
 >
   <a class="absolute inset-0" href={project.webpage}></a>
   <img class="rounded-xl" src={project.heroImage} alt={project.title} />
