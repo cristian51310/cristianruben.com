@@ -1,4 +1,6 @@
 ---
+import Card from "./Card.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -9,25 +11,19 @@ interface Props {
 const { title, description, href, image } = Astro.props;
 ---
 
-<div id="tool-card" class="group flex flex-col">
-  <div
-    class="flex flex-col md:gap-4 md:flex-row p-6 py-4 bg-neutral-800/40 rounded-xl"
-  >
-    <img src={image} alt={title} class="sm:size-20 size-14" />
+<Card id="tool-card" class="flex flex-col md:gap-4 md:flex-row p-6 py-4">
+  <img src={image} alt={title} class="sm:size-20 size-14" />
 
-    <div>
-      <h2 class="text-lg font-semibold">
-        <a href={href}>
-          <span class="absolute z-20 -inset-y-6 -inset-x-4"></span>
-          <span class="relative z-10 group-hover:underline">{title}</span>
-        </a>
-      </h2>
-      <p class="mt-2 text-base leading-8">
-        {description}
-      </p>
-    </div>
+  <div>
+    <h2 class="text-lg font-semibold">
+      <a href={href}>
+        <span class="absolute z-20 -inset-y-6 -inset-x-4"></span>
+        <span class="relative z-10 group-hover:underline">{title}</span>
+      </a>
+    </h2>
+    <p class="mt-2 leading-8">{description}</p>
   </div>
-</div>
+</Card>
 
 <style>
   #tool-card {

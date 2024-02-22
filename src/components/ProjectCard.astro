@@ -7,27 +7,25 @@ const { project } = Astro.props;
 ---
 
 <Card
-  class="flex group flex-col md:bg-neutral-700/10 p-4 justify-between gap-6 min-w-96 md:first:ml-4 md:last:mr-4"
+  class="flex group flex-col md:bg-neutral-700/10 p-4 justify-between gap-4 min-w-96 md:first:ml-4 md:last:mr-4"
 >
   <a class="absolute inset-0" href={project.webpage}></a>
-  <div class="grid gap-4">
-    <img class="rounded-xl" src={project.heroImage} alt={project.title} />
+  <img class="rounded-xl" src={project.heroImage} alt={project.title} />
 
-    <h2 class="text-lg md:text-xl font-bold text-white group-hover:underline">
-      {project.title}
-    </h2>
+  <h2 class="text-lg md:text-xl font-bold text-white group-hover:underline">
+    {project.title}
+  </h2>
 
-    <p>{project.description[lang]}</p>
+  <p>{project.description[lang]}</p>
 
-    <div class="flex flex-wrap gap-2">
-      {
-        project.tags.map((tag: any) => (
-          <div class="flex items-center gap-1 bg-neutral-700/50 rounded-full px-2 py-1">
-            <tag.icon class="size-4" />
-            <span class="text-xs">{tag.name}</span>
-          </div>
-        ))
-      }
-    </div>
+  <div class="flex flex-wrap gap-2">
+    {
+      project.tags.map((tag: any) => (
+        <Card class="flex items-center gap-1 rounded-full px-2 py-1">
+          <tag.icon class="size-4" />
+          <span class="text-xs">{tag.name}</span>
+        </Card>
+      ))
+    }
   </div>
 </Card>
