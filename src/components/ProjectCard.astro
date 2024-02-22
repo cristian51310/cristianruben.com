@@ -1,27 +1,23 @@
 ---
-interface Props {
-  project: any;
-}
+import Card from "./Card.astro";
 
 const lang = Astro.currentLocale === "es" ? "es" : "en";
 
 const { project } = Astro.props;
 ---
 
-<article
-  class="flex group flex-col bg-neutral-500/10 md:bg-neutral-700/10 rounded-2xl p-4 justify-between gap-6 relative min-w-96 md:first:ml-4 md:last:mr-4 border border-neutral-400/10"
+<Card
+  class="flex group flex-col md:bg-neutral-700/10 p-4 justify-between gap-6 min-w-96 md:first:ml-4 md:last:mr-4"
 >
   <a class="absolute inset-0" href={project.webpage}></a>
   <div class="grid gap-4">
-    <div class="overflow-hidden rounded-xl">
-      <img src={project.heroImage} alt={project.title} />
-    </div>
+    <img class="rounded-xl" src={project.heroImage} alt={project.title} />
 
     <h2 class="text-lg md:text-xl font-bold text-white group-hover:underline">
       {project.title}
     </h2>
 
-    <p class="text-base">{project.description[lang]}</p>
+    <p>{project.description[lang]}</p>
 
     <div class="flex flex-wrap gap-2">
       {
@@ -34,4 +30,4 @@ const { project } = Astro.props;
       }
     </div>
   </div>
-</article>
+</Card>
