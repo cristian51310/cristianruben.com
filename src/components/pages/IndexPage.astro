@@ -1,6 +1,4 @@
 ---
-import { projects } from "../../data/projects";
-import { TAGS } from "../../data/tags";
 import { useTranslate } from "../../i18n/utils";
 import MainLayout from "../../layouts/MainLayout.astro";
 import ProjectCard from "../ProjectCard.astro";
@@ -8,30 +6,21 @@ import SocialIcons from "../SocialIcons.astro";
 import StackCard from "../StackCard.astro";
 import StatusWork from "../StatusWork.astro";
 
-const stack = [
-  TAGS.REACT,
-  TAGS.ASTRO,
-  TAGS.NEXTJS,
-  TAGS.JS,
-  TAGS.TS,
-  TAGS.PRISMA,
-  TAGS.NODEJS,
-  TAGS.GIT,
-  TAGS.GITHUB,
-  TAGS.TAILWIND,
-];
+import { resume } from "../../data/resume";
+
+const { stack, projects } = resume;
 
 const t = useTranslate(Astro.currentLocale);
 ---
 
 <MainLayout title={t("MAIN_TITLE")} description={t("MAIN_DESCRIPTION")}>
   <div
-    class="flex md:flex-row flex-col items-start md:items-center gap-8 mb-10 md:mb-12"
+    class="flex md:flex-row flex-col items-start md:items-center gap-8 mb-10 md:mb-12 mx-6 sm:mx-0"
   >
     <img
       src="/images/portrait.webp"
       alt="Cristian Ruben Figueroa Espinoza"
-      class="md:size-52 size-40"
+      class="md:size-52 size-40 rounded-xl"
     />
     <div>
       <h1 class="text-[20px] md:text-3xl font-bold mb-2 text-amber-200/90">
@@ -44,23 +33,34 @@ const t = useTranslate(Astro.currentLocale);
     </div>
   </div>
 
-  <h1 class="text-2xl font-bold mt-10 text-amber-200/90">
+  <h1 class="text-2xl font-bold mt-10 text-amber-200/90 mx-6 sm:mx-0">
     {t("MY_PROJECTS")}
   </h1>
-  <h2 class="mb-6 mt-3">
+  <h2 class="mb-6 mt-3 mx-6 sm:mx-0">
     {t("MY_PROJECTS_CARD_DESCRIPTION")}
   </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+  <div
+    id="projects"
+    class="flex gap-5 overflow-x-auto w-full px-6 lg:px-0 rounded-2xl overflow-hidden md:bg-neutral-700/10 p-4 border-neutral-400/10"
+  >
     {projects.map((project) => <ProjectCard project={project} />)}
   </div>
 
-  <h1 class="text-2xl font-bold mt-14 text-amber-200/90">Tecnologias</h1>
-  <h2 class="mb-6 mt-3">
+  <h1 class="text-2xl font-bold mt-14 text-amber-200/90 mx-6 sm:mx-0">
+    Tecnologias
+  </h1>
+  <h2 class="mb-6 mt-3 mx-6 sm:mx-0">
     Mis tecnologias favoritas, que uso en mis proyectos y que son parte de mi
   </h2>
 
-  <div class="flex flex-wrap gap-3">
+  <div class="flex flex-wrap gap-3 mx-6 sm:mx-0">
     {stack.map((tag) => <StackCard name={tag.name} icon={tag.icon} />)}
   </div>
 </MainLayout>
+
+<style>
+  #projects {
+    scrollbar-width: none;
+  }
+</style>

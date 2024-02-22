@@ -1,10 +1,10 @@
 ---
+import Card from "../components/Card.astro";
+
 const { icon: Icon, name } = Astro.props;
 ---
 
-<div
-  class="flex p-3 py-2 gap-2 bg-gray-500/10 rounded-xl justify-center items-center"
->
-  <Icon class="size-6 md:size-8" />
+<Card class="flex p-2.5 py-1.5 gap-2 justify-center items-center">
+  <Icon class="size-6" />
   <h2 class="text-sm">{name}</h2>
-</div>
+</Card>

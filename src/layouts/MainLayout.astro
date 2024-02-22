@@ -28,7 +28,7 @@ const { title, description } = Astro.props;
     <DesktopNavbar />
 
     <main
-      class="w-[1000px] mx-auto max-w-full md:pt-14 pt-8 pb-6 md:pb-14 px-4"
+      class="w-[1000px] mx-auto max-w-full md:pt-14 pt-8 pb-6 md:pb-14"
     >
       <slot />
     </main>
@@ -43,10 +43,6 @@ const { title, description } = Astro.props;
         .education__time
         > .education__line {
         display: none;
-      }
-
-      img {
-        border-radius: 12px;
       }
 
       p {

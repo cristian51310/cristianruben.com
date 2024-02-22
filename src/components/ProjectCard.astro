@@ -1,18 +1,15 @@
 ---
-import { useTranslate } from "../i18n/utils";
-
 interface Props {
   project: any;
 }
 
 const lang = Astro.currentLocale === "es" ? "es" : "en";
-const t = useTranslate(lang);
 
 const { project } = Astro.props;
 ---
 
 <article
-  class="flex group flex-col h-full bg-gray-500/10 rounded-2xl p-4 justify-between gap-6 relative"
+  class="flex group flex-col bg-neutral-500/10 md:bg-neutral-700/10 rounded-2xl p-4 justify-between gap-6 relative min-w-96 md:first:ml-4 md:last:mr-4 border border-neutral-400/10"
 >
   <a class="absolute inset-0" href={project.webpage}></a>
   <div class="grid gap-4">
