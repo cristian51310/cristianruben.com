@@ -20,7 +20,6 @@ export const ui = {
     'DESCRIPTION_404': 'The page you are looking for may have been removed, its name changed, or is temporarily unavailable',
     'MY_PROJECTS': 'My Projects',
     'MY_PROJECTS_DESCRIPTION': 'These are some of the projects I have worked on and of which I am most proud.',
-    'MY_PROJECTS_CARD_DESCRIPTION': 'Projects that I have worked on and that I am most proud of.',
     'STATUS_WORK': 'Available for new projects, contact me',
 
     'WORKSTATION_TEXT': 'Workstation',
@@ -45,7 +44,6 @@ export const ui = {
     'DESCRIPTION_404': 'La página que estás buscando pudo haber sido removida, cambiado su nombre o está temporalmente no disponible',
     'MY_PROJECTS': 'Mis Proyectos',
     'MY_PROJECTS_DESCRIPTION': 'Estos son algunos de los proyectos en los que he trabajado y de los que más orgulloso me siento.',
-    'MY_PROJECTS_CARD_DESCRIPTION': 'Algunos proyectos en los que he trabajado y de los que más orgulloso me siento.',
     'STATUS_WORK': 'Disponible para nuevos proyectos, contáctame',
 
     'WORKSTATION_TEXT': 'Workstation',
