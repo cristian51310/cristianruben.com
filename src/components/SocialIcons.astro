@@ -1,7 +1,13 @@
 ---
 import { Icon } from "astro-icon";
 
-const socialLinks = [
+export interface SocialLinkProp {
+  name: string;
+  url: string;
+  icon: string;
+}
+
+export const socialLinks: SocialLinkProp[] = [
   {
     name: "Github",
     url: "https://github.com/cristian51310",

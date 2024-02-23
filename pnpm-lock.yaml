@@ -23,6 +23,9 @@ dependencies:
   astro:
     specifier: ^4.0.7
     version: 4.0.7(typescript@5.3.3)
+  hotkeypad:
+    specifier: ^0.1.0
+    version: 0.1.0
   tailwindcss:
     specifier: ^3.4.0
     version: 3.4.0
@@ -1991,6 +1994,10 @@ packages:
       hast-util-parse-selector: 4.0.0
       property-information: 6.4.0
       space-separated-tokens: 2.0.2
+    dev: false
+
+  /hotkeypad@0.1.0:
+    resolution: {integrity: sha512-e9R4mp2B0YtjV7Rm9KpMMyMSMwvEjb1gHxnvpnMQD0ussSOobl6+Tr6rFCq2aNLgExkcfHtShyd/DQqM4qqHTw==}
     dev: false
 
   /html-escaper@3.0.3:
