@@ -4,6 +4,7 @@ const t = useTranslate(Astro.currentLocale);
 ---
 
 <div
+  id="status-work"
   class="inline-flex items-center justify-center px-3 py-1.5 border rounded-md border-lime-600/60 bg-lime-800/10"
 >
   <span class="mr-2 flex size-3 items-center">
@@ -15,3 +16,11 @@ const t = useTranslate(Astro.currentLocale);
 
   <span class="text-sm text-lime-500">{t("STATUS_WORK")}</span>
 </div>
+
+<style>
+  @media print {
+    #status-work {
+      display: none;
+    }
+  }
+</style>

@@ -67,7 +67,7 @@ export const resume = {
     {
       title: 'Kuil',
       description: {
-        es: 'Pagina web ecommerce y dashboard de administracion para Kuil, una marca de lapices ecológicos',
+        es: 'Ecommerce y dashboard de administracion para Kuil, una marca de lapices ecológicos',
         en: 'Ecommerce website and administration dashboard for Kuil, an ecological pencil brand'
       },
       pubDate: 'Jul 08 2022',
@@ -79,7 +79,7 @@ export const resume = {
     {
       title: 'Dorichangos',
       description: {
-        es: 'Sistema de reservaciones y comercio electrónico. Permite reservar mesas y hacer pedidos en línea.',
+        es: 'Sistema de reservaciones y ecommerce. Permite reservar mesas y hacer pedidos en línea.',
         en: 'Reservation and e-commerce system. Allows customers to book tables and place orders online.'
       },
       pubDate: 'Dec 08 2023',
@@ -91,8 +91,8 @@ export const resume = {
     {
       title: 'TeamPilot',
       description: {
-        es: 'Aplicación de gestión de proyectos basada en la metodología Kanban, soporte cooperativo para trabajar en equipo y asignar responsabilidades.',
-        en: 'Project management application based on the Kanban methodology, cooperative support for teamwork and assigning responsibilities.'
+        es: 'Aplicación de gestión de proyectos basada en la metodología Kanban.',
+        en: 'Project management application based on the Kanban methodology.'
       },
       pubDate: 'Jan 08 2024',
       heroImage: '/images/projects/team-pilot.webp',

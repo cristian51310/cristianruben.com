@@ -1,8 +1,8 @@
 ---
 import Background from "@/components/Background.astro";
 import BaseHead from "@/components/BaseHead.astro";
+import BlogBanner from "@/components/BlogBanner.astro";
 import Footer from "@/components/Footer.astro";
-import BlogBanner from "@/components/blog-banner.astro";
 import DesktopNavbar from "@/components/navbar/DesktopNavbar.astro";
 
 import "@fontsource/onest/400.css";
@@ -24,16 +24,26 @@ const { title, description } = Astro.props;
   </head>
   <body class="text-neutral-300 bg-neutral-900">
     <Background />
-    <BlogBanner />
     <DesktopNavbar />
 
     <main class="w-[1000px] mx-auto max-w-full md:pt-14 pt-8 pb-6 md:pb-14">
       <slot />
     </main>
     <Footer />
+
     <style is:global>
       body {
         font-family: "Onest", sans-serif;
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
 
       .time-line-container
@@ -45,6 +55,16 @@ const { title, description } = Astro.props;
 
       p {
         text-wrap: pretty;
+      }
+
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+
+        astro-dev-toolbar {
+          display: none !important;
+        }
       }
     </style>
   </body>

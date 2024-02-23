@@ -10,13 +10,25 @@ export const links = [
     href: "/recommendations",
     label: "nav.recommendations",
   },
+  {
+    href: "https://cristianblog.vercel.app/",
+    label: "nav.blog",
+  },
 ];
 ---
 
 <nav class="flex justify-center mt-8">
   <div
-    class="flex px-5 py-2 text-lg border rounded-2xl bg-neutral-600/20 border-neutral-400/10 text-zinc-400"
+    class="flex px-3 md:px-5 py-2 text-lg border rounded-xl bg-neutral-600/20 border-neutral-400/10 text-zinc-400"
   >
     {links.map(({ href, label }) => <NavItem href={href} label={label} />)}
   </div>
 </nav>
+
+<style>
+  @media print {
+    nav {
+      display: none;
+    }
+  }
+</style>

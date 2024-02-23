@@ -9,6 +9,7 @@ export const ui = {
   en: {
     'nav.home': 'About Me',
     'nav.recommendations': 'Recommendations',
+    'nav.blog': 'Blog',
     'MAIN_TITLE': 'Cristian | Full Stack Programmer, Frontend and Mobile Designer',
     'RESUME_TITLE': 'About Me',
     'RECOMMENDATIONS_TITLE': 'My Recommendations',
@@ -33,6 +34,7 @@ export const ui = {
   es: {
     'nav.home': 'Sobre mi',
     'nav.recommendations': 'Recomendaciones',
+    'nav.blog': 'Blog',
     'MAIN_TITLE': 'Cristian | Programador Full Stack, Diseñador Frontend y Móvil',
     'MAIN_DESCRIPTION': 'Programador Full Stack, Diseñador Frontend y Móvil',
     "MAIN_DESCRIPTION_2": "Creo soluciones para negocios en la web y en plataformas móviles.",

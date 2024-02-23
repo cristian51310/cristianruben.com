@@ -3,6 +3,7 @@ import { Icon } from "astro-icon";
 ---
 
 <div
+  id="blog-banner"
   class="h-12 flex justify-center items-center md:bg-neutral-600/20 bg-neutral-600 border-white/10 gap-2 group md:relative fixed bottom-0 inset-x-0 z-20"
 >
   <a href="https://cristianblog.vercel.app">
@@ -20,3 +21,11 @@ import { Icon } from "astro-icon";
     class="size-4 text-amber-100/90 md:group-hover:translate-x-2 transition-transform"
   />
 </div>
+
+<style>
+  @media print {
+    #blog-banner {
+      display: none;
+    }
+  }
+</style>

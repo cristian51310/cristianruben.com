@@ -9,7 +9,11 @@ const projects = resume.projects;
 const t = useTranslate(Astro.currentLocale);
 ---
 
-<Section title={t("MY_PROJECTS")} subtitle={t("MY_PROJECTS_DESCRIPTION")}>
+<Section
+  id="projects"
+  title={t("MY_PROJECTS")}
+  subtitle={t("MY_PROJECTS_DESCRIPTION")}
+>
   <div
     id="projects"
     class="flex gap-5 overflow-x-auto w-full px-6 lg:px-0 rounded-2xl overflow-hidden md:bg-neutral-700/10 p-4 border-neutral-400/10 md:border"
@@ -21,5 +25,11 @@ const t = useTranslate(Astro.currentLocale);
 <style>
   #projects {
     scrollbar-width: none;
+  }
+
+  @media print {
+    #projects {
+      display: none;
+    }
   }
 </style>
