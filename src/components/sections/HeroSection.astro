@@ -7,19 +7,18 @@ const t = useTranslate(Astro.currentLocale);
 ---
 
 <div
-  class="flex md:flex-row flex-col items-start md:items-center gap-8 mb-10 md:mb-12 mx-6 sm:mx-0"
+  class="flex md:flex-row flex-col items-start md:items-center gap-10 mb-10 md:mb-12 mx-6 sm:mx-0"
 >
   <img
     src="/images/portrait.webp"
     alt="Cristian Ruben Figueroa Espinoza"
-    class="md:size-52 size-40 rounded-xl"
+    class="md:size-44 size-40"
   />
   <div>
-    <h1 class="text-xl md:text-3xl font-bold mb-2 text-amber-200/90">
+    <h1 class="text-[22px] md:text-3xl font-bold dark:text-amber-200/90 text-yellow-500">
       Cristian Rubén Figueroa Espinoza
     </h1>
-    <h2 class="my-1">{t("MAIN_DESCRIPTION")}</h2>
-    <h2 class="mb-4">{t("MAIN_DESCRIPTION_2")}</h2>
+    <h2 class="my-3">{t("MAIN_DESCRIPTION")}</h2>
     <StatusWork />
     <SocialIcons />
   </div>

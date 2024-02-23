@@ -9,11 +9,8 @@ const t = useTranslate(Astro.currentLocale);
 const stack = resume.stack;
 ---
 
-<Section
-  title="Habilidades"
-  subtitle="Tecnologías que he utilizado en mis proyectos y que manejo con soltura"
->
-  <div class="flex flex-wrap gap-3 mx-6 sm:mx-0">
+<Section title="Habilidades">
+  <div class="flex flex-wrap gap-3 mt-2">
     {stack.map((tag) => <StackCard name={tag.name} icon={tag.icon} />)}
   </div>
 </Section>

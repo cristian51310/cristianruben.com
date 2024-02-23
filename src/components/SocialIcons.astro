@@ -36,17 +36,17 @@ export const socialLinks: SocialLinkProp[] = [
 ];
 ---
 
-<div class="flex gap-4 mt-5">
+<div class="flex gap-3 mt-3">
   {
     socialLinks.map((link) => (
       <a
         href={link.url}
         target="_blank"
-        class="border p-1 group rounded-lg border-neutral-400/10 bg-neutral-500/10"
+        class="border p-1 group rounded-lg dark:border-neutral-400/10 border-neutral-700/20 dark:bg-neutral-500/10 bg-neutral-400/10"
       >
         <Icon
           name={link.icon}
-          class="w-6 group-hover:text-white transition duration-300"
+          class="w-5 dark:group-hover:text-white group-hover:text-black transition duration-300"
         />
         <span class="sr-only">Go to my {link.name}</span>
       </a>

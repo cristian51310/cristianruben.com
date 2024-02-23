@@ -4,6 +4,7 @@ import { useTranslate } from "@/i18n/utils";
 import MainLayout from "@/layouts/MainLayout.astro";
 import ToolCard from "../ToolCard.astro";
 import ToolsSection from "../ToolsSection.astro";
+import Section from "../Section.astro";
 
 function filterStacks(stacks: any, type: string) {
   return stacks.filter((stack: any) => stack.type === type);
@@ -21,7 +22,9 @@ const t = useTranslate(lang);
   title={t("RECOMMENDATIONS_TITLE")}
   description={t("RECOMMENDATIONS_DESCRIPTION")}
 >
-  <h1 class="md:text-3xl text-2xl font-bold mb-8 md:mb-4 text-amber-200/90">
+  <h1
+    class="md:text-3xl text-2xl font-bold mb-8 md:mb-4 dark:text-amber-200/90 text-yellow-600"
+  >
     {t("RECOMMENDATIONS_TITLE")}
   </h1>
   <h2 class="mb-6">{t("RECOMMENDATIONS_DESCRIPTION")}</h2>

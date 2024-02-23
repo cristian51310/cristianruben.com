@@ -2,14 +2,20 @@
 import { Icon } from "astro-icon";
 
 const lang = Astro.currentLocale;
+
+const classNames =
+  "md:hover:dark:bg-neutral-700 md:hover:bg-neutral-300 px-3 py-1 rounded-md flex items-center gap-2 border";
+
 ---
 
 <div class="flex gap-4">
   <a
     href="/en/"
     class:list={[
-      "md:hover:bg-gray-700 px-3 py-1 rounded-md flex items-center gap-2",
-      lang === "en" ? "bg-green-900" : "bg-gray-800",
+      classNames,
+      lang === "en"
+        ? "dark:bg-green-900 bg-green-300 dark:border-green-800 border-green-400"
+        : "dark:bg-neutral-800 bg-neutral-300 dark:border-neutral-700 border-neutral-400",
     ]}
   >
     English
@@ -18,8 +24,10 @@ const lang = Astro.currentLocale;
   <a
     href="/"
     class:list={[
-      "md:hover:bg-gray-700 px-3 py-1 rounded-md flex items-center gap-2",
-      lang === "es" ? "bg-green-900" : "bg-gray-800",
+      classNames,
+      lang === "es"
+        ? "dark:bg-green-900 bg-green-200 dark:border-green-800 border-green-400"
+        : "dark:bg-neutral-800 bg-neutral-300 dark:border-neutral-700 border-neutral-400",
     ]}
   >
     Español
