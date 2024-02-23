@@ -1,9 +1,9 @@
 ---
-import Background from "../components/Background.astro";
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import BlogBanner from "../components/blog-banner.astro";
-import DesktopNavbar from "../components/navbar/DesktopNavbar.astro";
+import Background from "@/components/Background.astro";
+import BaseHead from "@/components/BaseHead.astro";
+import Footer from "@/components/Footer.astro";
+import BlogBanner from "@/components/blog-banner.astro";
+import DesktopNavbar from "@/components/navbar/DesktopNavbar.astro";
 
 import "@fontsource/onest/400.css";
 import "@fontsource/onest/600.css";
@@ -27,9 +27,7 @@ const { title, description } = Astro.props;
     <BlogBanner />
     <DesktopNavbar />
 
-    <main
-      class="w-[1000px] mx-auto max-w-full md:pt-14 pt-8 pb-6 md:pb-14"
-    >
+    <main class="w-[1000px] mx-auto max-w-full md:pt-14 pt-8 pb-6 md:pb-14">
       <slot />
     </main>
     <Footer />
