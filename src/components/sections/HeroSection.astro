@@ -15,10 +15,12 @@ const t = useTranslate(Astro.currentLocale);
     class="md:size-44 size-40"
   />
   <div>
-    <h1 class="text-[22px] md:text-3xl font-bold dark:text-amber-200/90 text-yellow-500">
+    <h1
+      class="text-[22px] md:text-3xl font-bold dark:text-amber-200/90 text-yellow-500"
+    >
       Cristian Rubén Figueroa Espinoza
     </h1>
-    <h2 class="my-3">{t("MAIN_DESCRIPTION")}</h2>
+    <h2 class="my-3 max-w-lg">{t("MAIN_DESCRIPTION")}</h2>
     <StatusWork />
     <SocialIcons />
   </div>
