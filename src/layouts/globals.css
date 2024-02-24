@@ -1,0 +1,30 @@
+:root {
+  --bg-blue: #004daa50;
+  --bg-purple: #5800aa50;
+  --bg-green: #00AAA350;
+  --bg-yellow: #aaa70050;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+body {
+  font-family: "Onest", sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+img {
+  border-radius: 12px;
+}
+
+p {
+  text-wrap: pretty;
+}

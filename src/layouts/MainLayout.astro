@@ -8,6 +8,8 @@ import "@fontsource/onest/400.css";
 import "@fontsource/onest/600.css";
 import "@fontsource/onest/700.css";
 
+import "./globals.css";
+
 interface Props {
   title: string;
   description: string;
@@ -33,35 +35,6 @@ const { title, description } = Astro.props;
     <Footer />
 
     <style is:global>
-      body {
-        font-family: "Onest", sans-serif;
-        animation: fadeIn 0.5s ease-in-out;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      img {
-        border-radius: 12px;
-      }
-
-      .time-line-container
-        > div:last-child
-        .education__time
-        > .education__line {
-        display: none;
-      }
-
-      p {
-        text-wrap: pretty;
-      }
-
       @media print {
         .no-print {
           display: none !important;
