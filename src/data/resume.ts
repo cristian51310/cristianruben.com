@@ -1,30 +1,75 @@
 import { TAGS } from "./tags"
 
-export const resume = {
+interface Educacion {
+  title: string
+  start: string
+  end: string
+  place: string
+  country: string
+}
+
+export interface Experience {
+  company: string
+  start: string
+  title: string
+  description: ExperienceDescription
+  achievements: AchievementItems
+}
+
+interface ExperienceDescription {
+  en: string
+  es: string
+}
+
+interface AchievementItems {
+  es: string[]
+  en: string[]
+}
+
+interface Project {
+  title: string
+  description: ProjectDescription
+  pubDate: string
+  heroImage: string
+  webpage: string
+  github: string | null
+  tags: any[]
+}
+
+interface ProjectDescription {
+  en: string
+  es: string
+}
+
+interface Resumen {
+  education: Educacion[]
+  experience: Experience[]
+  projects: Project[]
+  stack: any[]
+}
+
+export const resume: Resumen = {
   education: [
     {
       title: "Ingenieria en software",
       start: "2021",
       end: "Actualidad",
       place: "Universidad Politecnica de Pénjamo",
-      country: "Mexico",
+      country: "Gto, Mexico",
     },
     {
       title: "Tecnico en programacion",
       start: "2019",
       end: "2021",
       place: "Centro de bachillerato tecnologico industrial y de servicios 171",
-      country: "Mexico",
+      country: "Gto, Mexico",
     },
   ],
   experience: [
     {
-      title: "Kuil - Lápices Ecológicos",
+      company: "Kuil",
       start: "2022",
-      company: {
-        es: "Freelancer",
-        en: "Freelancer"
-      },
+      title: "Freelancer",
       description: {
         es: "Dirigí el desarrollo y la implementación de un eficiente sistema de inventario para Kuil, optimizando significativamente la gestión de productos. Asimismo, diseñé y construí una aplicación web integral que impulsó las ventas y mejoró la experiencia del usuario en la compra de productos.",
         en: "I led the development and implementation of an efficient inventory system for Kuil, significantly optimizing product management. Additionally, I designed and built a comprehensive web application that boosted sales and enhanced the user experience in purchasing products."
@@ -41,12 +86,9 @@ export const resume = {
       }
     },
     {
-      title: "Dorichangos",
+      company: "Dorichangos",
       start: "2023",
-      company: {
-        es: "Freelancer",
-        en: "Freelancer"
-      },
+      title: "Freelancer",
       description: {
         es: "Desarrollé un sitio web y una plataforma de comercio electrónico para Dorichangos, permitiendo a los usuarios comprar productos de manera sencilla. Implementé un dashboard integral para la administración eficiente de productos y pedidos, mejorando la eficacia operativa de la empresa.",
         en: "I developed a website and an e-commerce platform for Dorichangos, enabling users to easily purchase products. Implemented a comprehensive dashboard for efficient product and order management, enhancing the operational effectiveness of the company."
@@ -112,19 +154,5 @@ export const resume = {
     TAGS.GIT,
     TAGS.GITHUB,
     TAGS.TAILWIND,
-  ],
-  skills: [
-    {
-      title: "Desarollo Web"
-    },
-    {
-      title: "Desarrollo Movil"
-    },
-    {
-      title: "Gestion de BD"
-    },
-    {
-      title: "Ingles A2"
-    },
   ],
 }
