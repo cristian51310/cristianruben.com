@@ -36,7 +36,7 @@ export const ui = {
     'nav.recommendations': 'Recomendaciones',
     'nav.blog': 'Blog',
     'MAIN_TITLE': 'Cristian | Programador Full Stack, Diseñador Frontend y Móvil',
-    'MAIN_DESCRIPTION': 'Programador Full Stack y de palataformas moviles con mas de 3 años de experiencia en el desarrollo de software.',
+    'MAIN_DESCRIPTION': 'Programador Full Stack y de plataformas moviles con mas de 3 años de experiencia en el desarrollo de software.',
     "MAIN_DESCRIPTION_2": "Creo soluciones para negocios en la web y en plataformas móviles.",
     'RECOMMENDATIONS_TITLE': 'Mis Recomendaciones',
     'RECOMMENDATIONS_DESCRIPTION': 'El software que uso, las cosas que uso para desarrollar, mantenerme productivo y pensar que estoy siendo productivo cuando en realidad solo estoy procrastinando',

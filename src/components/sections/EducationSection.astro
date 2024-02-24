@@ -1,5 +1,31 @@
 ---
+import { resume } from "@/data/resume";
+import Card from "../Card.astro";
 import Section from "../Section.astro";
+
+const { education } = resume;
 ---
 
-<Section title="Educacion" />
+<Section title="Educacion">
+  <div class="flex flex-col gap-4 mt-2">
+    {
+      education.map((grade) => {
+        const { title, start, end, place, country } = grade;
+        
+        return (
+          <Card class="p-4 px-5 flex flex-col gap-2">
+            <header class="flex justify-between items-center">
+              <h3 class="md:text-xl text-lg font-bold">{title}</h3>
+              <span class="text-neutral-600 dark:text-neutral-400">
+                {start} - {end}
+              </span>
+            </header>
+            <footer class="md:text-base text-sm">
+              {place} - {country}
+            </footer>
+          </Card>
+        );
+      })
+    }
+  </div>
+</Section>

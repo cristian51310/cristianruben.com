@@ -1,5 +1,37 @@
 ---
+import type { Experience } from "@/data/resume";
+import { resume } from "@/data/resume";
+import Card from "../Card.astro";
 import Section from "../Section.astro";
+
+const lang = Astro.currentLocale;
+
+const { experience } = resume;
 ---
 
-<Section title="Experiencia" />
+<Section title="Experiencia">
+  <div class="flex flex-col gap-3 mt-2">
+    {
+      experience.map((job: Experience) => {
+        const { company, start, title, description, achievements } = job;
+
+        return (
+          <Card class="p-4 px-5">
+            <header class="flex justify-between items-center">
+              <h3 class="md:text-xl text-lg font-bold">
+                {company} - {title}
+              </h3>
+              <span class="text-neutral-600 dark:text-neutral-400">
+                {start}
+              </span>
+            </header>
+            <footer class="md:text-base text-sm mt-2 leading-6 md:leading-7">
+              {lang === "en" && description.en}
+              {lang === "es" && description.es}
+            </footer>
+          </Card>
+        );
+      })
+    }
+  </div>
+</Section>
