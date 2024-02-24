@@ -11,17 +11,21 @@ const { education } = resume;
     {
       education.map((grade) => {
         const { title, start, end, place, country } = grade;
-        
+
         return (
-          <Card class="p-4 px-5 flex flex-col gap-2">
+          <Card class="p-4 px-5 flex flex-col gap-2 print:gap-0 print:p-0">
             <header class="flex justify-between items-center">
-              <h3 class="md:text-xl text-lg font-bold">{title}</h3>
-              <span class="text-neutral-600 dark:text-neutral-400">
+              <h3 class="md:text-xl text-lg font-bold print:text-sm">
+                {title}
+              </h3>
+              <span class="text-neutral-600 dark:text-neutral-400 print:text-xs">
                 {start} - {end}
               </span>
             </header>
             <footer class="md:text-base text-sm">
-              {place} - {country}
+              <p>
+                {place} - {country}
+              </p>
             </footer>
           </Card>
         );

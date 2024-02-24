@@ -1,54 +1,62 @@
 ---
-import { Icon } from "astro-icon";
+import GitHub from "./icons/simples/GitHub.astro";
+import LinkedIn from "./icons/simples/LinkedIn.astro";
+import Mail from "./icons/simples/Mail.astro";
+import Phone from "./icons/simples/Phone.astro";
+import X from "./icons/simples/X.astro";
 
 export interface SocialLinkProp {
   name: string;
   url: string;
-  icon: string;
+  print: string;
+  icon: any;
 }
 
 export const socialLinks: SocialLinkProp[] = [
   {
     name: "Github",
     url: "https://github.com/cristian51310",
-    icon: "mdi:github",
+    print: "cristian51310",
+    icon: GitHub,
   },
   {
     name: "Linkedin",
     url: "https://www.linkedin.com/in/cristianruben",
-    icon: "mdi:linkedin",
+    print: "cristianruben",
+    icon: LinkedIn,
   },
   {
     name: "Whatsapp",
     url: "https://wa.me/+525646256576",
-    icon: "mdi:whatsapp",
+    print: "+52 5646256576",
+    icon: Phone,
   },
   {
     name: "Twitter",
     url: "https://twitter.com/CristianRubnFi1",
-    icon: "mdi:twitter",
+    print: "CristianRubnFi1",
+    icon: X,
   },
   {
     name: "Email",
     url: "mailto:cristian.figueroa.crfe@gmail.com",
-    icon: "mdi:email",
+    print: "cristian.figueroa.crfe@gmail.com",
+    icon: Mail,
   },
 ];
 ---
 
-<div class="flex gap-3 mt-3">
+<div class="flex flex-wrap gap-3 mt-3 print:gap-x-2 print:gap-y-1 print:mt-1">
   {
     socialLinks.map((link) => (
       <a
         href={link.url}
         target="_blank"
-        class="border p-1 group rounded-lg dark:border-neutral-400/10 border-neutral-700/20 dark:bg-neutral-500/10 bg-neutral-400/10"
+        class="border p-1.5 print:p-0 print:px-1 group rounded-lg print:rounded-md dark:border-neutral-400/10 border-neutral-700/20 dark:bg-neutral-500/10 bg-neutral-400/10 flex gap-2"
       >
-        <Icon
-          name={link.icon}
-          class="w-5 dark:group-hover:text-white group-hover:text-black transition duration-300"
-        />
+        <link.icon class="w-5 print:w-3 dark:group-hover:text-white group-hover:text-black transition duration-300 print:text-neutral-800" />
         <span class="sr-only">Go to my {link.name}</span>
+        <p class=" hidden print:block">{link.print}</p>
       </a>
     ))
   }

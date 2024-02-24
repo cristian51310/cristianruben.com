@@ -10,24 +10,26 @@ const { experience } = resume;
 ---
 
 <Section title="Experiencia">
-  <div class="flex flex-col gap-3 mt-2">
+  <div class="flex flex-col gap-4 mt-2">
     {
       experience.map((job: Experience) => {
         const { company, start, title, description, achievements } = job;
 
         return (
-          <Card class="p-4 px-5">
+          <Card class="p-4 px-5 print:p-0">
             <header class="flex justify-between items-center">
-              <h3 class="md:text-xl text-lg font-bold">
+              <h3 class="md:text-xl text-lg font-bold print:text-sm">
                 {company} - {title}
               </h3>
-              <span class="text-neutral-600 dark:text-neutral-400">
+              <span class="text-neutral-600 dark:text-neutral-400 print:text-xs">
                 {start}
               </span>
             </header>
-            <footer class="md:text-base text-sm mt-2 leading-6 md:leading-7">
-              {lang === "en" && description.en}
-              {lang === "es" && description.es}
+            <footer class="md:text-base text-sm mt-2 leading-6 md:leading-7 print:leading-relaxed print:mt-1">
+              <p>
+                {lang === "en" && description.en}
+                {lang === "es" && description.es}
+              </p>
             </footer>
           </Card>
         );

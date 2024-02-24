@@ -15,6 +15,20 @@
   }
 }
 
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  astro-dev-toolbar {
+    display: none !important;
+  }
+
+  p {
+    font-size: 12px;
+    color: rgb(78, 78, 78);
+  }
+}
 
 body {
   font-family: "Onest", sans-serif;

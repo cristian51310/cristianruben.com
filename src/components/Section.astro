@@ -9,9 +9,12 @@ interface Props {
 const { title, subtitle, class: className, ...props } = Astro.props;
 ---
 
-<div class:list={["mx-6 lg:mx-0 mt-10 flex flex-col", className]} {...props}>
+<div
+  class:list={["mx-6 lg:mx-0 mt-10 print:mt-6 flex flex-col", className]}
+  {...props}
+>
   <h1
-    class="text-xl md:text-2xl font-bold dark:text-amber-200/90 text-yellow-500 mb-3"
+    class="text-xl md:text-2xl font-bold dark:text-amber-200/90 text-yellow-500 mb-3 print:mb-1"
   >
     {title}
   </h1>
