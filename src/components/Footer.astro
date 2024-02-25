@@ -1,5 +1,4 @@
 ---
-import ColorToggle from "./ColorToggle.astro";
 import LanguagePicker from "./LanguagePicker.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
@@ -9,12 +8,9 @@ import ThemeToggle from "./ThemeToggle.astro";
 >
 	<span class="mb-10 md:mb-0">Cristian Ruben Figueroa Espinoza.</span>
 
-	<div class="flex items-center justify-center gap-4 md:flex-row flex-col">
+	<div class="flex items-center justify-center gap-4">
 		<LanguagePicker />
-		<div class="flex gap-4">
-			<ThemeToggle />
-			<ColorToggle />
-		</div>
+		<ThemeToggle />
 	</div>
 </footer>
 
