@@ -1,0 +1,21 @@
+---
+import { useTranslate } from "@/i18n/utils";
+import MainLayout from "@/layouts/MainLayout.astro";
+import AboutmeSection from "../articles/AboutmeSection.astro";
+import EducationSection from "../articles/EducationSection.astro";
+import EperienceSection from "../articles/EperienceSection.astro";
+import HeroSection from "../articles/HeroSection.astro";
+import ProjectsSection from "../articles/ProjectsSection.astro";
+import SkillsSection from "../articles/SkillsSection.astro";
+
+const t = useTranslate(Astro.currentLocale);
+---
+
+<MainLayout title={t("MAIN_TITLE")} description={t("MAIN_DESCRIPTION")}>
+  <HeroSection />
+  <AboutmeSection />
+  <ProjectsSection />
+  <EperienceSection />
+  <EducationSection />
+  <SkillsSection />
+</MainLayout>
