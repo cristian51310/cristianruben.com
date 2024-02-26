@@ -3,7 +3,7 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "jsx": "react-jsx",
-    "baseUrl": "/Users/cristian/Programming/cristianruben.com",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
