@@ -4,9 +4,12 @@ import Section from "../Section.astro";
 import StackCard from "../StackCard.astro";
 
 const stack = resume.stack;
+
+import { useTranslate } from "@/i18n/utils";
+const t = useTranslate(Astro.currentLocale);
 ---
 
-<Section title="Habilidades">
+<Section title={t("SKILLS_TEXT")}>
   <div class="flex flex-wrap gap-3 print:gap-5 mt-2">
     {stack.map((tag) => <StackCard name={tag.name} icon={tag.icon} />)}
   </div>

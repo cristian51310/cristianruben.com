@@ -144,15 +144,19 @@ export const resume: Resumen = {
     },
   ],
   stack: [
+    TAGS.HTML,
+    TAGS.CSS,
+    TAGS.JS,
+    TAGS.TS,
     TAGS.REACT,
     TAGS.ASTRO,
     TAGS.NEXTJS,
-    TAGS.JS,
-    TAGS.TS,
     TAGS.PRISMA,
     TAGS.NODEJS,
     TAGS.GIT,
     TAGS.GITHUB,
     TAGS.TAILWIND,
+    TAGS.MYSQL,
+    TAGS.POSTGRESS
   ],
 }

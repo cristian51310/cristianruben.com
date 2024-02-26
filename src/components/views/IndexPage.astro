@@ -14,7 +14,9 @@ const t = useTranslate(Astro.currentLocale);
 <MainLayout title={t("MAIN_TITLE")} description={t("MAIN_DESCRIPTION")}>
   <HeroSection />
   <AboutmeSection />
-  <ProjectsSection />
+  <div class="print:hidden">
+    <ProjectsSection />
+  </div>
   <EperienceSection />
   <EducationSection />
   <SkillsSection />

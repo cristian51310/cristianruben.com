@@ -1,12 +1,12 @@
 ---
+import { useTranslate } from "@/i18n/utils";
 import Section from "../Section.astro";
+
+const t = useTranslate(Astro.currentLocale);
 ---
 
 <Section title="Sobre mi">
-  <p class="leading-7 print:leading-relaxed">
-    Con una experiencia de 3 años como Desarrollador Web y Diseñador UX
-    especializado en dispositivos móviles, resido en Guanajuato, México. Durante
-    este tiempo, he colaborado como freelancer con diversas empresas en el
-    ambito nacional, contribuyendo a su destacada presencia en el mundo digital.
+  <p class="leading-7 print:leading-relaxed print:mt-1">
+    {t("ABOUT_ME")}
   </p>
 </Section>

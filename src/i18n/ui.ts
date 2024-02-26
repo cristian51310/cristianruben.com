@@ -22,13 +22,14 @@ export const ui = {
     'MY_PROJECTS': 'My Projects',
     'MY_PROJECTS_DESCRIPTION': 'These are some of the projects I have worked on and of which I am most proud.',
     'STATUS_WORK': 'Available for new projects, contact me',
+    "ABOUT_ME": "With 3 years of experience as a Web Developer and UX Designer specialized in mobile devices, I reside in Guanajuato, Mexico. During this time, I have collaborated as a freelancer with various companies in the national field, contributing to their outstanding presence in the digital world.",
 
     'WORKSTATION_TEXT': 'Workstation',
     'DEVELOPMENT_TEXT': 'Development',
     'PRODUCTIVITY_TEXT': 'Productivity',
     'EDUCATION_TEXT': 'Education',
-    'EXPERIENCE_TEXT': 'Experience',
-    'SKILLS_TEXT': 'Skills',
+    'EXPERIENCE_TEXT': 'Professional Experience',
+    'SKILLS_TEXT': 'Technical skills',
     'BACK_TO_HOME_TEXT': 'Back to home',
   },
   es: {
@@ -47,13 +48,14 @@ export const ui = {
     'MY_PROJECTS': 'Mis Proyectos',
     'MY_PROJECTS_DESCRIPTION': 'Estos son algunos de los proyectos en los que he trabajado y de los que más orgulloso me siento.',
     'STATUS_WORK': 'Disponible para nuevos proyectos, contáctame',
+    "ABOUT_ME": "Con una experiencia de 3 años como Desarrollador Web y Diseñador UX especializado en dispositivos móviles, resido en Guanajuato, México. Durante este tiempo, he colaborado como freelancer con diversas empresas en el ambito nacional, contribuyendo a su destacada presencia en el mundo digital.",
 
     'WORKSTATION_TEXT': 'Workstation',
     'DEVELOPMENT_TEXT': 'Desarrollo',
     'PRODUCTIVITY_TEXT': 'Productividad',
     'EDUCATION_TEXT': 'Educación',
-    'EXPERIENCE_TEXT': 'Experiencia',
-    'SKILLS_TEXT': 'Habilidades',
+    'EXPERIENCE_TEXT': 'Experiencia Profesional',
+    'SKILLS_TEXT': 'Habilidades técnicas',
     'BACK_TO_HOME_TEXT': 'Volver al inicio',
   },
 } as const;

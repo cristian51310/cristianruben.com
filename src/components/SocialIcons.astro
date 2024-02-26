@@ -4,6 +4,7 @@ import GitHub from "./icons/simples/GitHub.astro";
 import LinkedIn from "./icons/simples/LinkedIn.astro";
 import Mail from "./icons/simples/Mail.astro";
 import Whatsapp from "./icons/simples/Whatsapp.astro";
+import WorldMap from "./icons/simples/WorldMap.astro";
 import X from "./icons/simples/X.astro";
 
 export interface SocialLinkProp {
@@ -11,6 +12,8 @@ export interface SocialLinkProp {
   url: string;
   print: string;
   icon: any;
+  printable?: boolean;
+  visible?: boolean;
 }
 
 export const socialLinks: SocialLinkProp[] = [
@@ -37,12 +40,20 @@ export const socialLinks: SocialLinkProp[] = [
     url: "https://twitter.com/CristianRubnFi1",
     print: "CristianRubnFi1",
     icon: X,
+    printable: false,
   },
   {
     name: "Email",
     url: "mailto:cristian.figueroa.crfe@gmail.com",
     print: "cristian.figueroa.crfe@gmail.com",
     icon: Mail,
+  },
+  {
+    name: "Website",
+    url: "https://cristianfigueroa.dev",
+    print: "www.cristianfigueroa.dev",
+    icon: WorldMap,
+    visible: false,
   },
 ];
 ---
@@ -55,7 +66,11 @@ export const socialLinks: SocialLinkProp[] = [
       <a
         href={link.url}
         target="_blank"
-        class="border p-1 md:p-1.5 print:p-0 print:px-1 group rounded-lg print:rounded-md dark:border-neutral-400/10 border-neutral-700/20 dark:bg-neutral-500/10 bg-neutral-400/10 flex gap-2 items-center justify-center"
+        class:list={[
+          "border p-1 md:p-1.5 print:p-0 print:px-1 group rounded-lg print:rounded-md dark:border-neutral-400/10 border-neutral-700/20 dark:bg-neutral-500/10 bg-neutral-400/10 flex gap-2 items-center justify-center",
+          link.printable === false && "print:hidden",
+          link.visible === false && "hidden print:flex",
+        ]}
       >
         <link.icon
           width="22"
@@ -67,7 +82,7 @@ export const socialLinks: SocialLinkProp[] = [
     ))
   }
   <a
-    href="/cristian_figueroa_resume.pdf"
+    href="/cristian-figueroa-resume.pdf"
     target="_blank"
     class="border p-1.5 px-3 print:p-0 print:px-1 group rounded-lg print:rounded-md dark:border-neutral-400/10 border-neutral-700/20 dark:bg-neutral-500/10 bg-neutral-400/10 flex gap-2 print:hidden justify-center items-center"
   >

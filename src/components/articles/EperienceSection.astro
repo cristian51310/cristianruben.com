@@ -1,15 +1,17 @@
 ---
 import type { Experience } from "@/data/resume";
 import { resume } from "@/data/resume";
+import { useTranslate } from "@/i18n/utils";
 import Card from "../Card.astro";
 import Section from "../Section.astro";
 
 const lang = Astro.currentLocale;
 
 const { experience } = resume;
+const t = useTranslate(lang);
 ---
 
-<Section title="Experiencia">
+<Section title={t("EXPERIENCE_TEXT")}>
   <div class="flex flex-col gap-4 mt-2">
     {
       experience.map((job: Experience) => {
