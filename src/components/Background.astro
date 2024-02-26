@@ -1,12 +1,10 @@
+---
+import "./background.css";
+---
+
 <div
   class="fixed inset-0 -z-10 h-full w-full dark:bg-neutral-900 bg-neutral-100"
 >
-  <div
-    class="absolute bottom-0 left-0 right-0 top-0
-    bg-[radial-gradient(circle_600px_at_100%_200px,#00AAA350,transparent)]
-    md:bg-[radial-gradient(circle_1200px_at_100%_200px,#00AAA350,transparent)]
-    dark:bg-[radial-gradient(circle_600px_at_100%_200px,#00474460,transparent)]
-    dark:md:bg-[radial-gradient(circle_1200px_at_100%_200px,#00474460,transparent)]"
-  >
-  </div>
+  <div class="radial block dark:hidden"></div>
+  <div class="radial-dark hidden dark:block"></div>
 </div>

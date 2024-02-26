@@ -1,0 +1,29 @@
+.radial {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle 600px at 100% 200px, var(--bg-tint), transparent);
+}
+
+@media (min-width: 768px) {
+  .radial {
+    background: radial-gradient(circle 1200px at 100% 200px, var(--bg-tint), transparent);
+  }
+}
+
+.radial-dark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle 600px at 100% 200px, var(--dark-bg-tint), transparent);
+}
+
+@media (min-width: 768px) {
+  .radial-dark {
+    background: radial-gradient(circle 1200px at 100% 200px, var(--dark-bg-tint), transparent);
+  }
+}

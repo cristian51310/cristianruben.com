@@ -3,14 +3,15 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "/Users/cristian/Programming/cristianruben.com",
     "paths": {
       "@/*": [
         "src/*"
       ],
       "@cv": [
         "./cv.json"
-      ],
-    }
+      ]
+    },
+    "jsxImportSource": "react"
   }
 }

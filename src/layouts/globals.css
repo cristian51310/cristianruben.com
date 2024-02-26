@@ -1,8 +1,23 @@
 :root {
-  --bg-blue: #004daa50;
-  --bg-purple: #5800aa50;
-  --bg-green: #00AAA350;
-  --bg-yellow: #aaa70050;
+  --bg-blue: #004daa70;
+  --bg-purple: #44009760;
+  --bg-green: #00999470;
+  --bg-yellow: #89870060;
+
+  --dark-bg-blue: #004daa50;
+  --dark-bg-purple: #44009750;
+  --dark-bg-green: #00999450;
+  --dark-bg-yellow: #89870050;
+
+  --dark-title-blue: #a0cbff;
+  --dark-title-purple: #dab0ff;
+  --dark-title-green: #a0ffc0;
+  --dark-title-yellow: #FDE68A;
+
+  --title-blue: #005baa;
+  --title-purple: #5a2e90;
+  --title-green: #009994;
+  --title-yellow: #898700;
 }
 
 @keyframes fadeIn {
