@@ -1,6 +1,6 @@
 ---
 import ThemeToggle from "@/components/ThemeToggle";
-import TintToggle from "@/components/TintToggle";
+import ColorSelector from "./ColorSelector";
 import LanguagePicker from "./LanguagePicker.astro";
 ---
 
@@ -13,7 +13,7 @@ import LanguagePicker from "./LanguagePicker.astro";
 		<LanguagePicker />
 		<div class="flex gap-4">
 			<ThemeToggle client:idle />
-			<TintToggle client:only />
+			<ColorSelector client:only />
 		</div>
 	</div>
 </footer>
@@ -25,3 +25,4 @@ import LanguagePicker from "./LanguagePicker.astro";
 		}
 	}
 </style>
+@/components/ColorSelector
