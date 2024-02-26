@@ -5,7 +5,7 @@ import LanguagePicker from "./LanguagePicker.astro";
 ---
 
 <footer
-	class="flex flex-col-reverse md:flex-row gap-4 justify-between items-center py-10 text-center bg-transparent border-t border-neutral-700 lg:mx-16 mx-6 mt-4 md:mt-0"
+	class="flex flex-col-reverse md:flex-row gap-4 justify-between items-center py-10 text-center bg-transparent border-t border-neutral-700 lg:mx-16 mx-6 mt-4 md:mt-0 print:hidden"
 >
 	<span class="mb-10 md:mb-0">Cristian Ruben Figueroa Espinoza.</span>
 
@@ -17,12 +17,3 @@ import LanguagePicker from "./LanguagePicker.astro";
 		</div>
 	</div>
 </footer>
-
-<style>
-	@media print {
-		footer {
-			display: none;
-		}
-	}
-</style>
-@/components/ColorSelector

@@ -1,8 +1,9 @@
 ---
+import Download from "./icons/simples/Download.astro";
 import GitHub from "./icons/simples/GitHub.astro";
 import LinkedIn from "./icons/simples/LinkedIn.astro";
 import Mail from "./icons/simples/Mail.astro";
-import Phone from "./icons/simples/Phone.astro";
+import Whatsapp from "./icons/simples/Whatsapp.astro";
 import X from "./icons/simples/X.astro";
 
 export interface SocialLinkProp {
@@ -29,7 +30,7 @@ export const socialLinks: SocialLinkProp[] = [
     name: "Whatsapp",
     url: "https://wa.me/+525646256576",
     print: "+52 5646256576",
-    icon: Phone,
+    icon: Whatsapp,
   },
   {
     name: "Twitter",
@@ -46,18 +47,34 @@ export const socialLinks: SocialLinkProp[] = [
 ];
 ---
 
-<div class="flex flex-wrap gap-3 mt-3 print:gap-x-2 print:gap-y-1 print:mt-1">
+<div
+  class="flex flex-wrap gap-2 md:gap-3 mt-3 print:gap-x-2 print:gap-y-1 print:mt-1"
+>
   {
     socialLinks.map((link) => (
       <a
         href={link.url}
         target="_blank"
-        class="border p-1.5 print:p-0 print:px-1 group rounded-lg print:rounded-md dark:border-neutral-400/10 border-neutral-700/20 dark:bg-neutral-500/10 bg-neutral-400/10 flex gap-2"
+        class="border p-1 md:p-1.5 print:p-0 print:px-1 group rounded-lg print:rounded-md dark:border-neutral-400/10 border-neutral-700/20 dark:bg-neutral-500/10 bg-neutral-400/10 flex gap-2 items-center justify-center"
       >
-        <link.icon class="w-5 print:w-3 dark:group-hover:text-white group-hover:text-black transition duration-300 print:text-neutral-800" />
+        <link.icon
+          width="22"
+          class="print:w-3 dark:group-hover:text-white group-hover:text-black transition duration-300 print:text-neutral-800"
+        />
         <span class="sr-only">Go to my {link.name}</span>
         <p class=" hidden print:block">{link.print}</p>
       </a>
     ))
   }
+  <a
+    href="/cristian_figueroa_resume.pdf"
+    target="_blank"
+    class="border p-1.5 px-3 print:p-0 print:px-1 group rounded-lg print:rounded-md dark:border-neutral-400/10 border-neutral-700/20 dark:bg-neutral-500/10 bg-neutral-400/10 flex gap-2 print:hidden justify-center items-center"
+  >
+    <Download
+      width="20"
+      class="w-3 print:w-3 dark:group-hover:text-white group-hover:text-black transition duration-300"
+    />
+    <span class="text-sm">Descargar CV</span>
+  </a>
 </div>

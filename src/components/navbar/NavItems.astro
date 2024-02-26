@@ -17,14 +17,14 @@ const isActive =
   class:list={[
     "relative block px-3 py-0 md:text-base text-sm md:hover:bg-neutral-200/10 rounded-md transition-colors duration-500",
     isActive
-      ? "dark:text-amber-400 text-amber-500"
+      ? "dark:text-amber-400 text-amber-700"
       : "dark:text-neutral-400 text-neutral-500",
   ]}
 >
   {t(label)}
   {
     isActive && (
-      <span class="absolute h-px inset-x-1 -bottom-px bg-gradient-to-r from-transparent via-amber-400/80 dark:via-amber-500 to-transparent" />
+      <span class="absolute h-px inset-x-1 -bottom-px bg-gradient-to-r from-transparent via-amber-600/80 dark:via-amber-500 to-transparent" />
     )
   }
 </a>
