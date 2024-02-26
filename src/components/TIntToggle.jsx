@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import { useEffect, useState } from "react"
 
-export default function TIntToggle() {
+export default function TintToggle() {
   const [tint, setTint] = useState('blue')
 
   const $document = document.documentElement
