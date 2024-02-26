@@ -13,7 +13,7 @@ const { experience } = resume;
   <div class="flex flex-col gap-4 mt-2">
     {
       experience.map((job: Experience) => {
-        const { company, start, title, description, achievements } = job;
+        const { company, start, title, description } = job;
 
         return (
           <Card class="p-4 px-5 print:p-0">
