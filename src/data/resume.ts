@@ -67,25 +67,6 @@ export const resume: Resumen = {
   ],
   experience: [
     {
-      company: "Kuil",
-      start: "2022",
-      title: "Freelancer",
-      description: {
-        es: "Dirigí el desarrollo y la implementación de un eficiente sistema de inventario para Kuil, optimizando significativamente la gestión de productos. Asimismo, diseñé y construí una aplicación web integral que impulsó las ventas y mejoró la experiencia del usuario en la compra de productos.",
-        en: "I led the development and implementation of an efficient inventory system for Kuil, significantly optimizing product management. Additionally, I designed and built a comprehensive web application that boosted sales and enhanced the user experience in purchasing products."
-      },
-      achievements: {
-        es: [
-          "Optimización significativa en la gestión de inventario.",
-          "Incremento notable en las ventas a través de la aplicación web desarrollada."
-        ],
-        en: [
-          "Significant optimization in inventory management.",
-          "Notable increase in sales through the developed web application."
-        ]
-      }
-    },
-    {
       company: "Dorichangos",
       start: "2023",
       title: "Freelancer",
