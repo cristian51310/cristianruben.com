@@ -88,18 +88,6 @@ export const resume: Resumen = {
   ],
   projects: [
     {
-      title: 'Kuil',
-      description: {
-        es: 'Ecommerce y dashboard de administracion para Kuil, una marca de lapices ecológicos',
-        en: 'Ecommerce website and administration dashboard for Kuil, an ecological pencil brand'
-      },
-      pubDate: 'Jul 08 2022',
-      heroImage: '/images/projects/kuil.webp',
-      webpage: 'https://kuil.com.mx',
-      github: null,
-      tags: [TAGS.REACT, TAGS.NEXTJS, TAGS.JS]
-    },
-    {
       title: 'Dorichangos',
       description: {
         es: 'Sistema de reservaciones y ecommerce. Permite reservar mesas y hacer pedidos en línea.',
