@@ -4,6 +4,7 @@ import LinkedIn from "./icons/simples/LinkedIn.astro"
 import Mail from "./icons/simples/Mail.astro"
 import Whatsapp from "./icons/simples/Whatsapp.astro"
 import WorldMap from "./icons/simples/WorldMap.astro"
+import Download from "./icons/simples/Download.astro"
 import X from "./icons/simples/X.astro"
 
 export interface SocialLinkProp {
@@ -31,7 +32,7 @@ export const socialLinks: SocialLinkProp[] = [
   {
     name: "Whatsapp",
     url: "https://wa.me/+523339632525",
-    print: "+52 5646256576",
+    print: "+52 333-963-2525",
     icon: Whatsapp,
   },
   {
@@ -58,7 +59,7 @@ export const socialLinks: SocialLinkProp[] = [
 ---
 
 <div
-  class='flex flex-wrap gap-2 md:gap-3 mt-3 print:gap-x-2 print:gap-y-1 print:mt-1'
+  class='flex flex-wrap gap-2 md:gap-3 mt-3 print:gap-3 print:mt-1'
 >
   {
     socialLinks.map((link) => (
@@ -80,8 +81,8 @@ export const socialLinks: SocialLinkProp[] = [
       </a>
     ))
   }
-  <!-- <a
-    href="/cristian-figueroa-resume.pdf"
+  <a
+    href="/cristian-ruben-resume.pdf"
     target="_blank"
     class="border p-1.5 px-3 print:p-0 print:px-1 group rounded-lg print:rounded-md dark:border-neutral-400/10 border-neutral-700/20 dark:bg-neutral-500/10 bg-neutral-400/10 flex gap-2 print:hidden justify-center items-center"
   >
@@ -90,5 +91,5 @@ export const socialLinks: SocialLinkProp[] = [
       class="w-3 print:w-3 dark:group-hover:text-white group-hover:text-black transition duration-300"
     />
     <span class="text-sm">Descargar CV</span>
-  </a> -->
+  </a>
 </div>
